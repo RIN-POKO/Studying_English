@@ -152,6 +152,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-11-17-10",
+    date: "2026-11-17",
+    category: "Naturalness",
+    whatISaid: "Some Chinese food is not a good taste for me.",
+    correction: "Some Chinese dishes aren't really to my taste.",
+    explanation:
+      "「口に合わない・味が好みではない」と言うときは「not a good taste for me」ではなく、「be not to my taste」や「doesn't suit my taste」と表現すると自然です。",
+    examples: [
+      "The soup was a bit too spicy and wasn't really to my taste.",
+      "Turkish cuisine really suits my taste."
+    ],
+    tags: ["naturalness", "food", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-09",
+    date: "2026-11-17",
+    category: "Vocabulary",
+    whatISaid: "It's difficult to see street cats in Japan.",
+    correction: "It's rare to see stray cats in Japan.",
+    explanation:
+      "飼い主のいない「野良猫・野良犬」は英語で「street cats」より「stray cats（stray dogs）」と言うのが一般的です。また、「めったに見かけない」には「rare」もよく使われます。",
+    examples: [
+      "You can see many stray cats on the streets of Istanbul.",
+      "We adopted a stray cat that we found near our house."
+    ],
+    tags: ["vocabulary", "pets", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-08",
+    date: "2026-11-17",
+    category: "Grammar",
+    whatISaid: "I think Turkey is the most I like.",
+    correction: "I think I like Turkey the most.",
+    explanation:
+      "「〜が一番好きです」と言うとき、「A is the most I like」の語順にはできません。「I like Turkey the most.」または「Turkey is my favorite.」と表現します。",
+    examples: [
+      "Out of all the countries I've visited, I like Turkey the most.",
+      "Which city did you like the most on your trip?"
+    ],
+    tags: ["grammar", "word-order", "preference"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-07",
+    date: "2026-11-17",
+    category: "Preposition",
+    whatISaid: "I've been in Malaysia, the Philippines, and Singapore.",
+    correction: "I've been to Malaysia, the Philippines, and Singapore.",
+    explanation:
+      "「（場所に）行ったことがある」という経験を伝えるときは、「have been in（ずっと滞在している）」ではなく「have been to（行ったことがある）」を使います。",
+    examples: [
+      "Have you ever been to Spain?",
+      "I've been to the US twice to visit my sister."
+    ],
+    tags: ["preposition", "travel", "grammar"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-06",
+    date: "2026-11-17",
+    category: "Vocabulary",
+    whatISaid: "I want to go to Hokkaido Prefecture to enjoy skiing.",
+    correction: "I want to go to Hokkaido to enjoy skiing.",
+    explanation:
+      "「北海道」は「都・道・府・県」のうち「道」にあたるため、英語では「Hokkaido Prefecture」とは言わず、単に「Hokkaido」だけで表します（東京も日常会話では「Tokyo」のみを使います）。",
+    examples: [
+      "I've never been to Hokkaido, so I'd love to visit in winter.",
+      "Hokkaido is famous for its fresh seafood and ski resorts."
+    ],
+    tags: ["vocabulary", "geography", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-05",
+    date: "2026-11-17",
+    category: "Vocabulary",
+    whatISaid: "I went to making soba workshop.",
+    correction: "I went to a soba-making workshop.",
+    explanation:
+      "「そば打ち体験・ワークショップ」のように「〜作り体験」を表すときは、「making soba workshop」ではなく「a soba-making workshop」のようにハイフンでつないだ複合形容詞の形にし、冠詞「a」を付けます。",
+    examples: [
+      "We joined a pottery-making workshop during our trip.",
+      "The soba-making workshop in Tochigi was really fun."
+    ],
+    tags: ["vocabulary", "travel", "hobby"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-04",
+    date: "2026-11-17",
+    category: "Vocabulary",
+    whatISaid: "Tochigi is located above Tokyo.",
+    correction: "Tochigi is located north of Tokyo.",
+    explanation:
+      "地図上の位置関係で「〜の北にある」と言うときは、「above（真上・上空）」ではなく「north of Tokyo」や「in the northern part of 〜」を使います。",
+    examples: [
+      "Tochigi Prefecture is located just north of Tokyo.",
+      "Nagoya is located west of Tokyo."
+    ],
+    tags: ["vocabulary", "geography", "preposition"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-03",
+    date: "2026-11-17",
+    category: "Grammar",
+    whatISaid: "I like Japanese histories.",
+    correction: "I like Japanese history.",
+    explanation:
+      "「歴史」という意味の「history」は通常不可算名詞として扱うため、複数形の「histories」にはせず「Japanese history」とします。",
+    examples: [
+      "I'm interested in Japanese history and traditional culture.",
+      "Kyoto is full of sites rich in history."
+    ],
+    tags: ["grammar", "uncountable", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-02",
+    date: "2026-11-17",
+    category: "Naturalness",
+    whatISaid: "I like the wine most of alcohol.",
+    correction: "Wine is my favorite alcoholic drink.",
+    explanation:
+      "ワイン全般（特定のワインではない）を指すときは「the」は不要です。また、「お酒の中で一番好き」と言うときは「most of alcohol」ではなく「Wine is my favorite alcoholic drink.」や「Out of all alcoholic drinks, I like wine the most.」と表現します。",
+    examples: [
+      "Red wine is my favorite alcoholic drink.",
+      "I visited a winery in Yamanashi and tasted several local wines."
+    ],
+    tags: ["naturalness", "food", "preference"],
+    mastered: false
+  },
+  {
+    id: "2026-11-17-01",
+    date: "2026-11-17",
+    category: "Grammar",
+    whatISaid: "This year, I've been traveling three times.",
+    correction: "I've traveled three times this year.",
+    explanation:
+      "「今年これまでに3回旅行した」のように回数や経験を伝えるときは、現在完了進行形（have been traveling）ではなく現在完了形（have traveled）を使います。",
+    examples: [
+      "I've traveled domestically three times this year.",
+      "How many times have you visited Kyoto?"
+    ],
+    tags: ["grammar", "tense", "travel"],
+    mastered: false
+  },
+  {
     id: "2026-11-14-10",
     date: "2026-11-14",
     category: "Grammar",
