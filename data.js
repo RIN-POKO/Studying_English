@@ -152,6 +152,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-11-14-10",
+    date: "2026-11-14",
+    category: "Grammar",
+    whatISaid: "I usually go, the store is about to close.",
+    correction: "I usually go right before the store closes.",
+    explanation:
+      "2つの節をつなげて「お店が閉まる直前に行く」と言うときは、接続詞の「before」や「when」を入れて「right before the store closes」または「when the store is about to close」と表現します。",
+    examples: [
+      "I often go to the supermarket right before it closes to buy discounted bento.",
+      "We arrived at the restaurant just before it closed."
+    ],
+    tags: ["grammar", "conjunction", "shopping"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-09",
+    date: "2026-11-14",
+    category: "Naturalness",
+    whatISaid: "It's difficult to manage fresh foods in my fridge.",
+    correction: "It's difficult to use up fresh ingredients in my fridge before they spoil.",
+    explanation:
+      "「食材が傷まないうちに使い切る・やりくりする」と言うときは、「manage fresh foods」よりも「use up fresh ingredients before they spoil（または go bad）」と表現すると具体的で自然です。また、食材全般を指すとき「food」は不可算名詞です。",
+    examples: [
+      "Living alone makes it hard to use up vegetables before they go bad.",
+      "I try to keep only what I can finish in my fridge."
+    ],
+    tags: ["naturalness", "cooking", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-08",
+    date: "2026-11-14",
+    category: "Grammar",
+    whatISaid: "At the supermarket, the least amount of onions are three, which is excessive for one people.",
+    correction: "At the supermarket, the smallest pack has three onions, which is too much for one person.",
+    explanation:
+      "「1人」は「one people」ではなく単数形の「one person」を使います（people は複数形）。また、「最小パック」は「the smallest pack」と言い、主語が単数なので動詞も「has（is）」にします。",
+    examples: [
+      "A pack of three onions is too much for one person.",
+      "I wish supermarkets sold smaller portions for single people."
+    ],
+    tags: ["grammar", "singular", "shopping"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-07",
+    date: "2026-11-14",
+    category: "Naturalness",
+    whatISaid: "It's difficult to cook for only me.",
+    correction: "It's difficult to cook just for myself.",
+    explanation:
+      "「自分一人のために」と言うときは、「for only me」ではなく再帰代名詞を使って「just for myself」や「for myself alone」と表現するのが自然です。",
+    examples: [
+      "It takes too much effort to cook a full meal just for myself.",
+      "I enjoy baking, even when I'm making it just for myself."
+    ],
+    tags: ["naturalness", "cooking", "pronoun"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-06",
+    date: "2026-11-14",
+    category: "Grammar",
+    whatISaid: "I usually go out for eating out or buying food at the supermarket.",
+    correction: "I usually go out to eat or buy groceries at the supermarket.",
+    explanation:
+      "「〜しに出かける」と目的を表すときは「for + 動名詞」よりも不定詞「to + 動詞の原形（go out to eat）」を使うのが自然です。また、「go out」と「eating out」で「out」が重複するため「go out to eat」ですっきり表せます。",
+    examples: [
+      "I went out to grab dinner with my coworkers.",
+      "On weekends, I go out to buy groceries for the week."
+    ],
+    tags: ["grammar", "infinitive", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-05",
+    date: "2026-11-14",
+    category: "Vocabulary",
+    whatISaid: "I walk or use bicycle instead of train and cars.",
+    correction: "I walk or ride a bicycle instead of taking the train or driving.",
+    explanation:
+      "「自転車に乗る」は「use bicycle」より「ride a bicycle（または ride a bike）」を使います。同様に「電車に乗る」は「take the train」、「車に乗る・運転する」は「drive（または ride in a car）」と表現します。",
+    examples: [
+      "I try to ride my bicycle to the station instead of taking the bus.",
+      "We took the train instead of driving because of the traffic."
+    ],
+    tags: ["vocabulary", "collocation", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-04",
+    date: "2026-11-14",
+    category: "Grammar",
+    whatISaid: "I try to do it as possible I can.",
+    correction: "I try to do it as much as possible.",
+    explanation:
+      "「できるだけ〜」と言うときは、「as ... as possible」または「as ... as I can」のどちらか一方を使います。「possible」と「I can」を混ぜて「as possible I can」にしないように注意しましょう。",
+    examples: [
+      "I try to walk as much as possible during my commute.",
+      "Please send me the report as soon as you can."
+    ],
+    tags: ["grammar", "comparison", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-03",
+    date: "2026-11-14",
+    category: "Grammar",
+    whatISaid: "I don't have less time to do exercise.",
+    correction: "I don't have much time to exercise.",
+    explanation:
+      "比較対象がない状態で否定文に「less」を使うと意味が不自然になります。「あまり時間がない」と言うときは「don't have much time」または「have little time」を使います。また、「運動する」は「do exercise」より動詞の「exercise」が自然です。",
+    examples: [
+      "I don't have much time to exercise on weekdays.",
+      "Even if you have little time, stretching for five minutes helps."
+    ],
+    tags: ["grammar", "quantifier", "health"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-02",
+    date: "2026-11-14",
+    category: "Grammar",
+    whatISaid: "Keeping our body looks good.",
+    correction: "Keeping our bodies fit and healthy.",
+    explanation:
+      "「keep + 目的語 + 形容詞」で「〜を…の状態に保つ」を表すため、後ろに動詞の「looks」は置けません。「fit（健康で引き締まった）」「healthy」「in good shape」などの形容詞・句を直接続けます。",
+    examples: [
+      "Regular exercise helps keep our bodies fit and healthy.",
+      "I try to eat well to keep my body in good shape."
+    ],
+    tags: ["grammar", "health", "verb"],
+    mastered: false
+  },
+  {
+    id: "2026-11-14-01",
+    date: "2026-11-14",
+    category: "Vocabulary",
+    whatISaid: "What does being healthy mean to you? — Health means living without disease.",
+    correction: "Health means living free from illness and disease.",
+    explanation:
+      "「病気（illness / disease）なしで生きること」と表現するときは、「without disease」でも通じますが、「free from illness」「without any serious health issues」のように言うとより自然でこなれた表現になります。",
+    examples: [
+      "Being healthy means living free from illness and stress.",
+      "A balanced diet helps you stay free from disease."
+    ],
+    tags: ["vocabulary", "health", "conversation"],
+    mastered: false
+  },
+  {
     id: "2026-11-13-10",
     date: "2026-11-13",
     category: "Vocabulary",
