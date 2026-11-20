@@ -388,6 +388,20 @@
       border-color: var(--success-border);
     }
 
+    .expr-japanese {
+      background: var(--surface-muted);
+      border-color: var(--border);
+      margin-block-end: 10px;
+    }
+
+    .expr-japanese .expr-label {
+      color: var(--primary);
+    }
+
+    .expr-japanese .expr-text {
+      font-size: 1rem;
+    }
+
     .expr-label {
       font-size: 0.74rem;
       font-weight: 700;
@@ -667,6 +681,7 @@
         if (state.query.trim()) {
           const q = state.query.trim().toLowerCase();
           const haystack = [
+            entry.japanese,
             entry.whatISaid,
             entry.correction,
             entry.explanation,
@@ -823,9 +838,15 @@
             const tagsHtml = (entry.tags || [])
               .map((t) => `<span class="tag">#${escapeHtml(t)}</span>`)
               .join("");
+            const japaneseHtml = entry.japanese
+              ? `<div class="expr-box expr-japanese">
+                  <span class="expr-label">日本語訳</span>
+                  <p class="expr-text">${escapeHtml(entry.japanese)}</p>
+                </div>`
+              : "";
             const examplesHtml = (entry.examples && entry.examples.length)
               ? `<div>
-                  <h2 class="examples-title">例文</h2>
+                  <h2 class="examples-title">例文 (Example)</h2>
                   <ul class="examples" lang="en">
                     ${entry.examples
                       .map(
@@ -849,6 +870,8 @@
                     ${mastered ? "✓ 習得済み" : "未習得"}
                   </button>
                 </div>
+
+                ${japaneseHtml}
 
                 <div class="expr-grid">
                   <div class="expr-box expr-wrong">

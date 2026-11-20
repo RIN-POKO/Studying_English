@@ -7,6 +7,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "When I go to Seattle, I buy coffee beans for my souvenir.",
     correction: "When I go to Seattle, I buy coffee beans as a souvenir.",
+    japanese: "シアトルに行くときは、お土産としてコーヒー豆を買います。",
     explanation:
       "「お土産として」と言うときは、前置詞「for」ではなく「as（〜として）」を使い、「as a souvenir」または「as souvenirs」と表現します。",
     examples: [
@@ -22,6 +23,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "The leaves color turn to be orange.",
     correction: "The leaves turn orange.",
+    japanese: "葉がオレンジ色に変わります。",
     explanation:
       "「（色が）〜に変わる」と言うときは「turn + 形容詞（色）」の形をそのまま使い、「to be」や「color」を間に入れる必要はありません。",
     examples: [
@@ -37,6 +39,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "I prefer going to sea to mountain.",
     correction: "I prefer going to the beach over the mountains.",
+    japanese: "私は山よりビーチに行く方が好きです。",
     explanation:
       "ビーチと山を比べるときは「sea」より「the beach」と言うのが自然です。また、「prefer A to B」や「prefer A over B」の形を使うときは比較する名詞の冠詞（the）を落とさないようにします。",
     examples: [
@@ -52,6 +55,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I like to go to Finland to see Aurora.",
     correction: "I'd like to go to Finland to see the aurora.",
+    japanese: "オーロラを見るためにフィンランドに行ってみたいです。",
     explanation:
       "「〜したい」という願望を表すときは「I like to」ではなく「I'd like to（I would like to）」を使います。「I like to」は「普段〜するのが好き」という習慣の意味になります。また、オーロラは「the aurora」または「the Northern Lights」のように「the」を付けます。",
     examples: [
@@ -67,6 +71,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I want to order a different menu depending on my feeling.",
     correction: "I like to order something different depending on my mood.",
+    japanese: "気分によって違うものを注文するのが好きです。",
     explanation:
       "英語の「menu」は料理や飲み物の一覧表全体を指す言葉で、個別の注文品には使いません。1つひとつの注文品を指すときは「item」「drink」「order」、あるいは「something different（いつもと違うもの）」のように表現します。",
     examples: [
@@ -82,6 +87,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "Staying at Seattle is the longest vacation.",
     correction: "Staying in Seattle was my longest vacation.",
+    japanese: "シアトルでの滞在はこれまでで一番長い休暇でした。",
     explanation:
       "都市名のように広い場所を表すときは、前置詞は「at」ではなく「in」を使います。また、過去の旅行の話なので時制は過去形（was）にします。",
     examples: [
@@ -97,6 +103,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I've been there to meet my sister.",
     correction: "I went there to visit my sister.",
+    japanese: "姉妹に会うためにそこへ行きました。",
     explanation:
       "特定の過去の旅行について話すときは、現在完了の「have been」ではなく過去形の「went」を使います。また、すでに知っている家族や友人に会いにいく場合は「meet」より「visit」が自然です。",
     examples: [
@@ -112,6 +119,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Japan's summer has so humid.",
     correction: "Summer in Japan is very humid.",
+    japanese: "日本の夏はとても蒸し暑いです。",
     explanation:
       "「humid（蒸し暑い）」は形容詞なので「has」ではなく be動詞（is）と組み合わせて使います。名詞の「humidity（湿度）」を使う場合は「It has low humidity.」のように言えます。",
     examples: [
@@ -127,6 +135,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "when I was an university student",
     correction: "when I was a university student",
+    japanese: "私が大学生だったとき",
     explanation:
       "「university」は文字では母音の u で始まりますが、発音が子音の /j/（ユ）で始まるため、冠詞は「an」ではなく「a」を使います。",
     examples: [
@@ -142,6 +151,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I'm good because today is Friday, so tomorrow is holiday.",
     correction: "I'm good because today is Friday, and tomorrow is the weekend.",
+    japanese: "今日は金曜日で明日は週末なので、気分が良いです。",
     explanation:
       "英語の「holiday」は祝日や長期休暇を指すことが多く、通常の土日を指す場合は「the weekend」や「a day off」を使います。",
     examples: [
@@ -157,6 +167,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Some people order, but some people cook by ourselves.",
     correction: "Some people order it, while others cook it themselves.",
+    japanese: "注文する人もいれば、自分たちで作る人もいます。",
     explanation:
       "主語が「some people / others（三人称複数＝彼ら）」なので、再帰代名詞も「ourselves（私たち自身）」ではなく「themselves（彼ら自身）」に揃える必要があります。",
     examples: [
@@ -172,6 +183,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "Japan has custom, people eat soba when it is New Year's Eve.",
     correction: "Japan has a custom of eating soba on New Year's Eve.",
+    japanese: "日本には大晦日にそばを食べる習慣があります。",
     explanation:
       "「〜する習慣がある」と言うときは、可算名詞「custom」に冠詞「a」を付け、「have a custom of + 動名詞」の形でつなぐと自然です。また、特定の日（大晦日）には前置詞「on」を使います。",
     examples: [
@@ -187,6 +199,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I did a resort hotel three days.",
     correction: "I stayed at a resort hotel for three days.",
+    japanese: "リゾートホテルに3日間泊まりました。",
     explanation:
       "「ホテルに泊まる」は「do a hotel」ではなく「stay at a hotel」を使います。また、「3日間」のように期間を表すときは前置詞「for」を付けて「for three days」と表現します。",
     examples: [
@@ -202,6 +215,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I'll go back to my hometown in New Year.",
     correction: "I'll go back to my hometown for New Year's.",
+    japanese: "お正月に地元へ帰省する予定です。",
     explanation:
       "「お正月に・年末年始に（帰省する）」と言うときは、前置詞「in」ではなく「for New Year's」や「over the New Year holidays」を使います。特定の日である元日を指す場合は「on New Year's Day」とします。",
     examples: [
@@ -217,6 +231,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Hokkaido is located in the northest of Japan.",
     correction: "Hokkaido is located in the northernmost part of Japan.",
+    japanese: "北海道は日本の最北部に位置しています。",
     explanation:
       "「north」に「-est」を付けた「northest」という語は存在しません。「日本の最北端にある」と言うときは「in the northernmost part of Japan」や、シンプルに「in northern Japan」と表現します。",
     examples: [
@@ -232,6 +247,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I'm not heard of the name before.",
     correction: "I haven't heard of that name before.",
+    japanese: "その名前はこれまで聞いたことがありません。",
     explanation:
       "「今まで聞いたことがない」という現在完了形の否定では、be動詞（I'm）ではなく助動詞「have（I haven't / I've never）」を使います。",
     examples: [
@@ -247,6 +263,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I bought grape juice for my brother because he's not adult.",
     correction: "I bought grape juice for my brother because he's not an adult.",
+    japanese: "弟はまだ大人ではないので、ぶどうジュースを買いました。",
     explanation:
       "「adult（大人）」は可算名詞なので、単数で使うときは冠詞「an」が必要です（「not an adult」）。なお、「未成年だ」と言うときは「he's underage」や「he's still a minor」とも言えます。",
     examples: [
@@ -262,6 +279,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I prefer to non-sparkly wine to sparkly wine.",
     correction: "I prefer non-sparkling wine to sparkling wine.",
+    japanese: "スパークリングワインより発泡していないワインの方が好きです。",
     explanation:
       "発泡性のワインは「sparkly」ではなく「sparkling wine」、発泡していないワインは「non-sparkling wine」または「still wine」と言います。また、「prefer」は他動詞なので後ろの「to」は不要で「prefer A to B」の形をとります。",
     examples: [
@@ -277,6 +295,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Some of them are not, but the most wine is sweet.",
     correction: "Some of them aren't, but most of the wines are sweet.",
+    japanese: "そうでないものもありますが、ほとんどのワインは甘いです。",
     explanation:
       "「ほとんどの〜」を表す「most」には定冠詞「the」を付けません（「the most」は「最も〜」という最上級の意味になります）。特定の複数種類のワインを指すときは「most of the wines are sweet」と表現します。",
     examples: [
@@ -292,6 +311,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Yes, I've ate sandwiches.",
     correction: "Yes, I've eaten a sandwich.",
+    japanese: "はい、サンドイッチを食べました。",
     explanation:
       "現在完了形（have + 過去分詞）では、動詞「eat」の過去形「ate」ではなく過去分詞形「eaten」を使います。また、1つのサンドイッチなら単数形「a sandwich」にします。",
     examples: [
@@ -307,6 +327,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "Some Chinese food is not a good taste for me.",
     correction: "Some Chinese dishes aren't really to my taste.",
+    japanese: "中華料理の中にはあまり私の口に合わないものもあります。",
     explanation:
       "「口に合わない・味が好みではない」と言うときは「not a good taste for me」ではなく、「be not to my taste」や「doesn't suit my taste」と表現すると自然です。",
     examples: [
@@ -322,6 +343,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "It's difficult to see street cats in Japan.",
     correction: "It's rare to see stray cats in Japan.",
+    japanese: "日本では野良猫を見かけることはめったにありません。",
     explanation:
       "飼い主のいない「野良猫・野良犬」は英語で「street cats」より「stray cats（stray dogs）」と言うのが一般的です。また、「めったに見かけない」には「rare」もよく使われます。",
     examples: [
@@ -337,6 +359,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I think Turkey is the most I like.",
     correction: "I think I like Turkey the most.",
+    japanese: "トルコが一番好きだと思います。",
     explanation:
       "「〜が一番好きです」と言うとき、「A is the most I like」の語順にはできません。「I like Turkey the most.」または「Turkey is my favorite.」と表現します。",
     examples: [
@@ -352,6 +375,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I've been in Malaysia, the Philippines, and Singapore.",
     correction: "I've been to Malaysia, the Philippines, and Singapore.",
+    japanese: "マレーシア、フィリピン、シンガポールに行ったことがあります。",
     explanation:
       "「（場所に）行ったことがある」という経験を伝えるときは、「have been in（ずっと滞在している）」ではなく「have been to（行ったことがある）」を使います。",
     examples: [
@@ -367,6 +391,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I want to go to Hokkaido Prefecture to enjoy skiing.",
     correction: "I want to go to Hokkaido to enjoy skiing.",
+    japanese: "スキーを楽しむために北海道に行きたいです。",
     explanation:
       "「北海道」は「都・道・府・県」のうち「道」にあたるため、英語では「Hokkaido Prefecture」とは言わず、単に「Hokkaido」だけで表します（東京も日常会話では「Tokyo」のみを使います）。",
     examples: [
@@ -382,6 +407,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I went to making soba workshop.",
     correction: "I went to a soba-making workshop.",
+    japanese: "そば打ち体験に行きました。",
     explanation:
       "「そば打ち体験・ワークショップ」のように「〜作り体験」を表すときは、「making soba workshop」ではなく「a soba-making workshop」のようにハイフンでつないだ複合形容詞の形にし、冠詞「a」を付けます。",
     examples: [
@@ -397,6 +423,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Tochigi is located above Tokyo.",
     correction: "Tochigi is located north of Tokyo.",
+    japanese: "栃木は東京の北に位置しています。",
     explanation:
       "地図上の位置関係で「〜の北にある」と言うときは、「above（真上・上空）」ではなく「north of Tokyo」や「in the northern part of 〜」を使います。",
     examples: [
@@ -412,6 +439,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I like Japanese histories.",
     correction: "I like Japanese history.",
+    japanese: "私は日本の歴史が好きです。",
     explanation:
       "「歴史」という意味の「history」は通常不可算名詞として扱うため、複数形の「histories」にはせず「Japanese history」とします。",
     examples: [
@@ -427,6 +455,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "I like the wine most of alcohol.",
     correction: "Wine is my favorite alcoholic drink.",
+    japanese: "お酒の中でワインが一番好きです。",
     explanation:
       "ワイン全般（特定のワインではない）を指すときは「the」は不要です。また、「お酒の中で一番好き」と言うときは「most of alcohol」ではなく「Wine is my favorite alcoholic drink.」や「Out of all alcoholic drinks, I like wine the most.」と表現します。",
     examples: [
@@ -442,6 +471,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "This year, I've been traveling three times.",
     correction: "I've traveled three times this year.",
+    japanese: "今年これまでに3回旅行しました。",
     explanation:
       "「今年これまでに3回旅行した」のように回数や経験を伝えるときは、現在完了進行形（have been traveling）ではなく現在完了形（have traveled）を使います。",
     examples: [
@@ -457,6 +487,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I usually go, the store is about to close.",
     correction: "I usually go right before the store closes.",
+    japanese: "お店が閉まる直前によく行きます。",
     explanation:
       "2つの節をつなげて「お店が閉まる直前に行く」と言うときは、接続詞の「before」や「when」を入れて「right before the store closes」または「when the store is about to close」と表現します。",
     examples: [
@@ -472,6 +503,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "It's difficult to manage fresh foods in my fridge.",
     correction: "It's difficult to use up fresh ingredients in my fridge before they spoil.",
+    japanese: "冷蔵庫の生鮮食材が傷む前に使い切るのは難しいです。",
     explanation:
       "「食材が傷まないうちに使い切る・やりくりする」と言うときは、「manage fresh foods」よりも「use up fresh ingredients before they spoil（または go bad）」と表現すると具体的で自然です。また、食材全般を指すとき「food」は不可算名詞です。",
     examples: [
@@ -487,6 +519,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "At the supermarket, the least amount of onions are three, which is excessive for one people.",
     correction: "At the supermarket, the smallest pack has three onions, which is too much for one person.",
+    japanese: "スーパーでは最小パックでも玉ねぎが3個入りで、1人には多すぎます。",
     explanation:
       "「1人」は「one people」ではなく単数形の「one person」を使います（people は複数形）。また、「最小パック」は「the smallest pack」と言い、主語が単数なので動詞も「has（is）」にします。",
     examples: [
@@ -502,6 +535,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "It's difficult to cook for only me.",
     correction: "It's difficult to cook just for myself.",
+    japanese: "自分1人のためだけに料理するのは大変です。",
     explanation:
       "「自分一人のために」と言うときは、「for only me」ではなく再帰代名詞を使って「just for myself」や「for myself alone」と表現するのが自然です。",
     examples: [
@@ -517,6 +551,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I usually go out for eating out or buying food at the supermarket.",
     correction: "I usually go out to eat or buy groceries at the supermarket.",
+    japanese: "普段は外食をするか、スーパーで食料品を買うために出かけます。",
     explanation:
       "「〜しに出かける」と目的を表すときは「for + 動名詞」よりも不定詞「to + 動詞の原形（go out to eat）」を使うのが自然です。また、「go out」と「eating out」で「out」が重複するため「go out to eat」ですっきり表せます。",
     examples: [
@@ -532,6 +567,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I walk or use bicycle instead of train and cars.",
     correction: "I walk or ride a bicycle instead of taking the train or driving.",
+    japanese: "電車に乗ったり車に乗ったりする代わりに、歩いたり自転車に乗ったりします。",
     explanation:
       "「自転車に乗る」は「use bicycle」より「ride a bicycle（または ride a bike）」を使います。同様に「電車に乗る」は「take the train」、「車に乗る・運転する」は「drive（または ride in a car）」と表現します。",
     examples: [
@@ -547,6 +583,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I try to do it as possible I can.",
     correction: "I try to do it as much as possible.",
+    japanese: "できるだけそうするようにしています。",
     explanation:
       "「できるだけ〜」と言うときは、「as ... as possible」または「as ... as I can」のどちらか一方を使います。「possible」と「I can」を混ぜて「as possible I can」にしないように注意しましょう。",
     examples: [
@@ -562,6 +599,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I don't have less time to do exercise.",
     correction: "I don't have much time to exercise.",
+    japanese: "運動する時間があまりありません。",
     explanation:
       "比較対象がない状態で否定文に「less」を使うと意味が不自然になります。「あまり時間がない」と言うときは「don't have much time」または「have little time」を使います。また、「運動する」は「do exercise」より動詞の「exercise」が自然です。",
     examples: [
@@ -577,6 +615,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Keeping our body looks good.",
     correction: "Keeping our bodies fit and healthy.",
+    japanese: "体を健康で引き締まった状態に保つこと。",
     explanation:
       "「keep + 目的語 + 形容詞」で「〜を…の状態に保つ」を表すため、後ろに動詞の「looks」は置けません。「fit（健康で引き締まった）」「healthy」「in good shape」などの形容詞・句を直接続けます。",
     examples: [
@@ -592,6 +631,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "What does being healthy mean to you? — Health means living without disease.",
     correction: "Health means living free from illness and disease.",
+    japanese: "健康とは病気や不調のない状態で生きることです。",
     explanation:
       "「病気（illness / disease）なしで生きること」と表現するときは、「without disease」でも通じますが、「free from illness」「without any serious health issues」のように言うとより自然でこなれた表現になります。",
     examples: [
@@ -607,6 +647,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I bring my single lens camera.",
     correction: "I brought my DSLR camera.",
+    japanese: "一眼レフカメラを持っていきました。",
     explanation:
       "「一眼レフカメラ」は英語では「a single-lens reflex camera」または略して「SLR」「DSLR（デジタル一眼レフ）」と言います。また、過去の旅行の話なので「bring」ではなく過去形「brought」を使います。",
     examples: [
@@ -622,6 +663,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "My hometown is Nagoya, but I migrated to Tokyo to work.",
     correction: "My hometown is Nagoya, but I moved to Tokyo for work.",
+    japanese: "地元は名古屋ですが、仕事のために東京へ引っ越しました。",
     explanation:
       "「migrate」は主に国境を越えて移住したり、鳥や動物が季節移動したりするときに使う硬い語です。国内で就職などのために引っ越すときは、シンプルに「moved to Tokyo for work」と表現するのが自然です。",
     examples: [
@@ -637,6 +679,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I usually go Seattle alone because it's difficult to adjust our schedule.",
     correction: "I usually go to Seattle alone because it's hard to coordinate our schedules.",
+    japanese: "スケジュールを合わせるのが難しいので、普段は1人でシアトルに行きます。",
     explanation:
       "「go」の後ろに都市名などの目的地を置くときは前置詞「to」が必要です（「go to Seattle」）。また、「お互いの予定を合わせる」と言うときは「adjust」よりも「coordinate our schedules」がよく使われます。",
     examples: [
@@ -652,6 +695,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "She was married with Americans, so after graduate, she married to Seattle.",
     correction: "She married an American, so after graduating, she moved to Seattle.",
+    japanese: "姉はアメリカ人と結婚したので、卒業後にシアトルへ引っ越しました。",
     explanation:
       "「（人）と結婚する」と言うときは他動詞の「marry + 人」を使うか、「get married to + 人」のように前置詞「to」を使います（「with」は使いません）。また、「結婚してシアトルに移った」は「moved to Seattle」と表現します。",
     examples: [
@@ -667,6 +711,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "One of my sister lives in Seattle now.",
     correction: "One of my sisters lives in Seattle now.",
+    japanese: "姉妹の1人が今シアトルに住んでいます。",
     explanation:
       "「〜のうちの1人」を表すときは「one of + 複数名詞」になるため、「sister」ではなく複数形の「sisters」にします。",
     examples: [
@@ -682,6 +727,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "My house doesn't have space to animals.",
     correction: "My house doesn't have enough space for pets.",
+    japanese: "私の家にはペットを飼う十分なスペースがありません。",
     explanation:
       "「〜のためのスペース・余裕」と言うときは「space to + 名詞」ではなく「space for + 名詞」（または「room for + 名詞」）と前置詞「for」を使います。",
     examples: [
@@ -697,6 +743,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Now I live in company's dormitory, and there is prohibit to have pets.",
     correction: "Now I live in a company dormitory, and pets are prohibited.",
+    japanese: "今は社員寮に住んでいて、ペットは禁止されています。",
     explanation:
       "「prohibit」は動詞なので「there is prohibit」という形にはできません。「ペットの飼育が禁止されている」と言うときは「pets are prohibited」または「we are not allowed to have pets」と表現します。また、「社員寮」は「a company dormitory」とします。",
     examples: [
@@ -712,6 +759,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "The test max score is 1000 and if we take the over 700...",
     correction: "The maximum score is 1,000, and you pass if you score over 700.",
+    japanese: "満点は1,000点で、700点以上取ると合格です。",
     explanation:
       "試験の「満点」は「the maximum score」または「a perfect score」と言います。また、「〜点以上を取る」は「take over 700」ではなく「score over 700」や「get over 700」を使います。",
     examples: [
@@ -727,6 +775,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I feel nervous because I had the exam two times, but I failed.",
     correction: "I feel nervous because I've taken the exam twice and failed both times.",
+    japanese: "すでに2回受けて2回とも落ちているので緊張しています。",
     explanation:
       "「試験を受ける」は「have an exam」より「take an exam」を使うのが自然です。また、「2回」を表すときは「two times」よりも「twice」がよく使われます。",
     examples: [
@@ -742,6 +791,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "In this weekend, I have a qualification exam.",
     correction: "This weekend, I have a certification exam.",
+    japanese: "今週末、資格試験があります。",
     explanation:
       "「this」「next」「last」「every」などが名詞の前に付くときは、前置詞の「in」や「on」は不要になります（「This weekend」「Next Monday」「Last week」）。",
     examples: [
@@ -757,6 +807,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Frozen food are so delicious, so I don't cook recently.",
     correction: "Frozen food is so delicious, so I haven't cooked much recently.",
+    japanese: "冷凍食品がとても美味しいので、最近はあまり自炊していません。",
     explanation:
       "「frozen food（冷凍食品）」は総称として不可算名詞で扱うため、be動詞は「is」を使います。また、「最近ずっと自炊していない」という過去から現在までの継続を表すときは、現在完了形（haven't cooked much recently）にします。",
     examples: [
@@ -772,6 +823,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "Using computers too much makes our health bad.",
     correction: "Using computers too much is bad for our health.",
+    japanese: "パソコンを使いすぎると健康に悪いです。",
     explanation:
       "「健康に悪い」と言うときは「make our health bad」よりも「be bad for our health」や「harm our health」を使う方が英語として自然です。",
     examples: [
@@ -787,6 +839,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "Some people are absorbed with computers.",
     correction: "Some people get too absorbed in computers.",
+    japanese: "パソコンにのめり込みすぎてしまう人もいます。",
     explanation:
       "「〜に夢中になる・没頭する」と言うときは、「be absorbed with」ではなく「be absorbed in」または「get absorbed in」のように前置詞「in」を使います。",
     examples: [
@@ -802,6 +855,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "It is easy to take care of pet robot than real pet like dogs and cats.",
     correction: "It is easier to take care of pet robots than real pets like dogs and cats.",
+    japanese: "犬や猫のような本物のペットより、ペットロボットの方が世話をしやすいです。",
     explanation:
       "「than（〜より）」を使って比較するときは、形容詞を比較級「easier」にする必要があります。また、一般的なペットやロボット全般を指すときは可算名詞を複数形（pet robots / real pets）にします。",
     examples: [
@@ -817,6 +871,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "We have to call other people without, unless I remember the cell phone number.",
     correction: "We can call people even if we don't remember their phone numbers.",
+    japanese: "電話番号を覚えていなくても電話をかけることができます。",
     explanation:
       "「電話番号を覚えていなくても電話できる」と言うときは、「have to（〜しなければならない）」ではなく「can（〜できる）」を使い、「even if we don't remember 〜（たとえ覚えていなくても）」とつなげると意味が明確になります。",
     examples: [
@@ -832,6 +887,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I remember my cell phone number when I was a child.",
     correction: "I used to remember my phone number when I was a child.",
+    japanese: "子どもの頃は自分の電話番号を覚えていました。",
     explanation:
       "「子どもの頃は覚えていた（今は覚えていない）」という過去の状態や習慣を表すときは、現在形（remember）ではなく「used to remember」または過去形「remembered」を使います。",
     examples: [
@@ -847,6 +903,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "In Japan, most Japanese cannot write a difficult language.",
     correction: "In Japan, many people can no longer write complex kanji by hand.",
+    japanese: "日本では、複雑な漢字を手書きできなくなっている人が多いです。",
     explanation:
       "「難しい漢字（文字）」を指すときは、「a difficult language（難しい言語）」ではなく「complex kanji」や「difficult characters」と言います。また、「手書きで」は「by hand」を添えると明確です。",
     examples: [
@@ -862,6 +919,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "We can connect other people every time.",
     correction: "We can connect with other people anytime.",
+    japanese: "いつでも他の人とつながることができます。",
     explanation:
       "「人とつながる・連絡を取り合う」という意味で「connect」を使うときは、自動詞として前置詞「with」を付け「connect with other people」とします（「connect A」はケーブルや機器をつなぐときに使います）。",
     examples: [
@@ -877,6 +935,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "AI makes our working efficiency.",
     correction: "AI makes our work more efficient.",
+    japanese: "AIは私たちの仕事をより効率的にしてくれます。",
     explanation:
       "「make + 目的語 + 形容詞」で「〜を…の状態にする」を表すときは、名詞の「efficiency」ではなく形容詞の「efficient」を使い「makes our work more efficient」とします。名詞「efficiency」を使う場合は「AI improves our work efficiency.」と表現します。",
     examples: [
@@ -892,6 +951,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Today I'm working day.",
     correction: "Today is a workday.",
+    japanese: "今日は仕事の日です。",
     explanation:
       "「今日は仕事の日（出勤日）です」と言うとき、「I（私）」を主語にして「I'm working day」とは言えません。「Today is a workday.」または「I'm working today.」「I have work today.」と表現します。",
     examples: [
@@ -907,6 +967,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Everyone has smartphones, so we can communicate with every time, everywhere.",
     correction: "Everyone has a smartphone, so we can communicate with each other anytime, anywhere.",
+    japanese: "誰もがスマートフォンを持っているので、いつでもどこでも連絡を取り合えます。",
     explanation:
       "「いつでも、どこでも」と言うときは「every time, everywhere」ではなく「anytime, anywhere」を使います。また、「communicate with」の後ろには「each other（お互い）」のように連絡をとる相手が必要です。",
     examples: [
@@ -922,6 +983,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Before smartphones, we had to make a point with my friends.",
     correction: "Before smartphones, we had to make plans in advance with friends.",
+    japanese: "スマートフォンの普及前は、友達と事前に予定を立てる必要がありました。",
     explanation:
       "「友達と会う約束をする・予定を立てる」と言うときは、「make a point（要点を述べる／わざわざ〜する）」ではなく「make plans」を使います。なお、「make an appointment」は主に病院やビジネスなどの予約に使います。",
     examples: [
@@ -937,6 +999,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "There is no chance to communicate with English.",
     correction: "There is no chance to communicate in English.",
+    japanese: "英語でコミュニケーションをとる機会がありません。",
     explanation:
       "「（言語）でコミュニケーションをとる・話す」と言うとき、言語の前置詞は「with」ではなく「in」を使います（「communicate in English」「speak in Japanese」）。「communicate with 〜」は後ろに「人」を置くときに使います。",
     examples: [
@@ -952,6 +1015,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Now we can easy to go where we want.",
     correction: "Now we can easily go wherever we want.",
+    japanese: "今では行きたい場所へどこへでも簡単に行けます。",
     explanation:
       "助動詞「can」の後ろに形容詞「easy」を直接置くことはできません。「簡単に〜できる」と言うときは、副詞の「easily」を使って「we can easily go」とするか、「it is easy for us to go」の形にします。",
     examples: [
@@ -967,6 +1031,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I think an automobile car is one of the best technological advancements.",
     correction: "I think the car is one of the best technological advancements.",
+    japanese: "車は最も優れた技術進歩の1つだと思います。",
     explanation:
       "「automobile」と「car」はどちらも「自動車」を意味するため、並べて使うと意味が重複します。日常会話ではシンプルに「the car」または「cars」だけで十分です。",
     examples: [
@@ -982,6 +1047,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "If the source which AI search incorrect, AI's information is wrong.",
     correction: "If the source that AI uses is incorrect, the information will be wrong.",
+    japanese: "AIが参照する情報源が間違っていれば、その情報も誤ったものになります。",
     explanation:
       "形容詞「incorrect」を使うときは、if節の中にbe動詞（is）が必要です（「If the source ... is incorrect」）。主語と動詞の対応を忘れずに補いましょう。",
     examples: [
@@ -997,6 +1063,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "AI also search for the internet or books.",
     correction: "AI also searches the internet or books.",
+    japanese: "AIもインターネットや書籍を検索します。",
     explanation:
       "「インターネットを検索する」と言うときは「search for the internet」ではなく「search the internet」と他動詞で使います。「search for 〜」は「（見つからないもの）を探し求める」という意味になるため、「search for information on the internet」のように使います。",
     examples: [
@@ -1012,6 +1079,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "To technology, we can easily communicate with people who live far from us.",
     correction: "Thanks to technology, we can easily communicate with people who live far from us.",
+    japanese: "テクノロジーのおかげで、遠くに住んでいる人とも簡単に連絡が取れます。",
     explanation:
       "「〜のおかげで」という肯定的な理由・背景を表すときは、「To 〜」ではなく「Thanks to 〜」を使います。",
     examples: [
@@ -1027,6 +1095,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I use smartphone for searching, listen to music, and watching videos.",
     correction: "I use my smartphone for searching, listening to music, and watching videos.",
+    japanese: "検索したり、音楽を聴いたり、動画を見たりするのにスマホを使っています。",
     explanation:
       "前置詞「for」の後ろに複数の動作を並べるときは、すべて動名詞（-ing）に形を揃えます（searching, listening, and watching）。また、「smartphone」は可算名詞なので「my smartphone」のように所有格や冠詞を付けます。",
     examples: [
@@ -1042,6 +1111,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I have no plan without studying.",
     correction: "I have no plans other than studying.",
+    japanese: "勉強以外に予定はありません。",
     explanation:
       "「〜以外に（〜を除いて）予定がない」と言うときは、「without（〜なしで）」ではなく「other than 〜」や「aside from 〜」を使います。また、「予定」は複数形の「plans」を使うのが自然です。",
     examples: [
@@ -1057,6 +1127,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I think technology makes discrimination splitting.",
     correction: "I think technology makes discrimination spread.",
+    japanese: "テクノロジーは差別を拡散させると思います。",
     explanation:
       "「広がる・拡散する」は「split（分裂する・割れる）」ではなく「spread」を使います。また、「make + 目的語 + 動詞の原形」の形をとるため、「splitting」ではなく原形の「spread」にします。",
     examples: [
@@ -1072,6 +1143,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "I try to do no discrimination.",
     correction: "I try not to discriminate against others.",
+    japanese: "他の人を差別しないように心がけています。",
     explanation:
       "「差別する」は「do discrimination」ではなく、動詞の「discriminate（against 〜）」を使います。「〜しないように心がける」は「try not to + 動詞の原形」で表すと自然です。",
     examples: [
@@ -1087,6 +1159,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I think prejudice is the same meaning as stereotype.",
     correction: "I think prejudice has the same meaning as stereotype.",
+    japanese: "偏見はステレオタイプと同じ意味だと思います。",
     explanation:
       "「AはBと同じ意味だ」と言うとき、「A is the same meaning as B」だと「A＝意味」になってしまいます。意味を「持っている」と考えて「A has the same meaning as B」とするか、動詞を使って「A means the same thing as B」と表現します。",
     examples: [
@@ -1102,6 +1175,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I went to high school which is not smart.",
     correction: "I didn't go to a prestigious high school.",
+    japanese: "私は名門高校に通っていたわけではありません。",
     explanation:
       "「smart」は主に人の知性に対して使う形容詞で、学校に対して「進学校・名門校」と言うときは「prestigious（名門の）」「top」「good」などを使います。また、「high school」は具体的な1つの学校を指すため、冠詞「a」が必要です。",
     examples: [
@@ -1117,6 +1191,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "When I applied job interview, I couldn't get the chance to be interviewed.",
     correction: "When I applied for a job, I didn't get a chance to be interviewed.",
+    japanese: "求人に応募したとき、面接を受ける機会すら得られませんでした。",
     explanation:
       "「〜に応募する」と言うときは、他動詞のように直接名詞を置かず、「apply for + 名詞」と前置詞「for」を付けます。また、「面接に応募する」のではなく「仕事（求人）に応募する」ので、「apply for a job」や「apply for a position」と言うのが自然です。",
     examples: [
@@ -1132,6 +1207,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "People in Japan have the same nationality, same religion, and same color of skins.",
     correction: "People in Japan share the same nationality, religion, and skin color.",
+    japanese: "日本の人々は同じ国籍、宗教、肌の色を共有しています。",
     explanation:
       "「肌の色」は「color of skins」ではなく「skin color（不可算）」と言うのが自然です。また、「同じ〜を持っている」と言うときは「share the same A, B, and C」のように「the same」を1回にまとめるとすっきりします。",
     examples: [
@@ -1147,6 +1223,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "In Japan, other discrimination hardly occurred.",
     correction: "In Japan, other forms of discrimination rarely happen.",
+    japanese: "日本では、他の種類の差別はめったに起きません。",
     explanation:
       "日本の現状という一般的な事実を述べているため、過去形（occurred）ではなく現在形（happen / occur）を使います。また、「他の種類の差別」と言うときは「other forms of discrimination」や「other types of discrimination」と表現すると自然です。",
     examples: [
@@ -1162,6 +1239,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Everyone may be able to discrimination because we don't know everything.",
     correction: "Anyone might discriminate against others because we don't know everything.",
+    japanese: "私たちはすべてを知っているわけではないので、誰でも他人を差別してしまうことがあります。",
     explanation:
       "「discrimination」は名詞なので、「to」の後ろには動詞の「discriminate（差別する）」を使います（通常「discriminate against + 人」の形をとります）。また、「〜してしまうかもしれない」という可能性を表すときは、「be able to（〜する能力がある）」ではなく「might」や「can」を使います。",
     examples: [
@@ -1177,6 +1255,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Almost doctors are men and almost women are good at cooking.",
     correction: "Most doctors are men, and most women are good at cooking.",
+    japanese: "ほとんどの医師は男性で、ほとんどの女性は料理が得意です。",
     explanation:
       "「almost」は副詞なので、「almost + 名詞」の形では使えません。「ほとんどの〜」と名詞に直接つなげるときは「most + 名詞」または「almost all + 名詞」を使います。",
     examples: [
@@ -1192,6 +1271,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "In Japan this week, tomorrow is national holiday.",
     correction: "Tomorrow is a national holiday in Japan.",
+    japanese: "明日は日本の祝日です。",
     explanation:
       "「holiday」や「national holiday」は可算名詞なので、単数で使うときは冠詞「a」が必要です。また、「this week」と「tomorrow」を重ねるより、「Tomorrow is a national holiday in Japan.」のようにシンプルに言うと自然です。",
     examples: [
@@ -1207,6 +1287,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "My company said to me to get a license.",
     correction: "My company told me to get a certification.",
+    japanese: "会社から資格を取得するように言われました。",
     explanation:
       "「（人）に〜するように言う」と言うときは、「say to 人 to 〜」の形は使えず、「tell + 人 + to + 動詞の原形」または「ask + 人 + to 〜」を使います。また、ITやAI関連の資格は運転免許などの公的免許を指す「license」より「certification」が自然です。",
     examples: [
@@ -1222,6 +1303,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "On YouTube, I can stop and restart and go back again.",
     correction: "On YouTube, I can pause, replay, and go back.",
+    japanese: "YouTubeでは一時停止したり、再生し直したり、巻き戻したりできます。",
     explanation:
       "動画の再生を一時停止するときは「stop（完全に終了する）」よりも「pause（一時停止する）」を使うのが自然です。また、もう一度見直すときは「replay」や「rewind（巻き戻す）」と言えます。",
     examples: [
@@ -1237,6 +1319,7 @@ window.ENGLISH_ENTRIES = [
     category: "Phrasal Verb",
     whatISaid: "I catch up AI news on YouTube.",
     correction: "I catch up on AI news on YouTube.",
+    japanese: "YouTubeでAIの最新ニュースを追っています。",
     explanation:
       "「（最新情報やニュースなど）に追いつく・情報を追う」と言うときは、「catch up」だけでなく前置詞「on」を付けて「catch up on + 名詞」と表現します。",
     examples: [
@@ -1252,6 +1335,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "To understand deeply the subject, I watch movies on YouTube.",
     correction: "To understand the subject deeply, I watch videos on YouTube.",
+    japanese: "その科目を深く理解するために、YouTubeで動画を見ています。",
     explanation:
       "他動詞（understand）と目的語（the subject）の間に副詞（deeply）を挟まず、目的語の後ろに置いて「understand the subject deeply」とするのが自然な語順です。",
     examples: [
@@ -1267,6 +1351,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I usually watch science and mathematic movie on YouTube.",
     correction: "I usually watch science and math videos on YouTube.",
+    japanese: "普段YouTubeで理科や数学の動画を見ています。",
     explanation:
       "英語の「movie」は主に劇場公開される長編映画を指し、YouTube などのネット上の動画や解説動画には「video（videos）」を使います。また、「数学」は「mathematic」ではなく「math」または「mathematics」と言います。",
     examples: [
@@ -1282,6 +1367,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I prefer watching movie with my friends to alone.",
     correction: "I prefer watching movies with my friends to watching them alone.",
+    japanese: "1人で観るより友達と映画を観る方が好きです。",
     explanation:
       "「prefer A to B」を使うときは、AとBの文法的な形を揃える必要があります。「watching movies 〜（動名詞句）」と比べる相手も「watching them alone（動名詞句）」にします。また、映画全般を指すときは複数形「movies」が自然です。",
     examples: [
@@ -1297,6 +1383,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I've not heard the movie.",
     correction: "I've never heard of that movie.",
+    japanese: "その映画は聞いたことがありません。",
     explanation:
       "「〜の存在を知っている／聞いたことがある」と言うときは、「hear」だけでなく前置詞「of」または「about」を付けて「hear of 〜」と表現します。「hear + 名詞」だけだと「音や声を聞く」という意味になります。",
     examples: [
@@ -1312,6 +1399,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I watched Conan when I was a kid, but recently I don't watch it.",
     correction: "I watched Conan when I was a kid, but I haven't watched it recently.",
+    japanese: "子どもの頃はコナンを見ていましたが、最近は見ていません。",
     explanation:
       "「最近ずっと〜していない」と過去から現在までの継続・経験を表すときは、現在形（don't watch）ではなく現在完了形（haven't watched it recently）を使います。",
     examples: [
@@ -1327,6 +1415,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "This anime sound is so nice, so it is a good experience, which I watch at theater.",
     correction: "The sound is great, so watching it in a theater is a wonderful experience.",
+    japanese: "音響が素晴らしいので、映画館で観るのは素敵な体験です。",
     explanation:
       "「映画館で観ると良い体験になる」と言うときは、関係代名詞「which」でつなぐよりも「watching it in a theater is a wonderful experience」のように動名詞を主語にするとすっきり自然に伝わります。また、「theater」には冠詞（a / the）が必要です。",
     examples: [
@@ -1342,6 +1431,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Today, I have a qualification exam after the work.",
     correction: "Today, I have a certification exam after work.",
+    japanese: "今日、仕事のあとに資格試験があります。",
     explanation:
       "「仕事のあとに」と言うとき、業務や労働を意味する不可算名詞の「work」には定冠詞「the」を付けず「after work」と言います（通勤の「at work」「before work」も同様です）。",
     examples: [
@@ -1357,6 +1447,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "My dormitory is close to university, so it is easy to go university every time to study.",
     correction: "My dormitory was close to the university, so it was easy to go to campus anytime to study.",
+    japanese: "寮が大学の近くだったので、いつでもキャンパスに行って勉強しやすかったです。",
     explanation:
       "「いつでも（好きなときに）」と言うときは「every time（〜するたびに毎回）」ではなく「anytime」を使います。また、「大学に行く」は前置詞「to」を付けて「go to the university」や「go to campus」とし、過去の話なので時制を過去形にします。",
     examples: [
@@ -1372,6 +1463,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "When I was a university student, I don't have time to enjoy your life.",
     correction: "When I was a university student, I didn't have time to enjoy my life.",
+    japanese: "大学生の頃は自分の生活を楽しむ時間がありませんでした。",
     explanation:
       "大学時代の過去の話なので「don't have」ではなく過去形の「didn't have」にします。また、主語が「I（私）」なので「your life」ではなく「my life」で統一します。",
     examples: [
@@ -1387,6 +1479,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Local people easy to work at Toyota.",
     correction: "It's easy for local people to work at Toyota.",
+    japanese: "地元の人にとってはトヨタで働きやすいです。",
     explanation:
       "「easy」や「difficult」は人を主語にして「Local people are easy to 〜」と言うと「地元の人は扱いやすい」という意味になります。「地元の人にとって〜しやすい」と言うときは「It is easy for local people to 〜」の構文を使います。",
     examples: [
@@ -1402,6 +1495,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Yes, headquarter is located in my hometown.",
     correction: "Yes, the headquarters is located in my hometown.",
+    japanese: "はい、本社が私の地元にあります。",
     explanation:
       "「本社・本部」を表す「headquarters」は、単数の会社の本社を指す場合でも常に語尾に「s」が付きます。また、特定の会社の本社を指すので定冠詞「the」や所有格（Toyota's）を付けます。",
     examples: [
@@ -1417,6 +1511,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "She studied English and she go abroad a lot. Now she work at Seattle airport.",
     correction: "She studied English and went abroad a lot. Now she works at Seattle's airport.",
+    japanese: "彼女は英語を勉強して海外にたくさん行きました。今はシアトルの空港で働いています。",
     explanation:
       "過去の出来事（海外へよく行った）には過去形「went abroad」を、現在の事実（主語が she）には三単現の「s」を付けて「works」を使います。時制と主語に合わせた動詞の変化に注意しましょう。",
     examples: [
@@ -1432,6 +1527,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "My siblings have the same choice like me.",
     correction: "My siblings made the same choice as me.",
+    japanese: "きょうだいたちも私と同じ選択をしました。",
     explanation:
       "「〜と同じ（選択・もの）」と言うときは「the same ... like 〜」ではなく、「the same ... as 〜」と前置詞「as」を使います。また、「選択をする」は「have a choice」より「make a choice」が自然です。",
     examples: [
@@ -1447,6 +1543,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "After graduate high school, most people work.",
     correction: "After graduating from high school, most people start working.",
+    japanese: "高校を卒業したあと、ほとんどの人が働き始めます。",
     explanation:
       "前置詞「after」の後ろに動詞を置くときは動名詞（graduating）にします。また、「graduate」は自動詞なので、学校名を続けるときは必ず前置詞「from」を付けて「graduate from high school」と言います。",
     examples: [
@@ -1462,6 +1559,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "We don't have deadline, so it's not pleasure.",
     correction: "We don't have strict deadlines, so there's no pressure.",
+    japanese: "厳しい締め切りがないのでプレッシャーがありません。",
     explanation:
       "「プレッシャー（重圧）」は「pleasure（喜び・楽しみ）」ではなく「pressure」です。発音と綴りの混同に気をつけましょう。また、「プレッシャーがない」は「it's not pressure」ではなく「there's no pressure」や「it's not stressful」と表現します。",
     examples: [
@@ -1477,6 +1575,7 @@ window.ENGLISH_ENTRIES = [
     category: "Phrasal Verb",
     whatISaid: "It is easy to eat out restaurants.",
     correction: "It is easy to eat out at restaurants.",
+    japanese: "レストランで外食しやすいです。",
     explanation:
       "「eat out（外食する）」は目的語をとらない自動詞句なので、後ろに「restaurants」を直接置けません。場所を付け加える場合は「eat out at restaurants」のように前置詞「at」を入れるか、単に「eat out」だけで表します。",
     examples: [
@@ -1492,6 +1591,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "It is easy to keep balance, career and daily life.",
     correction: "It is easy to keep a balance between my career and daily life.",
+    japanese: "仕事と日常生活のバランスを保つのが簡単です。",
     explanation:
       "「AとBのバランスを保つ」と言うときは、可算名詞「balance」に冠詞「a」を付け、前置詞「between」を使って「keep a balance between A and B」と表現します。",
     examples: [
@@ -1507,6 +1607,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "He taught how making things is fun.",
     correction: "He taught me to enjoy making things.",
+    japanese: "父はものづくりを楽しむことを教えてくれました。",
     explanation:
       "「（人）に〜することを教える」と言うときは、「teach + 人 + to + 動詞の原形」の形をとります。「teach」の後ろに「me（誰に）」を補い、「to enjoy」のように不定詞を続けると自然です。",
     examples: [
@@ -1522,6 +1623,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I chose a software engineer as a job.",
     correction: "I chose software engineering as my career.",
+    japanese: "キャリアとしてソフトウェアエンジニアリングを選びました。",
     explanation:
       "職種や分野そのものを「キャリアとして選んだ」と言うときは、人を表す「a software engineer」ではなく分野を表す「software engineering」を使います。また、「as a job」より「as my career」と言うと将来の道を選んだニュアンスが自然に伝わります。",
     examples: [
@@ -1537,6 +1639,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Maybe I'm not. I'm inspired by my parents.",
     correction: "Maybe not, but I was inspired by my parents.",
+    japanese: "そうではないかもしれませんが、両親に影響を受けました。",
     explanation:
       "相手の質問に対して「たぶんそうではない」と短く返すときは「Maybe I'm not.」ではなく「Maybe not.」と言います。また、子どもの頃に受けた影響の話なので、現在形（I'm inspired）ではなく過去形（I was inspired）にします。",
     examples: [
@@ -1552,6 +1655,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "Yes, I went kindergarten.",
     correction: "Yes, I went to kindergarten.",
+    japanese: "はい、幼稚園に通っていました。",
     explanation:
       "「go」は自動詞なので、行き先や通った学校を後ろに置くときは前置詞「to」が必要です（「go to kindergarten」）。前置詞なしで言う場合は他動詞の「attend」を使い、「I attended kindergarten.」とします。",
     examples: [
@@ -1567,6 +1671,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Some children cannot go kindergarten, even if their family can pay money.",
     correction: "Some children cannot attend kindergarten, even if their family can afford it.",
+    japanese: "たとえ家庭に払う余裕があっても、幼稚園に通えない子どもたちがいます。",
     explanation:
       "「（経済的に）費用を払う余裕がある」と言うときは、「can pay money」より「can afford it」または「can afford to pay for kindergarten」が自然です。また、「幼稚園に通う」は「go to kindergarten」または「attend kindergarten」とします。",
     examples: [
@@ -1582,6 +1687,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "In Philippines, do you have to pay money to go to school?",
     correction: "In the Philippines, do you have to pay to go to school?",
+    japanese: "フィリピンでは学校に通うのにお金を払う必要がありますか？",
     explanation:
       "「Philippines（フィリピン）」のように複数形の国名には定冠詞「the」を付けて「the Philippines」とします（「the United States」などと同様です）。また、「お金を払う」は文脈から明らかなので「pay」だけで十分伝わります。",
     examples: [
@@ -1597,6 +1703,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "We can study language, scientific things, and societies.",
     correction: "We can study languages, science, and social studies.",
+    japanese: "言語や理科、社会科を学ぶことができます。",
     explanation:
       "学校の教科名として言うときは、「scientific things」ではなく「science（理科・科学）」、「societies」ではなく「social studies（社会科）」を使います。",
     examples: [
@@ -1612,6 +1719,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Regardless of where you live and how much your family have money.",
     correction: "Regardless of where they live or how much their family earns.",
+    japanese: "どこに住んでいるかや、家族がどれだけ稼いでいるかに関係なく。",
     explanation:
       "「どれくらいのお金」と言うときは「how much money your family has」のように「how much + 名詞」の語順にします。また、家庭の収入について述べるときは「have money」より「how much their family earns（どれくらい稼いでいるか）」と表現すると自然です。",
     examples: [
@@ -1627,6 +1735,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "Can be educated until high school for free.",
     correction: "Students can receive a free education through high school.",
+    japanese: "生徒は高校まで無料で教育を受けられます。",
     explanation:
       "「高校まで（高校卒業まで含めて）」と言うときは、「until high school（高校に入るまで、と解釈されやすい）」ではなく「through high school」を使います。また、「教育を受ける」は受動態「be educated」より「receive an education」が自然で、主語（Students）も忘れずに補います。",
     examples: [
@@ -1642,6 +1751,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "Today is not off.",
     correction: "Today is not my day off.",
+    japanese: "今日は休みではありません。",
     explanation:
       "「今日は休みではない」と言うとき、「today」を主語にして「today is not off」とは言いません。「Today is not my day off.」または「I'm working today.」「I have work today.」と表現します。",
     examples: [
@@ -1657,6 +1767,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "It is difficult to monitor our children do SNS by parents.",
     correction: "It is difficult for parents to monitor how their children use social media.",
+    japanese: "親が子どものSNSの使い方を監視するのは難しいです。",
     explanation:
       "SNSを「使う」ときは「do SNS」ではなく「use social media」と言います。また、「親が〜するのは難しい」と行動の主体を示すときは、文末に「by parents」を置くのではなく「It is difficult for parents to 〜」の形にします。",
     examples: [
@@ -1672,6 +1783,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "One of the important role is support our dreams.",
     correction: "One of the important roles is to support our dreams.",
+    japanese: "重要な役割の1つは、子どもたちの夢を応援することです。",
     explanation:
       "「〜のうちの1つ」を表すときは「one of the + 複数名詞」になるため、「role」ではなく「roles」にします。また、be動詞（is）の後ろに動詞を置くときは「to support」または「supporting」の形にします。",
     examples: [
@@ -1687,6 +1799,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I want to do it, but I have so concerned.",
     correction: "I want to do it, but I have a lot of concerns.",
+    japanese: "そうしたいのですが、たくさんの懸念があります。",
     explanation:
       "「concerned」は形容詞なので「have」の後ろには置けません。「心配・懸念がある」と言うときは名詞の複数形を使って「I have a lot of concerns.」とするか、be動詞を使って「I'm very concerned (about it).」と表現します。",
     examples: [
@@ -1702,6 +1815,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "In Japan these days, raising fee is increasing.",
     correction: "In Japan these days, the cost of raising children is increasing.",
+    japanese: "最近の日本では、子育てにかかる費用が増えています。",
     explanation:
       "「子育てにかかる費用・養育費」は「raising fee」とは言わず、「the cost of raising children」や「child-rearing costs」と表現します。「fee」は授業料や入場料・手数料など特定のサービスに対する料金を指します。",
     examples: [
@@ -1717,6 +1831,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I wanted to go study abroad, and they paid fee.",
     correction: "I wanted to study abroad, and they paid for the expenses.",
+    japanese: "留学したかったのですが、両親が費用を払ってくれました。",
     explanation:
       "「fee」は可算名詞なので単数無冠詞では使えません。留学の費用全般を指すときは「the expenses」や「the costs」を使い、「paid for the expenses（費用を負担してくれた）」のように表現します。授業料を指す場合は「tuition」を使います。",
     examples: [
@@ -1732,6 +1847,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "When I was a child, I usually be scolded by my father.",
     correction: "When I was a child, I was often scolded by my father.",
+    japanese: "子どもの頃、よく父に叱られました。",
     explanation:
       "子どもの頃の過去の話なので、be動詞の原形「be」ではなく過去形「was」を使います。また、頻度を表す副詞（often / usually）はbe動詞の後ろに置きます。",
     examples: [
@@ -1747,6 +1863,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I call with my family every day.",
     correction: "I call my family every day.",
+    japanese: "毎日家族に電話しています。",
     explanation:
       "「（人に）電話をかける」という意味の「call」は他動詞なので、前置詞「with」は不要で直接目的語をとります。「talk with 〜」や「chat with 〜」と混同しないように注意しましょう。",
     examples: [
@@ -1762,6 +1879,7 @@ window.ENGLISH_ENTRIES = [
     category: "Phrasal Verb",
     whatISaid: "I usually eat out breakfast with my family in holiday.",
     correction: "I usually go out for breakfast with my family on holidays.",
+    japanese: "休日にはよく家族と朝ごはんを外で食べます。",
     explanation:
       "「eat out」は「外食する」という自動詞句なので、後ろに直接「breakfast」を続けることはできません。「朝ごはんを外で食べる」は「go out for breakfast」または「eat breakfast out」と言います。また、「休日に」は「on holidays」と前置詞「on」を使います。",
     examples: [
@@ -1777,6 +1895,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "If I have bad concerning things, I usually ask advice for my family.",
     correction: "If I have any concerns, I usually ask my family for advice.",
+    japanese: "心配事があるときは、たいてい家族にアドバイスを求めます。",
     explanation:
       "「（人）にアドバイスを求める」は「ask advice for 〜」ではなく「ask + 人 + for advice」または「ask advice from + 人」と表現します。また、「心配事」は「bad concerning things」より名詞の「concerns」や「worries」を使うとすっきりします。",
     examples: [
@@ -1792,6 +1911,7 @@ window.ENGLISH_ENTRIES = [
     category: "Phrasal Verb",
     whatISaid: "We can cheer up each other.",
     correction: "We can cheer each other up.",
+    japanese: "お互いを励まし合うことができます。",
     explanation:
       "「cheer up（元気づける）」のような他動詞句で、目的語が「each other」や代名詞（me, you, them など）のときは、動詞と副詞の間に目的語を挟んで「cheer each other up」とするのが自然です。",
     examples: [
@@ -1807,6 +1927,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "I make my rule long time I use SNS.",
     correction: "I set a time limit for using social media.",
+    japanese: "SNSを使う時間の上限を決めています。",
     explanation:
       "「使用時間のルールを作る（時間を制限する）」と言うときは「set a time limit for 〜」や「limit my screen time on 〜」と表現すると自然です。また、英語では和製英語の「SNS」よりも「social media」が一般的に使われます。",
     examples: [
@@ -1822,6 +1943,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I do not distract when I'm in working room.",
     correction: "I don't get distracted when I'm in my workspace.",
+    japanese: "仕事部屋にいるときは気が散りません。",
     explanation:
       "「distract」は「（人の）気を散らす」という他動詞なので、「気が散らない」と言うときは「I don't get distracted」のように受動態にします。また、仕事用の部屋は「working room」ではなく「workspace」や「home office」と言うのが自然です。",
     examples: [
@@ -1837,6 +1959,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "It is good effect for me.",
     correction: "It has a good effect on me.",
+    japanese: "私にとって良い効果があります。",
     explanation:
       "「effect（効果）」は名詞なので、「It is good effect」ではなく「It has a good effect on me.」のように動詞「have」と前置詞「on」を組み合わせて使います。形容詞を使って「It is very effective for me.」と言うこともできます。",
     examples: [
@@ -1852,6 +1975,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "We are difficult to calm down alone now.",
     correction: "It's difficult for us to unwind on our own now.",
+    japanese: "今は1人でゆっくりくつろぐのが難しいです。",
     explanation:
       "「difficult」や「easy」などの形容詞は、人を主語にして「We are difficult to 〜」と言うと「私たちは扱いにくい人だ」という意味になります。「私たちが〜するのは難しい」と言うときは「It is difficult for us to 〜」の形を使います。また、仕事後にリラックスする意味では「unwind」も自然です。",
     examples: [
@@ -1867,6 +1991,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I can communicate remote using smartphone and PC.",
     correction: "I can communicate remotely using a smartphone and a PC.",
+    japanese: "スマホやパソコンを使ってリモートで連絡が取れます。",
     explanation:
       "動詞の「communicate」を修飾するときは形容詞の「remote」ではなく副詞の「remotely」を使います。また、「smartphone」「PC」などの可算名詞を単数で使うときは冠詞「a」を付けます。",
     examples: [
@@ -1882,6 +2007,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "Sometimes I go back my parents' house and I work from there.",
     correction: "Sometimes I go back to my parents' house and work from there.",
+    japanese: "ときどき実家に帰ってそこから仕事をします。",
     explanation:
       "「go back」は自動詞なので、後ろに場所の名詞を置くときは前置詞「to」が必要です（「go back to + 場所」）。なお、「home」は副詞として使うため「go back home」のように「to」は不要になります。",
     examples: [
@@ -1897,6 +2023,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I like working from home because I can work from everywhere.",
     correction: "I like working from home because I can work from anywhere.",
+    japanese: "どこからでも働けるので在宅勤務が好きです。",
     explanation:
       "「（場所に縛られず）どこからでも働ける」と言うときは、「everywhere（文字通りすべての場所）」ではなく「anywhere（どこでも好きな場所）」を使うのが自然です。",
     examples: [
@@ -1912,6 +2039,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "My co-worker work from home too.",
     correction: "My coworkers work from home too.",
+    japanese: "同僚たちも在宅勤務をしています。",
     explanation:
       "同僚たち全般を指すときは複数形の「coworkers」にします。特定の1人の同僚を指す場合は「My coworker works from home」のように動詞に三単現の「-s」が必要です。",
     examples: [
@@ -1927,6 +2055,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I want to work at office, not in my house.",
     correction: "I want to work at the office rather than from home.",
+    japanese: "自宅からではなくオフィスで働きたいです。",
     explanation:
       "「オフィスで働く」と言うときは冠詞「the」を付けて「at the office」または「in the office」とします。また、「自宅で働く」は「in my house」より「from home」と言うのが一般的です。",
     examples: [
@@ -1942,6 +2071,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I think it is not healthy style because I have no to do exercise.",
     correction: "I don't think it's a healthy lifestyle because I don't exercise.",
+    japanese: "運動をしていないので健康的な生活スタイルではないと思います。",
     explanation:
       "「生活スタイル」は「style」だけでなく「lifestyle（可算名詞）」を使います。また、「運動をする時間や習慣がない」と言うときは「have no to do exercise」ではなく、「I don't exercise」や「I don't have time to exercise」のように表現します。",
     examples: [
@@ -1957,6 +2087,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "My biggest fail is failing studying abroad program.",
     correction: "My biggest failure was not getting into a study abroad program.",
+    japanese: "最大の失敗は、留学プログラムに合格できなかったことです。",
     explanation:
       "名詞の「失敗」は動詞の「fail」ではなく「failure」を使います。また、「留学プログラム」は「studying abroad program」ではなく「a study abroad program」のように名詞の「study」を修飾語として使います。過去の出来事なので時制も過去形（was）にします。",
     examples: [
@@ -1972,6 +2103,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I don't think that failure is pessimistic things.",
     correction: "I don't think failure is a negative thing.",
+    japanese: "失敗は悪いことだとは思いません。",
     explanation:
       "「pessimistic（悲観的な）」は主に人や態度に対して使う形容詞です。物事に対して「悪いこと・ネガティブなこと」と言うときは「negative」を使います。また、主語が単数の「failure」なので、「things」ではなく「a negative thing」と単数で揃えます。",
     examples: [
@@ -1987,6 +2119,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Makes people happy makes me happy.",
     correction: "Making people happy makes me happy.",
+    japanese: "人を幸せにすることが私を幸せにします。",
     explanation:
       "「〜すること」と動詞を文の主語にするときは、現在形（Makes）ではなく動名詞（Making）を使います。",
     examples: [
@@ -2002,6 +2135,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "My passion is makes people happy by making something.",
     correction: "My passion is making people happy by creating things.",
+    japanese: "私の情熱は、ものを作って人を幸せにすることです。",
     explanation:
       "be動詞（is）の後ろに動詞の現在形（makes）を続けることはできません。「私の情熱は〜することです」と補語にするときは動名詞（making）または不定詞（to make）を使います。",
     examples: [
@@ -2017,6 +2151,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I want to make my family happy by my cuisine.",
     correction: "I want to make my family happy with my cooking.",
+    japanese: "自分の料理で家族を幸せにしたいです。",
     explanation:
       "家庭料理や手料理を指すときは、「cuisine（特定の国・地域の料理様式、例：Japanese cuisine）」ではなく「cooking」や「food」「dishes」を使うのが自然です。また、手段を表す前置詞は「with」が適しています。",
     examples: [
@@ -2032,6 +2167,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Cooking is taught by my mother.",
     correction: "My mother taught me how to cook.",
+    japanese: "母が私に料理の仕方を教えてくれました。",
     explanation:
       "過去に母から教わったことなので、現在形の受動態（is taught）ではなく過去形を使います。また、「誰が誰に教えたか」を伝えるときは受動態より「My mother taught me how to cook.」と能動態にする方が自然です。",
     examples: [
@@ -2047,6 +2183,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "Yes, I like handcraft.",
     correction: "Yes, I like arts and crafts.",
+    japanese: "はい、手芸や工作が好きです。",
     explanation:
       "趣味としての「手芸・ハンドメイド・工作」の総称には、単数の「handcraft」より複数形の「crafts」や「arts and crafts」がよく使われます。",
     examples: [
@@ -2062,6 +2199,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "After looking at the art, I would hard working.",
     correction: "After looking at art, I feel motivated to work harder.",
+    japanese: "美術作品を鑑賞したあとは、もっと仕事を頑張ろうという気持ちになります。",
     explanation:
       "「hard-working（勤勉な）」は形容詞なので「would」の後ろにそのまま置けません。「頑張ろうという気持ちになる」と言いたいときは「feel motivated to work harder」や「It motivates me to work harder.」と表現すると自然です。",
     examples: [
@@ -2077,6 +2215,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "If the artist holds the exhibit, I want to go there.",
     correction: "If the artist holds an exhibition, I want to go.",
+    japanese: "好きなアーティストが展覧会を開くときは行きたいです。",
     explanation:
       "「exhibit」は主に「展示品（個々の作品）」を指し、「展覧会・展示会（イベント全体）」を表すときは「exhibition」を使います。「go there」は文脈から場所が明らかな場合は「go」だけで自然です。",
     examples: [
@@ -2092,6 +2231,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I like to go to the museum and watch the art.",
     correction: "I like to go to the museum and look at art.",
+    japanese: "美術館に行ってアートを鑑賞するのが好きです。",
     explanation:
       "「watch」は映画やスポーツなど動きのあるものを注視するときに使い、絵画や彫刻など静止しているものを見るときは「look at」や「view」を使います。また、一般的な芸術・美術は不可算名詞なので「the art」ではなく「art」とします。",
     examples: [
@@ -2107,6 +2247,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Leave the food is a bad manner in Japan.",
     correction: "Leaving food on your plate is bad manners in Japan.",
+    japanese: "お皿の食べ物を残すことは日本ではマナー違反です。",
     explanation:
       "動詞「leave」を主語にするときは動名詞「Leaving」にします。また、「礼儀作法・マナー」という意味では通常複数形の「bad manners」を使い、冠詞の「a」は付けません。",
     examples: [
@@ -2122,6 +2263,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "Explains feeling makes me relax.",
     correction: "Sharing my feelings makes me feel relaxed.",
+    japanese: "自分の気持ちを共有するとリラックスできます。",
     explanation:
       "文の主語に動詞を置くときは動名詞（-ing）にします。また、気持ちを打ち明けるときは「explain（説明する）」より「share（共有する）」や「express（表現する）」が自然です。感情を表す「relaxed」と組み合わせて「makes me feel relaxed」または「helps me relax」と表現します。",
     examples: [
@@ -2137,6 +2279,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "When I annoyed, I talk to my friends or family.",
     correction: "When I get annoyed, I talk to my friends or family.",
+    japanese: "イライラしたときは友達や家族と話します。",
     explanation:
       "「annoy」は「（人を）イライラさせる」という他動詞なので、「自分がイライラする」と言うときは「be annoyed」または「get annoyed」のように受動態（形容詞的用法）にします。「When I annoyed」だと「私が誰かをイライラさせたとき」という意味になってしまいます。",
     examples: [
@@ -2152,6 +2295,7 @@ window.ENGLISH_ENTRIES = [
     category: "Naturalness",
     whatISaid: "Waiting for the restaurant to eat.",
     correction: "Waiting for your food at a restaurant.",
+    japanese: "レストランで料理を待つこと。",
     explanation:
       "「waiting for the restaurant」だと「レストランそのものを待っている」という意味になります。レストランで料理や順番を待つことを指す場合は、「waiting for your food at a restaurant」や「waiting for your order」と表現します。",
     examples: [
@@ -2167,6 +2311,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "I usually listen Hatsune Miku Vocaloid.",
     correction: "I usually listen to Hatsune Miku and Vocaloid music.",
+    japanese: "普段は初音ミクやボカロの音楽を聴きます。",
     explanation:
       "「listen」は自動詞なので、後ろに聴く対象を置くときは必ず前置詞「to」が必要です（「listen to + 名詞」）。",
     examples: [
@@ -2182,6 +2327,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "It tastes like Japanese, so I can enjoy to taste that food.",
     correction: "It tastes similar to Japanese food, so I really enjoy eating it.",
+    japanese: "日本食に似た味がするので、とても美味しく食べられます。",
     explanation:
       "「enjoy」の後ろに動詞を続けるときは、不定詞（to 〜）ではなく動名詞（-ing）を使います。また、「tastes like Japanese」だけでは「日本語／日本人のような味がする」と聞こえるため、「similar to Japanese food（日本食に似ている）」のように「food」を補います。",
     examples: [
@@ -2197,6 +2343,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "I enjoy and go travel with my friends.",
     correction: "I enjoy traveling with my friends.",
+    japanese: "友達と旅行するのが好きです。",
     explanation:
       "「〜することを楽しむ」と言うときは「enjoy + 動名詞（-ing）」の形を使います。「enjoy and go travel」のように動詞を「and」で並べることはできません。",
     examples: [
@@ -2212,6 +2359,7 @@ window.ENGLISH_ENTRIES = [
     category: "Preposition",
     whatISaid: "Yes, so I do watch in a weekday.",
     correction: "Yes, I usually watch it on weekdays.",
+    japanese: "はい、普段は平日に見ています。",
     explanation:
       "曜日や「平日（weekdays）」「週末（weekends）」など特定の日を表すときは、前置詞「in」ではなく「on」を使います。また、習慣として平日に見る場合は複数形の「on weekdays」が自然です。",
     examples: [
@@ -2227,6 +2375,7 @@ window.ENGLISH_ENTRIES = [
     category: "Grammar",
     whatISaid: "Because it makes me fun to watch anime.",
     correction: "Because watching anime is fun.",
+    japanese: "アニメを見るのが楽しいからです。",
     explanation:
       "「fun」は楽しいという性質を表す言葉であり、「happy」や「excited」のような人の感情を表す形容詞ではないため、「make me fun」という形にはできません。「〜するのは楽しい」と言うときは「Watching anime is fun.」や「It is fun to watch anime.」と表現します。",
     examples: [
@@ -2242,6 +2391,7 @@ window.ENGLISH_ENTRIES = [
     category: "Vocabulary",
     whatISaid: "I don't know what to progress this material.",
     correction: "I don't know how to proceed with this material.",
+    japanese: "この教材をどのように進めたらよいかわかりません。",
     explanation:
       "「どのように〜するか」は「what to」ではなく「how to」を使います。また、「progress」は「前進する・進歩する」という自動詞なので、「教材を進める」と言うときは「proceed with 〜」や「go through 〜」を使います。",
     examples: [
