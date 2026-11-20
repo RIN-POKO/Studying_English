@@ -443,7 +443,7 @@
       font-weight: 600;
     }
 
-    .expr-correct.hidden-answer .reveal-btn {
+    .expr-correct.is-quiz .reveal-btn {
       display: inline-block;
     }
 
@@ -922,13 +922,13 @@
                     <span class="expr-label">自分の表現 (What I said)</span>
                     <p class="expr-text" lang="en">${escapeHtml(entry.whatISaid || "")}</p>
                   </div>
-                  <div class="expr-box expr-correct${state.quizMode ? " hidden-answer" : ""}" data-answer-box>
+                  <div class="expr-box expr-correct${state.quizMode ? " is-quiz hidden-answer" : ""}" data-answer-box>
                     <div class="expr-header">
                       <span class="expr-label">自然な表現 (Better / Correct)</span>
                       ${speakBtnHtml(entry.correction || "", "自然な表現を再生")}
                     </div>
                     <p class="expr-text" lang="en">${escapeHtml(entry.correction || "")}</p>
-                    <button type="button" class="reveal-btn" data-reveal-btn>答えを表示</button>
+                    <button type="button" class="reveal-btn" data-reveal-btn aria-expanded="false">答えを表示</button>
                   </div>
                 </div>
 
@@ -997,7 +997,9 @@
         if (revealBtn) {
           const box = revealBtn.closest("[data-answer-box]");
           if (box) {
-            box.classList.remove("hidden-answer");
+            const isNowHidden = box.classList.toggle("hidden-answer");
+            revealBtn.textContent = isNowHidden ? "答えを表示" : "答えを隠す";
+            revealBtn.setAttribute("aria-expanded", String(!isNowHidden));
           }
         }
       });
