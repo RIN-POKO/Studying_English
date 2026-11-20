@@ -526,7 +526,14 @@
   <script>
     (function () {
       const STORAGE_KEY = "english_mistake_log_mastered_v1";
-      const entries = Array.isArray(window.ENGLISH_ENTRIES) ? window.ENGLISH_ENTRIES : [];
+      const entries = (Array.isArray(window.ENGLISH_ENTRIES) ? [...window.ENGLISH_ENTRIES] : []).sort((a, b) => {
+        const dateA = String(a.date || "");
+        const dateB = String(b.date || "");
+        if (dateA !== dateB) {
+          return dateB.localeCompare(dateA);
+        }
+        return String(b.id || "").localeCompare(String(a.id || ""));
+      });
 
       let savedMastered = {};
       try {
