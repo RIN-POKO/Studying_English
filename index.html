@@ -740,6 +740,7 @@
           <button type="button" id="toggle-sort" class="btn" aria-label="並び順: 新しい順">新しい順 ↓</button>
           <button type="button" id="toggle-flashcard" class="btn" aria-pressed="false">瞬間英作文モード</button>
           <button type="button" id="reload-latest" class="btn" title="最新のデータを再読み込み">🔄 最新に更新</button>
+          <button type="button" id="send-anki" class="btn" title="AnkiConnect経由でAnkiに送信">📥 Anki に送信</button>
         </div>
         <div class="category-pills" id="category-pills" role="group" aria-label="カテゴリ絞り込み"></div>
       </search>
@@ -785,6 +786,7 @@
         toggleSort: document.getElementById("toggle-sort"),
         toggleFlashcard: document.getElementById("toggle-flashcard"),
         reloadLatest: document.getElementById("reload-latest"),
+        sendAnki: document.getElementById("send-anki"),
         categoryPills: document.getElementById("category-pills"),
         resultsStatus: document.getElementById("results-status"),
         cardsContainer: document.getElementById("cards-container")
@@ -1394,6 +1396,182 @@
           window.location.reload();
         }
       });
+
+      const ANKI_DECK_KEY = "english_mistake_log_anki_deck_v1";
+
+      async function ankiInvoke(action, params = {}) {
+        const res = await fetch("http://127.0.0.1:8765", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action, version: 6, params })
+        });
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+        const json = await res.json();
+        if (json.error) {
+          throw new Error(json.error);
+        }
+        return json.result;
+      }
+
+      function buildAnkiFront(entry) {
+        const meta = `[${escapeHtml(entry.date || "")}] ${escapeHtml(entry.category || "")}`;
+        const prompt = escapeHtml(entry.japanese || entry.explanation || "");
+        return `
+          <div style="text-align:left; font-family:sans-serif; line-height:1.6;">
+            <div style="font-size:12px; color:#64748b; margin-bottom:8px;">${meta}</div>
+            <div style="font-size:20px; font-weight:700;">${prompt}</div>
+          </div>
+        `.trim();
+      }
+
+      function buildAnkiBack(entry) {
+        const correction = escapeHtml(entry.correction || "");
+        const whatISaid = escapeHtml(entry.whatISaid || "");
+        const explanation = escapeHtml(entry.explanation || "");
+        const examples = (entry.examples || [])
+          .map((ex) => `<li style="margin-bottom:4px;">${escapeHtml(ex)}</li>`)
+          .join("");
+        const examplesBlock = examples
+          ? `<div style="margin-top:12px;">
+               <div style="font-size:12px; font-weight:700; color:#64748b; margin-bottom:4px;">例文 (Example)</div>
+               <ul style="margin:0; padding-left:20px;">${examples}</ul>
+             </div>`
+          : "";
+        return `
+          <div style="text-align:left; font-family:sans-serif; line-height:1.6;">
+            <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+              <div style="font-size:11px; font-weight:700; color:#15803d; margin-bottom:2px;">自然な表現 (Better / Correct)</div>
+              <div style="font-size:18px; font-weight:700; color:#0f172a;">${correction}</div>
+            </div>
+            <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:8px 12px; margin-bottom:10px;">
+              <div style="font-size:11px; font-weight:700; color:#b91c1c; margin-bottom:2px;">自分の表現 (What I said)</div>
+              <div style="font-size:15px; color:#0f172a;">${whatISaid}</div>
+            </div>
+            <div style="background:#f8fafc; border-radius:8px; padding:10px 12px; font-size:14px;">
+              <div style="font-size:12px; font-weight:700; color:#64748b; margin-bottom:4px;">解説</div>
+              <div>${explanation}</div>
+            </div>
+            ${examplesBlock}
+          </div>
+        `.trim();
+      }
+
+      async function sendFilteredToAnki() {
+        const targets = getFilteredEntries();
+        if (targets.length === 0) {
+          alert("送信対象の表現がありません。");
+          return;
+        }
+
+        let defaultDeck = "English Mistake Log";
+        try {
+          defaultDeck = localStorage.getItem(ANKI_DECK_KEY) || defaultDeck;
+        } catch (_) {
+          // ignore
+        }
+
+        const deckName = prompt(
+          `表示中の ${targets.length} 件を Anki に送信します。\n送信先のデッキ名を入力してください（存在しない場合は自動作成されます）:`,
+          defaultDeck
+        );
+        if (!deckName || !deckName.trim()) return;
+        const cleanDeck = deckName.trim();
+        try {
+          localStorage.setItem(ANKI_DECK_KEY, cleanDeck);
+        } catch (_) {
+          // ignore
+        }
+
+        const originalLabel = els.sendAnki.textContent;
+        els.sendAnki.disabled = true;
+        els.sendAnki.textContent = "送信中...";
+
+        try {
+          await ankiInvoke("createDeck", { deck: cleanDeck });
+
+          const models = await ankiInvoke("modelNames");
+          const modelName =
+            models.find((m) => m === "Basic") ||
+            models.find((m) => m === "基本") ||
+            models[0];
+          if (!modelName) {
+            throw new Error("利用可能なノートタイプが見つかりません。");
+          }
+
+          const fieldNames = await ankiInvoke("modelFieldNames", { modelName });
+          if (!fieldNames || fieldNames.length < 2) {
+            throw new Error(`ノートタイプ「${modelName}」に表面・裏面のフィールドがありません。`);
+          }
+          const frontField = fieldNames[0];
+          const backField = fieldNames[1];
+
+          const existingIds = await ankiInvoke("findNotes", {
+            query: `deck:"${cleanDeck.replace(/"/g, '\\"')}"`
+          });
+          const existingTags = new Set();
+          if (existingIds.length > 0) {
+            const infoList = await ankiInvoke("notesInfo", { notes: existingIds });
+            for (const info of infoList) {
+              for (const tag of info.tags || []) {
+                if (tag.startsWith("id:")) {
+                  existingTags.add(tag);
+                }
+              }
+            }
+          }
+
+          const notesToAdd = [];
+          let skippedCount = 0;
+          for (const entry of targets) {
+            const idTag = `id:${entry.id}`;
+            if (existingTags.has(idTag)) {
+              skippedCount += 1;
+              continue;
+            }
+            const cleanCategory = String(entry.category || "General").replace(/\s+/g, "_");
+            const tags = [
+              "english-log",
+              idTag,
+              cleanCategory,
+              ...(entry.tags || []).map((t) => String(t).replace(/\s+/g, "_"))
+            ];
+            notesToAdd.push({
+              deckName: cleanDeck,
+              modelName,
+              fields: {
+                [frontField]: buildAnkiFront(entry),
+                [backField]: buildAnkiBack(entry)
+              },
+              options: {
+                allowDuplicate: true
+              },
+              tags
+            });
+          }
+
+          if (notesToAdd.length === 0) {
+            alert(`デッキ「${cleanDeck}」にはすでに全 ${skippedCount} 件が登録済みです。`);
+            return;
+          }
+
+          const results = await ankiInvoke("addNotes", { notes: notesToAdd });
+          const addedCount = results.filter((r) => r !== null).length;
+          alert(
+            `Anki デッキ「${cleanDeck}」への送信が完了しました！\n・新規追加: ${addedCount} 件\n・登録済みスキップ: ${skippedCount} 件`
+          );
+        } catch (err) {
+          alert(
+            `AnkiConnect への接続に失敗しました。\n\n以下を確認してください：\n1. PC で Anki が起動していること\n2. AnkiConnect の設定で webCorsOriginList に "${window.location.origin}" または "*" が入っていること\n\nエラー詳細: ${err.message}`
+          );
+        } finally {
+          els.sendAnki.disabled = false;
+          els.sendAnki.textContent = originalLabel;
+        }
+      }
+
+      els.sendAnki.addEventListener("click", sendFilteredToAnki);
 
       function loadEntries() {
         const script = document.createElement("script");
