@@ -302,6 +302,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-10-23-10",
+    date: "2026-10-23",
+    category: "Grammar",
+    whatISaid: "My biggest fail is failing studying abroad program.",
+    correction: "My biggest failure was not getting into a study abroad program.",
+    explanation:
+      "名詞の「失敗」は動詞の「fail」ではなく「failure」を使います。また、「留学プログラム」は「studying abroad program」ではなく「a study abroad program」のように名詞の「study」を修飾語として使います。過去の出来事なので時制も過去形（was）にします。",
+    examples: [
+      "Not getting into the study abroad program was a turning point for me.",
+      "Every failure teaches us an important lesson."
+    ],
+    tags: ["grammar", "vocabulary", "education"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-09",
+    date: "2026-10-23",
+    category: "Vocabulary",
+    whatISaid: "I don't think that failure is pessimistic things.",
+    correction: "I don't think failure is a negative thing.",
+    explanation:
+      "「pessimistic（悲観的な）」は主に人や態度に対して使う形容詞です。物事に対して「悪いこと・ネガティブなこと」と言うときは「negative」を使います。また、主語が単数の「failure」なので、「things」ではなく「a negative thing」と単数で揃えます。",
+    examples: [
+      "Failure is not necessarily a negative thing if you learn from it.",
+      "Try not to be too pessimistic about the future."
+    ],
+    tags: ["vocabulary", "grammar", "discussion"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-08",
+    date: "2026-10-23",
+    category: "Grammar",
+    whatISaid: "Makes people happy makes me happy.",
+    correction: "Making people happy makes me happy.",
+    explanation:
+      "「〜すること」と動詞を文の主語にするときは、現在形（Makes）ではなく動名詞（Making）を使います。",
+    examples: [
+      "Making others smile makes me feel fulfilled.",
+      "Cooking for my family makes me happy."
+    ],
+    tags: ["grammar", "gerund", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-07",
+    date: "2026-10-23",
+    category: "Grammar",
+    whatISaid: "My passion is makes people happy by making something.",
+    correction: "My passion is making people happy by creating things.",
+    explanation:
+      "be動詞（is）の後ろに動詞の現在形（makes）を続けることはできません。「私の情熱は〜することです」と補語にするときは動名詞（making）または不定詞（to make）を使います。",
+    examples: [
+      "My passion is helping others learn new skills.",
+      "Her passion is creating handmade accessories."
+    ],
+    tags: ["grammar", "gerund", "discussion"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-06",
+    date: "2026-10-23",
+    category: "Vocabulary",
+    whatISaid: "I want to make my family happy by my cuisine.",
+    correction: "I want to make my family happy with my cooking.",
+    explanation:
+      "家庭料理や手料理を指すときは、「cuisine（特定の国・地域の料理様式、例：Japanese cuisine）」ではなく「cooking」や「food」「dishes」を使うのが自然です。また、手段を表す前置詞は「with」が適しています。",
+    examples: [
+      "I love making my friends happy with my cooking.",
+      "French cuisine is famous around the world."
+    ],
+    tags: ["vocabulary", "cooking", "preposition"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-05",
+    date: "2026-10-23",
+    category: "Grammar",
+    whatISaid: "Cooking is taught by my mother.",
+    correction: "My mother taught me how to cook.",
+    explanation:
+      "過去に母から教わったことなので、現在形の受動態（is taught）ではなく過去形を使います。また、「誰が誰に教えたか」を伝えるときは受動態より「My mother taught me how to cook.」と能動態にする方が自然です。",
+    examples: [
+      "My father taught me how to build plastic models.",
+      "I learned how to knit from my mother when I was young."
+    ],
+    tags: ["grammar", "tense", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-04",
+    date: "2026-10-23",
+    category: "Vocabulary",
+    whatISaid: "Yes, I like handcraft.",
+    correction: "Yes, I like arts and crafts.",
+    explanation:
+      "趣味としての「手芸・ハンドメイド・工作」の総称には、単数の「handcraft」より複数形の「crafts」や「arts and crafts」がよく使われます。",
+    examples: [
+      "I enjoy doing arts and crafts in my free time.",
+      "She sells her handmade crafts online."
+    ],
+    tags: ["vocabulary", "hobby", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-03",
+    date: "2026-10-23",
+    category: "Naturalness",
+    whatISaid: "After looking at the art, I would hard working.",
+    correction: "After looking at art, I feel motivated to work harder.",
+    explanation:
+      "「hard-working（勤勉な）」は形容詞なので「would」の後ろにそのまま置けません。「頑張ろうという気持ちになる」と言いたいときは「feel motivated to work harder」や「It motivates me to work harder.」と表現すると自然です。",
+    examples: [
+      "Visiting an art museum always motivates me to work harder.",
+      "After taking a short break, I felt motivated to study again."
+    ],
+    tags: ["naturalness", "vocabulary", "hobby"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-02",
+    date: "2026-10-23",
+    category: "Vocabulary",
+    whatISaid: "If the artist holds the exhibit, I want to go there.",
+    correction: "If the artist holds an exhibition, I want to go.",
+    explanation:
+      "「exhibit」は主に「展示品（個々の作品）」を指し、「展覧会・展示会（イベント全体）」を表すときは「exhibition」を使います。「go there」は文脈から場所が明らかな場合は「go」だけで自然です。",
+    examples: [
+      "My favorite artist is holding an exhibition in Tokyo next month.",
+      "There were many rare exhibits at the museum."
+    ],
+    tags: ["vocabulary", "art", "hobby"],
+    mastered: false
+  },
+  {
+    id: "2026-10-23-01",
+    date: "2026-10-23",
+    category: "Vocabulary",
+    whatISaid: "I like to go to the museum and watch the art.",
+    correction: "I like to go to the museum and look at art.",
+    explanation:
+      "「watch」は映画やスポーツなど動きのあるものを注視するときに使い、絵画や彫刻など静止しているものを見るときは「look at」や「view」を使います。また、一般的な芸術・美術は不可算名詞なので「the art」ではなく「art」とします。",
+    examples: [
+      "I love spending my weekends looking at modern art.",
+      "We went to the museum to view the new collection."
+    ],
+    tags: ["vocabulary", "art", "hobby"],
+    mastered: false
+  },
+  {
     id: "2026-10-22-10",
     date: "2026-10-22",
     category: "Grammar",
