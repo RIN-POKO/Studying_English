@@ -512,6 +512,7 @@
           />
           <button type="button" id="toggle-quiz" class="btn" aria-pressed="false">答えを隠す (テスト)</button>
           <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">未習得のみ</button>
+          <button type="button" id="toggle-sort" class="btn" aria-label="並び順: 新しい順">新しい順 ↓</button>
         </div>
         <div class="category-pills" id="category-pills" role="group" aria-label="カテゴリ絞り込み"></div>
       </search>
@@ -526,14 +527,7 @@
   <script>
     (function () {
       const STORAGE_KEY = "english_mistake_log_mastered_v1";
-      const entries = (Array.isArray(window.ENGLISH_ENTRIES) ? [...window.ENGLISH_ENTRIES] : []).sort((a, b) => {
-        const dateA = String(a.date || "");
-        const dateB = String(b.date || "");
-        if (dateA !== dateB) {
-          return dateB.localeCompare(dateA);
-        }
-        return String(b.id || "").localeCompare(String(a.id || ""));
-      });
+      const entries = Array.isArray(window.ENGLISH_ENTRIES) ? [...window.ENGLISH_ENTRIES] : [];
 
       let savedMastered = {};
       try {
@@ -546,7 +540,8 @@
         query: "",
         category: "All",
         quizMode: false,
-        onlyUnmastered: false
+        onlyUnmastered: false,
+        sortOrder: "desc"
       };
 
       const els = {
@@ -556,6 +551,7 @@
         searchInput: document.getElementById("search-input"),
         toggleQuiz: document.getElementById("toggle-quiz"),
         toggleUnmastered: document.getElementById("toggle-unmastered"),
+        toggleSort: document.getElementById("toggle-sort"),
         categoryPills: document.getElementById("category-pills"),
         resultsStatus: document.getElementById("results-status"),
         cardsContainer: document.getElementById("cards-container")
@@ -635,7 +631,15 @@
       }
 
       function renderCards() {
-        const filtered = entries.filter(matchesFilter);
+        const dir = state.sortOrder === "asc" ? 1 : -1;
+        const filtered = entries.filter(matchesFilter).sort((a, b) => {
+          const dateA = String(a.date || "");
+          const dateB = String(b.date || "");
+          if (dateA !== dateB) {
+            return dateA.localeCompare(dateB) * dir;
+          }
+          return String(a.id || "").localeCompare(String(b.id || "")) * dir;
+        });
         els.resultsStatus.textContent = `${filtered.length}件の表現を表示中`;
 
         if (filtered.length === 0) {
@@ -715,6 +719,14 @@
       els.toggleUnmastered.addEventListener("click", () => {
         state.onlyUnmastered = !state.onlyUnmastered;
         els.toggleUnmastered.setAttribute("aria-pressed", String(state.onlyUnmastered));
+        renderCards();
+      });
+
+      els.toggleSort.addEventListener("click", () => {
+        state.sortOrder = state.sortOrder === "desc" ? "asc" : "desc";
+        const isAsc = state.sortOrder === "asc";
+        els.toggleSort.textContent = isAsc ? "古い順 ↑" : "新しい順 ↓";
+        els.toggleSort.setAttribute("aria-label", `並び順: ${isAsc ? "古い順" : "新しい順"}`);
         renderCards();
       });
 
