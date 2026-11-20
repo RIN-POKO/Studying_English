@@ -553,36 +553,70 @@
       font-variant-numeric: tabular-nums;
     }
 
+    body.is-flashcard-mode .container {
+      padding-block: 12px 24px;
+    }
+
+    body.is-flashcard-mode header {
+      margin-block-end: 10px;
+    }
+
+    body.is-flashcard-mode header h1 {
+      font-size: 1.25rem;
+    }
+
+    body.is-flashcard-mode header .subtitle,
+    body.is-flashcard-mode .stats,
+    body.is-flashcard-mode .results-status {
+      display: none;
+    }
+
+    body.is-flashcard-mode .controls {
+      padding-block: 10px;
+      padding-inline: 12px;
+      margin-block-end: 10px;
+    }
+
     .flashcard-prompt {
       background: var(--surface-muted);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding-block: 22px;
-      padding-inline: 20px;
-      margin-block-end: 16px;
+      padding-block: 14px;
+      padding-inline: 16px;
+      margin-block-end: 12px;
     }
 
     .flashcard-prompt-label {
       display: block;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--primary);
-      margin-block-end: 8px;
+      margin-block-end: 4px;
     }
 
     .flashcard-prompt-text {
       margin: 0;
-      font-size: 1.22rem;
+      font-size: 1.12rem;
       font-weight: 700;
-      line-height: 1.55;
+      line-height: 1.5;
       color: var(--text);
+    }
+
+    .flashcard-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
     }
 
     .flashcard-answer {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-block-end: 16px;
+      gap: 10px;
+      margin-block-start: 14px;
+      padding-block-start: 14px;
+      border-top: 1px solid var(--border);
     }
 
     .flashcard-answer[hidden] {
@@ -591,16 +625,6 @@
 
     .flashcard-answer .explanation {
       margin-block-end: 0;
-    }
-
-    .flashcard-nav {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding-block-start: 14px;
-      border-top: 1px solid var(--border);
     }
 
     .btn-primary {
@@ -616,8 +640,8 @@
     }
 
     .flashcard-hint {
-      margin-block-start: 10px;
-      font-size: 0.76rem;
+      margin-block: 10px 0;
+      font-size: 0.74rem;
       color: var(--text-muted);
       text-align: center;
     }
@@ -1024,6 +1048,19 @@
                 <p class="flashcard-prompt-text">${escapeHtml(promptText)}</p>
               </div>
 
+              <div class="flashcard-nav">
+                <button type="button" class="btn" data-flashcard-prev ${state.flashcardIndex === 0 ? "disabled" : ""}>← 前へ</button>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+                  <button type="button" class="btn btn-primary" data-flashcard-toggle aria-expanded="${String(state.flashcardRevealed)}">
+                    ${state.flashcardRevealed ? "答えを隠す" : "答えを見る"}
+                  </button>
+                  <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
+                    ${mastered ? "✓ 習得済み (戻す)" : "✓ 習得済みにする"}
+                  </button>
+                </div>
+                <button type="button" class="btn" data-flashcard-next ${state.flashcardIndex >= filtered.length - 1 ? "disabled" : ""}>次へ →</button>
+              </div>
+
               <div class="flashcard-answer" ${state.flashcardRevealed ? "" : "hidden"}>
                 <div class="expr-box expr-correct">
                   <div class="expr-header">
@@ -1041,18 +1078,6 @@
                 ${examplesHtml}
               </div>
 
-              <div class="flashcard-nav">
-                <button type="button" class="btn" data-flashcard-prev ${state.flashcardIndex === 0 ? "disabled" : ""}>← 前へ</button>
-                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
-                  <button type="button" class="btn btn-primary" data-flashcard-toggle aria-expanded="${String(state.flashcardRevealed)}">
-                    ${state.flashcardRevealed ? "答えを隠す" : "答えを見る"}
-                  </button>
-                  <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
-                    ${mastered ? "✓ 習得済み (戻す)" : "✓ 習得済みにする"}
-                  </button>
-                </div>
-                <button type="button" class="btn" data-flashcard-next ${state.flashcardIndex >= filtered.length - 1 ? "disabled" : ""}>次へ →</button>
-              </div>
               <p class="flashcard-hint">ショートカット: Space で答えを表示/非表示 · ← / → で前後のカードへ</p>
             </article>
           </div>
@@ -1187,6 +1212,7 @@
         state.flashcardIndex = 0;
         state.flashcardRevealed = false;
         state.flashcardOrder = null;
+        document.body.classList.toggle("is-flashcard-mode", state.flashcardMode);
         els.toggleFlashcard.setAttribute("aria-pressed", String(state.flashcardMode));
         els.toggleQuiz.disabled = state.flashcardMode;
         renderCards();
