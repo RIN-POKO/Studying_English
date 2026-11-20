@@ -731,6 +731,9 @@
         } catch (_) {
           // ignore storage errors
         }
+        if (state.flashcardMode && state.onlyUnmastered && next) {
+          state.flashcardRevealed = false;
+        }
         render();
       }
 
@@ -1040,9 +1043,14 @@
 
               <div class="flashcard-nav">
                 <button type="button" class="btn" data-flashcard-prev ${state.flashcardIndex === 0 ? "disabled" : ""}>← 前へ</button>
-                <button type="button" class="btn btn-primary" data-flashcard-toggle aria-expanded="${String(state.flashcardRevealed)}">
-                  ${state.flashcardRevealed ? "答えを隠す" : "答えを見る"}
-                </button>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+                  <button type="button" class="btn btn-primary" data-flashcard-toggle aria-expanded="${String(state.flashcardRevealed)}">
+                    ${state.flashcardRevealed ? "答えを隠す" : "答えを見る"}
+                  </button>
+                  <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
+                    ${mastered ? "✓ 習得済み (戻す)" : "✓ 習得済みにする"}
+                  </button>
+                </div>
                 <button type="button" class="btn" data-flashcard-next ${state.flashcardIndex >= filtered.length - 1 ? "disabled" : ""}>次へ →</button>
               </div>
               <p class="flashcard-hint">ショートカット: Space で答えを表示/非表示 · ← / → で前後のカードへ</p>
