@@ -152,6 +152,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-11-13-10",
+    date: "2026-11-13",
+    category: "Vocabulary",
+    whatISaid: "I bring my single lens camera.",
+    correction: "I brought my DSLR camera.",
+    explanation:
+      "「一眼レフカメラ」は英語では「a single-lens reflex camera」または略して「SLR」「DSLR（デジタル一眼レフ）」と言います。また、過去の旅行の話なので「bring」ではなく過去形「brought」を使います。",
+    examples: [
+      "I always bring my DSLR camera when I visit an aquarium.",
+      "She loves taking landscape photos with her mirrorless camera."
+    ],
+    tags: ["vocabulary", "hobby", "photography"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-09",
+    date: "2026-11-13",
+    category: "Vocabulary",
+    whatISaid: "My hometown is Nagoya, but I migrated to Tokyo to work.",
+    correction: "My hometown is Nagoya, but I moved to Tokyo for work.",
+    explanation:
+      "「migrate」は主に国境を越えて移住したり、鳥や動物が季節移動したりするときに使う硬い語です。国内で就職などのために引っ越すときは、シンプルに「moved to Tokyo for work」と表現するのが自然です。",
+    examples: [
+      "I moved to Tokyo after graduating from university.",
+      "Many young people move to big cities for work."
+    ],
+    tags: ["vocabulary", "daily", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-08",
+    date: "2026-11-13",
+    category: "Preposition",
+    whatISaid: "I usually go Seattle alone because it's difficult to adjust our schedule.",
+    correction: "I usually go to Seattle alone because it's hard to coordinate our schedules.",
+    explanation:
+      "「go」の後ろに都市名などの目的地を置くときは前置詞「to」が必要です（「go to Seattle」）。また、「お互いの予定を合わせる」と言うときは「adjust」よりも「coordinate our schedules」がよく使われます。",
+    examples: [
+      "I go to Seattle every year to visit my sister.",
+      "It's hard to coordinate everyone's schedules for a family trip."
+    ],
+    tags: ["preposition", "travel", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-07",
+    date: "2026-11-13",
+    category: "Preposition",
+    whatISaid: "She was married with Americans, so after graduate, she married to Seattle.",
+    correction: "She married an American, so after graduating, she moved to Seattle.",
+    explanation:
+      "「（人）と結婚する」と言うときは他動詞の「marry + 人」を使うか、「get married to + 人」のように前置詞「to」を使います（「with」は使いません）。また、「結婚してシアトルに移った」は「moved to Seattle」と表現します。",
+    examples: [
+      "My sister got married to an American and moved to Seattle.",
+      "They married five years ago."
+    ],
+    tags: ["preposition", "family", "grammar"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-06",
+    date: "2026-11-13",
+    category: "Grammar",
+    whatISaid: "One of my sister lives in Seattle now.",
+    correction: "One of my sisters lives in Seattle now.",
+    explanation:
+      "「〜のうちの1人」を表すときは「one of + 複数名詞」になるため、「sister」ではなく複数形の「sisters」にします。",
+    examples: [
+      "One of my sisters works at Seattle's airport.",
+      "One of my friends recommended this book to me."
+    ],
+    tags: ["grammar", "plural", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-05",
+    date: "2026-11-13",
+    category: "Preposition",
+    whatISaid: "My house doesn't have space to animals.",
+    correction: "My house doesn't have enough space for pets.",
+    explanation:
+      "「〜のためのスペース・余裕」と言うときは「space to + 名詞」ではなく「space for + 名詞」（または「room for + 名詞」）と前置詞「for」を使います。",
+    examples: [
+      "Our apartment doesn't have enough space for a large dog.",
+      "Is there any space for one more suitcase in the trunk?"
+    ],
+    tags: ["preposition", "daily", "pets"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-04",
+    date: "2026-11-13",
+    category: "Grammar",
+    whatISaid: "Now I live in company's dormitory, and there is prohibit to have pets.",
+    correction: "Now I live in a company dormitory, and pets are prohibited.",
+    explanation:
+      "「prohibit」は動詞なので「there is prohibit」という形にはできません。「ペットの飼育が禁止されている」と言うときは「pets are prohibited」または「we are not allowed to have pets」と表現します。また、「社員寮」は「a company dormitory」とします。",
+    examples: [
+      "Pets are strictly prohibited in this apartment building.",
+      "We are not allowed to keep pets in our company dormitory."
+    ],
+    tags: ["grammar", "daily", "pets"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-03",
+    date: "2026-11-13",
+    category: "Vocabulary",
+    whatISaid: "The test max score is 1000 and if we take the over 700...",
+    correction: "The maximum score is 1,000, and you pass if you score over 700.",
+    explanation:
+      "試験の「満点」は「the maximum score」または「a perfect score」と言います。また、「〜点以上を取る」は「take over 700」ではなく「score over 700」や「get over 700」を使います。",
+    examples: [
+      "The maximum score on this exam is 1,000 points.",
+      "You need to score at least 700 to pass the test."
+    ],
+    tags: ["vocabulary", "exam", "study"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-02",
+    date: "2026-11-13",
+    category: "Vocabulary",
+    whatISaid: "I feel nervous because I had the exam two times, but I failed.",
+    correction: "I feel nervous because I've taken the exam twice and failed both times.",
+    explanation:
+      "「試験を受ける」は「have an exam」より「take an exam」を使うのが自然です。また、「2回」を表すときは「two times」よりも「twice」がよく使われます。",
+    examples: [
+      "I've taken this certification exam twice already.",
+      "She passed the driving test on her first try, whereas I took it twice."
+    ],
+    tags: ["vocabulary", "collocation", "exam"],
+    mastered: false
+  },
+  {
+    id: "2026-11-13-01",
+    date: "2026-11-13",
+    category: "Preposition",
+    whatISaid: "In this weekend, I have a qualification exam.",
+    correction: "This weekend, I have a certification exam.",
+    explanation:
+      "「this」「next」「last」「every」などが名詞の前に付くときは、前置詞の「in」や「on」は不要になります（「This weekend」「Next Monday」「Last week」）。",
+    examples: [
+      "This weekend, I'm going to study at a cafe.",
+      "I have an important meeting next Monday."
+    ],
+    tags: ["preposition", "time", "exam"],
+    mastered: false
+  },
+  {
     id: "2026-11-11-10",
     date: "2026-11-11",
     category: "Grammar",
