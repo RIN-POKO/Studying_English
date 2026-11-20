@@ -152,6 +152,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-11-19-10",
+    date: "2026-11-19",
+    category: "Grammar",
+    whatISaid: "Some people order, but some people cook by ourselves.",
+    correction: "Some people order it, while others cook it themselves.",
+    explanation:
+      "主語が「some people / others（三人称複数＝彼ら）」なので、再帰代名詞も「ourselves（私たち自身）」ではなく「themselves（彼ら自身）」に揃える必要があります。",
+    examples: [
+      "Some people buy osechi online, while others make it themselves.",
+      "They repaired the roof themselves."
+    ],
+    tags: ["grammar", "pronoun", "culture"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-09",
+    date: "2026-11-19",
+    category: "Naturalness",
+    whatISaid: "Japan has custom, people eat soba when it is New Year's Eve.",
+    correction: "Japan has a custom of eating soba on New Year's Eve.",
+    explanation:
+      "「〜する習慣がある」と言うときは、可算名詞「custom」に冠詞「a」を付け、「have a custom of + 動名詞」の形でつなぐと自然です。また、特定の日（大晦日）には前置詞「on」を使います。",
+    examples: [
+      "We have a custom of taking off our shoes before entering a house.",
+      "People in Japan eat toshikoshi soba on New Year's Eve."
+    ],
+    tags: ["naturalness", "culture", "preposition"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-08",
+    date: "2026-11-19",
+    category: "Preposition",
+    whatISaid: "I did a resort hotel three days.",
+    correction: "I stayed at a resort hotel for three days.",
+    explanation:
+      "「ホテルに泊まる」は「do a hotel」ではなく「stay at a hotel」を使います。また、「3日間」のように期間を表すときは前置詞「for」を付けて「for three days」と表現します。",
+    examples: [
+      "We stayed at a nice resort hotel in Cebu for three days.",
+      "How long did you stay in Kyoto?"
+    ],
+    tags: ["preposition", "travel", "collocation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-07",
+    date: "2026-11-19",
+    category: "Preposition",
+    whatISaid: "I'll go back to my hometown in New Year.",
+    correction: "I'll go back to my hometown for New Year's.",
+    explanation:
+      "「お正月に・年末年始に（帰省する）」と言うときは、前置詞「in」ではなく「for New Year's」や「over the New Year holidays」を使います。特定の日である元日を指す場合は「on New Year's Day」とします。",
+    examples: [
+      "I'm going back to Nagoya for New Year's.",
+      "What do you usually eat on New Year's Day?"
+    ],
+    tags: ["preposition", "time", "culture"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-06",
+    date: "2026-11-19",
+    category: "Vocabulary",
+    whatISaid: "Hokkaido is located in the northest of Japan.",
+    correction: "Hokkaido is located in the northernmost part of Japan.",
+    explanation:
+      "「north」に「-est」を付けた「northest」という語は存在しません。「日本の最北端にある」と言うときは「in the northernmost part of Japan」や、シンプルに「in northern Japan」と表現します。",
+    examples: [
+      "Hokkaido is the northernmost prefecture in Japan.",
+      "Okinawa is located in the southernmost part of Japan."
+    ],
+    tags: ["vocabulary", "geography", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-05",
+    date: "2026-11-19",
+    category: "Grammar",
+    whatISaid: "I'm not heard of the name before.",
+    correction: "I haven't heard of that name before.",
+    explanation:
+      "「今まで聞いたことがない」という現在完了形の否定では、be動詞（I'm）ではなく助動詞「have（I haven't / I've never）」を使います。",
+    examples: [
+      "I haven't heard of that wine brand before.",
+      "Have you ever heard of Koshu wine?"
+    ],
+    tags: ["grammar", "tense", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-04",
+    date: "2026-11-19",
+    category: "Grammar",
+    whatISaid: "I bought grape juice for my brother because he's not adult.",
+    correction: "I bought grape juice for my brother because he's not an adult.",
+    explanation:
+      "「adult（大人）」は可算名詞なので、単数で使うときは冠詞「an」が必要です（「not an adult」）。なお、「未成年だ」と言うときは「he's underage」や「he's still a minor」とも言えます。",
+    examples: [
+      "In Japan, you can drink alcohol once you become an adult at 20.",
+      "He's still underage, so he ordered a non-alcoholic drink."
+    ],
+    tags: ["grammar", "article", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-03",
+    date: "2026-11-19",
+    category: "Vocabulary",
+    whatISaid: "I prefer to non-sparkly wine to sparkly wine.",
+    correction: "I prefer non-sparkling wine to sparkling wine.",
+    explanation:
+      "発泡性のワインは「sparkly」ではなく「sparkling wine」、発泡していないワインは「non-sparkling wine」または「still wine」と言います。また、「prefer」は他動詞なので後ろの「to」は不要で「prefer A to B」の形をとります。",
+    examples: [
+      "Do you prefer sparkling water or still water?",
+      "I prefer sweet white wine to dry red wine."
+    ],
+    tags: ["vocabulary", "food", "grammar"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-02",
+    date: "2026-11-19",
+    category: "Grammar",
+    whatISaid: "Some of them are not, but the most wine is sweet.",
+    correction: "Some of them aren't, but most of the wines are sweet.",
+    explanation:
+      "「ほとんどの〜」を表す「most」には定冠詞「the」を付けません（「the most」は「最も〜」という最上級の意味になります）。特定の複数種類のワインを指すときは「most of the wines are sweet」と表現します。",
+    examples: [
+      "Most of the wines produced in Yamanashi are easy to drink.",
+      "Most people enjoy sweet drinks."
+    ],
+    tags: ["grammar", "quantifier", "food"],
+    mastered: false
+  },
+  {
+    id: "2026-11-19-01",
+    date: "2026-11-19",
+    category: "Grammar",
+    whatISaid: "Yes, I've ate sandwiches.",
+    correction: "Yes, I've eaten a sandwich.",
+    explanation:
+      "現在完了形（have + 過去分詞）では、動詞「eat」の過去形「ate」ではなく過去分詞形「eaten」を使います。また、1つのサンドイッチなら単数形「a sandwich」にします。",
+    examples: [
+      "Have you eaten lunch yet? — Yes, I've already eaten.",
+      "I ate a sandwich for lunch before the lesson."
+    ],
+    tags: ["grammar", "tense", "daily"],
+    mastered: false
+  },
+  {
     id: "2026-11-17-10",
     date: "2026-11-17",
     category: "Naturalness",
