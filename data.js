@@ -300,5 +300,155 @@ window.ENGLISH_ENTRIES = [
     ],
     tags: ["article", "daily", "conversation"],
     mastered: false
+  },
+  {
+    id: "2026-10-22-10",
+    date: "2026-10-22",
+    category: "Grammar",
+    whatISaid: "Leave the food is a bad manner in Japan.",
+    correction: "Leaving food on your plate is bad manners in Japan.",
+    explanation:
+      "動詞「leave」を主語にするときは動名詞「Leaving」にします。また、「礼儀作法・マナー」という意味では通常複数形の「bad manners」を使い、冠詞の「a」は付けません。",
+    examples: [
+      "It is considered bad manners to talk with your mouth full.",
+      "Leaving food on your plate is frowned upon in many cultures."
+    ],
+    tags: ["grammar", "gerund", "culture"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-09",
+    date: "2026-10-22",
+    category: "Naturalness",
+    whatISaid: "Explains feeling makes me relax.",
+    correction: "Sharing my feelings makes me feel relaxed.",
+    explanation:
+      "文の主語に動詞を置くときは動名詞（-ing）にします。また、気持ちを打ち明けるときは「explain（説明する）」より「share（共有する）」や「express（表現する）」が自然です。感情を表す「relaxed」と組み合わせて「makes me feel relaxed」または「helps me relax」と表現します。",
+    examples: [
+      "Sharing my feelings with a close friend always helps me relax.",
+      "Expressing your emotions honestly can reduce stress."
+    ],
+    tags: ["naturalness", "gerund", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-08",
+    date: "2026-10-22",
+    category: "Grammar",
+    whatISaid: "When I annoyed, I talk to my friends or family.",
+    correction: "When I get annoyed, I talk to my friends or family.",
+    explanation:
+      "「annoy」は「（人を）イライラさせる」という他動詞なので、「自分がイライラする」と言うときは「be annoyed」または「get annoyed」のように受動態（形容詞的用法）にします。「When I annoyed」だと「私が誰かをイライラさせたとき」という意味になってしまいます。",
+    examples: [
+      "When I get annoyed, I usually go for a walk to cool down.",
+      "She was annoyed by the loud noise outside."
+    ],
+    tags: ["grammar", "emotion", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-07",
+    date: "2026-10-22",
+    category: "Naturalness",
+    whatISaid: "Waiting for the restaurant to eat.",
+    correction: "Waiting for your food at a restaurant.",
+    explanation:
+      "「waiting for the restaurant」だと「レストランそのものを待っている」という意味になります。レストランで料理や順番を待つことを指す場合は、「waiting for your food at a restaurant」や「waiting for your order」と表現します。",
+    examples: [
+      "Waiting for your order when you are starving can be frustrating.",
+      "People often get impatient while waiting for their food at a busy restaurant."
+    ],
+    tags: ["naturalness", "restaurant", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-06",
+    date: "2026-10-22",
+    category: "Preposition",
+    whatISaid: "I usually listen Hatsune Miku Vocaloid.",
+    correction: "I usually listen to Hatsune Miku and Vocaloid music.",
+    explanation:
+      "「listen」は自動詞なので、後ろに聴く対象を置くときは必ず前置詞「to」が必要です（「listen to + 名詞」）。",
+    examples: [
+      "I like to listen to music while commuting.",
+      "What kind of music do you usually listen to?"
+    ],
+    tags: ["preposition", "music", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-05",
+    date: "2026-10-22",
+    category: "Grammar",
+    whatISaid: "It tastes like Japanese, so I can enjoy to taste that food.",
+    correction: "It tastes similar to Japanese food, so I really enjoy eating it.",
+    explanation:
+      "「enjoy」の後ろに動詞を続けるときは、不定詞（to 〜）ではなく動名詞（-ing）を使います。また、「tastes like Japanese」だけでは「日本語／日本人のような味がする」と聞こえるため、「similar to Japanese food（日本食に似ている）」のように「food」を補います。",
+    examples: [
+      "This dish tastes similar to Japanese curry.",
+      "I really enjoy trying local food when I travel abroad."
+    ],
+    tags: ["grammar", "gerund", "food"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-04",
+    date: "2026-10-22",
+    category: "Grammar",
+    whatISaid: "I enjoy and go travel with my friends.",
+    correction: "I enjoy traveling with my friends.",
+    explanation:
+      "「〜することを楽しむ」と言うときは「enjoy + 動名詞（-ing）」の形を使います。「enjoy and go travel」のように動詞を「and」で並べることはできません。",
+    examples: [
+      "I enjoy traveling to new countries with my friends.",
+      "Do you enjoy traveling alone or in a group?"
+    ],
+    tags: ["grammar", "gerund", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-03",
+    date: "2026-10-22",
+    category: "Preposition",
+    whatISaid: "Yes, so I do watch in a weekday.",
+    correction: "Yes, I usually watch it on weekdays.",
+    explanation:
+      "曜日や「平日（weekdays）」「週末（weekends）」など特定の日を表すときは、前置詞「in」ではなく「on」を使います。また、習慣として平日に見る場合は複数形の「on weekdays」が自然です。",
+    examples: [
+      "I'm too busy to cook on weekdays.",
+      "She usually goes to the gym on weekdays after work."
+    ],
+    tags: ["preposition", "daily", "time"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-02",
+    date: "2026-10-22",
+    category: "Grammar",
+    whatISaid: "Because it makes me fun to watch anime.",
+    correction: "Because watching anime is fun.",
+    explanation:
+      "「fun」は楽しいという性質を表す言葉であり、「happy」や「excited」のような人の感情を表す形容詞ではないため、「make me fun」という形にはできません。「〜するのは楽しい」と言うときは「Watching anime is fun.」や「It is fun to watch anime.」と表現します。",
+    examples: [
+      "It is fun to watch anime after work.",
+      "Playing board games with friends is always fun."
+    ],
+    tags: ["grammar", "adjective", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-22-01",
+    date: "2026-10-22",
+    category: "Vocabulary",
+    whatISaid: "I don't know what to progress this material.",
+    correction: "I don't know how to proceed with this material.",
+    explanation:
+      "「どのように〜するか」は「what to」ではなく「how to」を使います。また、「progress」は「前進する・進歩する」という自動詞なので、「教材を進める」と言うときは「proceed with 〜」や「go through 〜」を使います。",
+    examples: [
+      "Could you tell me how to proceed with this task?",
+      "Let's go through the material step by step."
+    ],
+    tags: ["vocabulary", "grammar", "lesson"],
+    mastered: false
   }
 ];
