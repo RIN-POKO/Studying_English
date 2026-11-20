@@ -302,6 +302,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-10-29-10",
+    date: "2026-10-29",
+    category: "Vocabulary",
+    whatISaid: "My dormitory is close to university, so it is easy to go university every time to study.",
+    correction: "My dormitory was close to the university, so it was easy to go to campus anytime to study.",
+    explanation:
+      "「いつでも（好きなときに）」と言うときは「every time（〜するたびに毎回）」ではなく「anytime」を使います。また、「大学に行く」は前置詞「to」を付けて「go to the university」や「go to campus」とし、過去の話なので時制を過去形にします。",
+    examples: [
+      "Because the library is open 24 hours, students can study there anytime.",
+      "Every time I visit my hometown, I meet up with old friends."
+    ],
+    tags: ["vocabulary", "preposition", "university"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-09",
+    date: "2026-10-29",
+    category: "Grammar",
+    whatISaid: "When I was a university student, I don't have time to enjoy your life.",
+    correction: "When I was a university student, I didn't have time to enjoy my life.",
+    explanation:
+      "大学時代の過去の話なので「don't have」ではなく過去形の「didn't have」にします。また、主語が「I（私）」なので「your life」ではなく「my life」で統一します。",
+    examples: [
+      "When I was in college, I didn't have much time to travel.",
+      "I'm trying to enjoy my life more outside of work."
+    ],
+    tags: ["grammar", "tense", "university"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-08",
+    date: "2026-10-29",
+    category: "Grammar",
+    whatISaid: "Local people easy to work at Toyota.",
+    correction: "It's easy for local people to work at Toyota.",
+    explanation:
+      "「easy」や「difficult」は人を主語にして「Local people are easy to 〜」と言うと「地元の人は扱いやすい」という意味になります。「地元の人にとって〜しやすい」と言うときは「It is easy for local people to 〜」の構文を使います。",
+    examples: [
+      "It's easy for local residents to commute to the headquarters.",
+      "It was difficult for me to get used to living alone at first."
+    ],
+    tags: ["grammar", "work", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-07",
+    date: "2026-10-29",
+    category: "Vocabulary",
+    whatISaid: "Yes, headquarter is located in my hometown.",
+    correction: "Yes, the headquarters is located in my hometown.",
+    explanation:
+      "「本社・本部」を表す「headquarters」は、単数の会社の本社を指す場合でも常に語尾に「s」が付きます。また、特定の会社の本社を指すので定冠詞「the」や所有格（Toyota's）を付けます。",
+    examples: [
+      "The company's headquarters is located in Aichi Prefecture.",
+      "I visited our Tokyo headquarters for a meeting last week."
+    ],
+    tags: ["vocabulary", "business", "article"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-06",
+    date: "2026-10-29",
+    category: "Grammar",
+    whatISaid: "She studied English and she go abroad a lot. Now she work at Seattle airport.",
+    correction: "She studied English and went abroad a lot. Now she works at Seattle's airport.",
+    explanation:
+      "過去の出来事（海外へよく行った）には過去形「went abroad」を、現在の事実（主語が she）には三単現の「s」を付けて「works」を使います。時制と主語に合わせた動詞の変化に注意しましょう。",
+    examples: [
+      "My sister studied hard and now she works at an international airport.",
+      "He went abroad several times when he was in college."
+    ],
+    tags: ["grammar", "tense", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-05",
+    date: "2026-10-29",
+    category: "Preposition",
+    whatISaid: "My siblings have the same choice like me.",
+    correction: "My siblings made the same choice as me.",
+    explanation:
+      "「〜と同じ（選択・もの）」と言うときは「the same ... like 〜」ではなく、「the same ... as 〜」と前置詞「as」を使います。また、「選択をする」は「have a choice」より「make a choice」が自然です。",
+    examples: [
+      "He made the same career choice as his father.",
+      "We ordered the same dish as last time."
+    ],
+    tags: ["preposition", "collocation", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-04",
+    date: "2026-10-29",
+    category: "Grammar",
+    whatISaid: "After graduate high school, most people work.",
+    correction: "After graduating from high school, most people start working.",
+    explanation:
+      "前置詞「after」の後ろに動詞を置くときは動名詞（graduating）にします。また、「graduate」は自動詞なので、学校名を続けるときは必ず前置詞「from」を付けて「graduate from high school」と言います。",
+    examples: [
+      "After graduating from university, I started working as an engineer.",
+      "What do you want to do after you graduate from high school?"
+    ],
+    tags: ["grammar", "preposition", "education"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-03",
+    date: "2026-10-29",
+    category: "Vocabulary",
+    whatISaid: "We don't have deadline, so it's not pleasure.",
+    correction: "We don't have strict deadlines, so there's no pressure.",
+    explanation:
+      "「プレッシャー（重圧）」は「pleasure（喜び・楽しみ）」ではなく「pressure」です。発音と綴りの混同に気をつけましょう。また、「プレッシャーがない」は「it's not pressure」ではなく「there's no pressure」や「it's not stressful」と表現します。",
+    examples: [
+      "Without strict deadlines, there is much less pressure at work.",
+      "It was a pleasure meeting you today."
+    ],
+    tags: ["vocabulary", "pronunciation", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-02",
+    date: "2026-10-29",
+    category: "Phrasal Verb",
+    whatISaid: "It is easy to eat out restaurants.",
+    correction: "It is easy to eat out at restaurants.",
+    explanation:
+      "「eat out（外食する）」は目的語をとらない自動詞句なので、後ろに「restaurants」を直接置けません。場所を付け加える場合は「eat out at restaurants」のように前置詞「at」を入れるか、単に「eat out」だけで表します。",
+    examples: [
+      "Living in Tokyo makes it easy to eat out at various restaurants.",
+      "We usually eat out on Friday nights."
+    ],
+    tags: ["phrasal-verb", "preposition", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-29-01",
+    date: "2026-10-29",
+    category: "Preposition",
+    whatISaid: "It is easy to keep balance, career and daily life.",
+    correction: "It is easy to keep a balance between my career and daily life.",
+    explanation:
+      "「AとBのバランスを保つ」と言うときは、可算名詞「balance」に冠詞「a」を付け、前置詞「between」を使って「keep a balance between A and B」と表現します。",
+    examples: [
+      "Working remotely helps me keep a good balance between work and personal life.",
+      "It's important to maintain a healthy work-life balance."
+    ],
+    tags: ["preposition", "work", "lifestyle"],
+    mastered: false
+  },
+  {
     id: "2026-10-28-10",
     date: "2026-10-28",
     category: "Grammar",
