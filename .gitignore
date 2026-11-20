@@ -1,2 +1,7 @@
 .DS_Store
 .yomiyasu/
+
+# 外部スキル本体は gitignore し、skills-lock.json から復元できるようにする
+.agents/skills/yomiyasu/
+.agents/skills/modern-web-guidance/
+.agents/skills/chrome-extensions/

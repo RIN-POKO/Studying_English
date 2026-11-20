@@ -18,6 +18,21 @@
 
 ## 使い方
 
+### スキルのインストール（初回・別環境）
+
+このリポジトリでは、日本語校閲に `yomiyasu`、HTML/CSS 実装に `modern-web-guidance` を利用します。外部スキル本体は `.gitignore` で除外しているため、別環境では以下のコマンドで `skills-lock.json` からインストールしてください。
+
+```sh
+npx skills experimental_install
+```
+
+個別にインストールする場合は以下を実行します。
+
+```sh
+npx skills add nanaism/yomiyasu -a antigravity -y
+npx skills add GoogleChrome/modern-web-guidance -a antigravity -y
+```
+
 ### ローカルで確認する
 
 `index.html` をブラウザで直接開くだけで動作します（外部サーバーやビルド手順は不要です）。
