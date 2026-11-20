@@ -302,6 +302,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-10-30-10",
+    date: "2026-10-30",
+    category: "Grammar",
+    whatISaid: "My company said to me to get a license.",
+    correction: "My company told me to get a certification.",
+    explanation:
+      "「（人）に〜するように言う」と言うときは、「say to 人 to 〜」の形は使えず、「tell + 人 + to + 動詞の原形」または「ask + 人 + to 〜」を使います。また、ITやAI関連の資格は運転免許などの公的免許を指す「license」より「certification」が自然です。",
+    examples: [
+      "My manager told me to take the cloud certification exam.",
+      "She asked me to send the report before noon."
+    ],
+    tags: ["grammar", "vocabulary", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-09",
+    date: "2026-10-30",
+    category: "Vocabulary",
+    whatISaid: "On YouTube, I can stop and restart and go back again.",
+    correction: "On YouTube, I can pause, replay, and go back.",
+    explanation:
+      "動画の再生を一時停止するときは「stop（完全に終了する）」よりも「pause（一時停止する）」を使うのが自然です。また、もう一度見直すときは「replay」や「rewind（巻き戻す）」と言えます。",
+    examples: [
+      "I often pause the video to take notes.",
+      "It's helpful that I can rewind and watch difficult parts again."
+    ],
+    tags: ["vocabulary", "technology", "study"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-08",
+    date: "2026-10-30",
+    category: "Phrasal Verb",
+    whatISaid: "I catch up AI news on YouTube.",
+    correction: "I catch up on AI news on YouTube.",
+    explanation:
+      "「（最新情報やニュースなど）に追いつく・情報を追う」と言うときは、「catch up」だけでなく前置詞「on」を付けて「catch up on + 名詞」と表現します。",
+    examples: [
+      "I usually catch up on tech news every morning.",
+      "I need to catch up on my emails after taking a day off."
+    ],
+    tags: ["phrasal-verb", "preposition", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-07",
+    date: "2026-10-30",
+    category: "Grammar",
+    whatISaid: "To understand deeply the subject, I watch movies on YouTube.",
+    correction: "To understand the subject deeply, I watch videos on YouTube.",
+    explanation:
+      "他動詞（understand）と目的語（the subject）の間に副詞（deeply）を挟まず、目的語の後ろに置いて「understand the subject deeply」とするのが自然な語順です。",
+    examples: [
+      "Reading books helps me understand the topic deeply.",
+      "She speaks English fluently."
+    ],
+    tags: ["grammar", "word-order", "study"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-06",
+    date: "2026-10-30",
+    category: "Vocabulary",
+    whatISaid: "I usually watch science and mathematic movie on YouTube.",
+    correction: "I usually watch science and math videos on YouTube.",
+    explanation:
+      "英語の「movie」は主に劇場公開される長編映画を指し、YouTube などのネット上の動画や解説動画には「video（videos）」を使います。また、「数学」は「mathematic」ではなく「math」または「mathematics」と言います。",
+    examples: [
+      "I watch educational videos on YouTube when I want to learn something new.",
+      "There are many helpful math tutorials online."
+    ],
+    tags: ["vocabulary", "education", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-05",
+    date: "2026-10-30",
+    category: "Grammar",
+    whatISaid: "I prefer watching movie with my friends to alone.",
+    correction: "I prefer watching movies with my friends to watching them alone.",
+    explanation:
+      "「prefer A to B」を使うときは、AとBの文法的な形を揃える必要があります。「watching movies 〜（動名詞句）」と比べる相手も「watching them alone（動名詞句）」にします。また、映画全般を指すときは複数形「movies」が自然です。",
+    examples: [
+      "I prefer working in the office to working from home.",
+      "She prefers reading books to watching TV."
+    ],
+    tags: ["grammar", "preference", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-04",
+    date: "2026-10-30",
+    category: "Preposition",
+    whatISaid: "I've not heard the movie.",
+    correction: "I've never heard of that movie.",
+    explanation:
+      "「〜の存在を知っている／聞いたことがある」と言うときは、「hear」だけでなく前置詞「of」または「about」を付けて「hear of 〜」と表現します。「hear + 名詞」だけだと「音や声を聞く」という意味になります。",
+    examples: [
+      "I've never heard of that restaurant before.",
+      "Have you heard about the new anime movie?"
+    ],
+    tags: ["preposition", "vocabulary", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-03",
+    date: "2026-10-30",
+    category: "Grammar",
+    whatISaid: "I watched Conan when I was a kid, but recently I don't watch it.",
+    correction: "I watched Conan when I was a kid, but I haven't watched it recently.",
+    explanation:
+      "「最近ずっと〜していない」と過去から現在までの継続・経験を表すときは、現在形（don't watch）ではなく現在完了形（haven't watched it recently）を使います。",
+    examples: [
+      "I haven't been to a movie theater recently.",
+      "Have you watched any good movies lately?"
+    ],
+    tags: ["grammar", "tense", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-02",
+    date: "2026-10-30",
+    category: "Naturalness",
+    whatISaid: "This anime sound is so nice, so it is a good experience, which I watch at theater.",
+    correction: "The sound is great, so watching it in a theater is a wonderful experience.",
+    explanation:
+      "「映画館で観ると良い体験になる」と言うときは、関係代名詞「which」でつなぐよりも「watching it in a theater is a wonderful experience」のように動名詞を主語にするとすっきり自然に伝わります。また、「theater」には冠詞（a / the）が必要です。",
+    examples: [
+      "Watching live music in a concert hall is an unforgettable experience.",
+      "The sound quality in that theater is amazing."
+    ],
+    tags: ["naturalness", "movie", "grammar"],
+    mastered: false
+  },
+  {
+    id: "2026-10-30-01",
+    date: "2026-10-30",
+    category: "Grammar",
+    whatISaid: "Today, I have a qualification exam after the work.",
+    correction: "Today, I have a certification exam after work.",
+    explanation:
+      "「仕事のあとに」と言うとき、業務や労働を意味する不可算名詞の「work」には定冠詞「the」を付けず「after work」と言います（通勤の「at work」「before work」も同様です）。",
+    examples: [
+      "I'm going to meet my friends after work today.",
+      "Do you usually relax at home after work?"
+    ],
+    tags: ["grammar", "article", "work"],
+    mastered: false
+  },
+  {
     id: "2026-10-29-10",
     date: "2026-10-29",
     category: "Vocabulary",
