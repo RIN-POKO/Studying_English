@@ -302,6 +302,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-10-27-10",
+    date: "2026-10-27",
+    category: "Naturalness",
+    whatISaid: "It is difficult to monitor our children do SNS by parents.",
+    correction: "It is difficult for parents to monitor how their children use social media.",
+    explanation:
+      "SNSを「使う」ときは「do SNS」ではなく「use social media」と言います。また、「親が〜するのは難しい」と行動の主体を示すときは、文末に「by parents」を置くのではなく「It is difficult for parents to 〜」の形にします。",
+    examples: [
+      "It is hard for parents to monitor what their kids watch online.",
+      "Many parents worry about how their children use social media."
+    ],
+    tags: ["naturalness", "family", "technology"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-09",
+    date: "2026-10-27",
+    category: "Grammar",
+    whatISaid: "One of the important role is support our dreams.",
+    correction: "One of the important roles is to support our dreams.",
+    explanation:
+      "「〜のうちの1つ」を表すときは「one of the + 複数名詞」になるため、「role」ではなく「roles」にします。また、be動詞（is）の後ろに動詞を置くときは「to support」または「supporting」の形にします。",
+    examples: [
+      "One of the main goals is to improve our communication skills.",
+      "One of a parent's most important roles is to guide their children."
+    ],
+    tags: ["grammar", "plural", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-08",
+    date: "2026-10-27",
+    category: "Grammar",
+    whatISaid: "I want to do it, but I have so concerned.",
+    correction: "I want to do it, but I have a lot of concerns.",
+    explanation:
+      "「concerned」は形容詞なので「have」の後ろには置けません。「心配・懸念がある」と言うときは名詞の複数形を使って「I have a lot of concerns.」とするか、be動詞を使って「I'm very concerned (about it).」と表現します。",
+    examples: [
+      "I have some concerns about the cost of raising children.",
+      "Many young people are concerned about their financial future."
+    ],
+    tags: ["grammar", "vocabulary", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-07",
+    date: "2026-10-27",
+    category: "Vocabulary",
+    whatISaid: "In Japan these days, raising fee is increasing.",
+    correction: "In Japan these days, the cost of raising children is increasing.",
+    explanation:
+      "「子育てにかかる費用・養育費」は「raising fee」とは言わず、「the cost of raising children」や「child-rearing costs」と表現します。「fee」は授業料や入場料・手数料など特定のサービスに対する料金を指します。",
+    examples: [
+      "The cost of raising children has been increasing in Japan.",
+      "High living costs make it harder for young couples to start a family."
+    ],
+    tags: ["vocabulary", "family", "social"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-06",
+    date: "2026-10-27",
+    category: "Grammar",
+    whatISaid: "I wanted to go study abroad, and they paid fee.",
+    correction: "I wanted to study abroad, and they paid for the expenses.",
+    explanation:
+      "「fee」は可算名詞なので単数無冠詞では使えません。留学の費用全般を指すときは「the expenses」や「the costs」を使い、「paid for the expenses（費用を負担してくれた）」のように表現します。授業料を指す場合は「tuition」を使います。",
+    examples: [
+      "My parents paid for all my living expenses while I was abroad.",
+      "She worked part-time to pay her own tuition."
+    ],
+    tags: ["grammar", "vocabulary", "education"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-05",
+    date: "2026-10-27",
+    category: "Grammar",
+    whatISaid: "When I was a child, I usually be scolded by my father.",
+    correction: "When I was a child, I was often scolded by my father.",
+    explanation:
+      "子どもの頃の過去の話なので、be動詞の原形「be」ではなく過去形「was」を使います。また、頻度を表す副詞（often / usually）はbe動詞の後ろに置きます。",
+    examples: [
+      "I was often scolded by my parents for staying up too late.",
+      "He used to get scolded by his teacher for forgetting his homework."
+    ],
+    tags: ["grammar", "tense", "passive"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-04",
+    date: "2026-10-27",
+    category: "Grammar",
+    whatISaid: "I call with my family every day.",
+    correction: "I call my family every day.",
+    explanation:
+      "「（人に）電話をかける」という意味の「call」は他動詞なので、前置詞「with」は不要で直接目的語をとります。「talk with 〜」や「chat with 〜」と混同しないように注意しましょう。",
+    examples: [
+      "I call my parents every Sunday to catch up.",
+      "Please call me when you arrive at the station."
+    ],
+    tags: ["grammar", "verb", "family"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-03",
+    date: "2026-10-27",
+    category: "Phrasal Verb",
+    whatISaid: "I usually eat out breakfast with my family in holiday.",
+    correction: "I usually go out for breakfast with my family on holidays.",
+    explanation:
+      "「eat out」は「外食する」という自動詞句なので、後ろに直接「breakfast」を続けることはできません。「朝ごはんを外で食べる」は「go out for breakfast」または「eat breakfast out」と言います。また、「休日に」は「on holidays」と前置詞「on」を使います。",
+    examples: [
+      "We often go out for dinner on weekends.",
+      "In Nagoya, many people go out for breakfast at local cafes."
+    ],
+    tags: ["phrasal-verb", "preposition", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-02",
+    date: "2026-10-27",
+    category: "Preposition",
+    whatISaid: "If I have bad concerning things, I usually ask advice for my family.",
+    correction: "If I have any concerns, I usually ask my family for advice.",
+    explanation:
+      "「（人）にアドバイスを求める」は「ask advice for 〜」ではなく「ask + 人 + for advice」または「ask advice from + 人」と表現します。また、「心配事」は「bad concerning things」より名詞の「concerns」や「worries」を使うとすっきりします。",
+    examples: [
+      "Whenever I have a problem, I ask my friends for advice.",
+      "You can always ask your mentor for advice about your career."
+    ],
+    tags: ["preposition", "vocabulary", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-27-01",
+    date: "2026-10-27",
+    category: "Phrasal Verb",
+    whatISaid: "We can cheer up each other.",
+    correction: "We can cheer each other up.",
+    explanation:
+      "「cheer up（元気づける）」のような他動詞句で、目的語が「each other」や代名詞（me, you, them など）のときは、動詞と副詞の間に目的語を挟んで「cheer each other up」とするのが自然です。",
+    examples: [
+      "Good friends always cheer each other up during tough times.",
+      "I bought her favorite dessert to cheer her up."
+    ],
+    tags: ["phrasal-verb", "family", "conversation"],
+    mastered: false
+  },
+  {
     id: "2026-10-26-10",
     date: "2026-10-26",
     category: "Naturalness",
