@@ -576,7 +576,7 @@
             class="search-input"
             placeholder="表現・解説・タグで検索..."
           />
-          <button type="button" id="toggle-quiz" class="btn" aria-pressed="false">答えを隠す (テスト)</button>
+          <button type="button" id="toggle-quiz" class="btn" aria-pressed="true">答えを隠す (テスト)</button>
           <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">未習得のみ</button>
           <button type="button" id="toggle-sort" class="btn" aria-label="並び順: 新しい順">新しい順 ↓</button>
         </div>
@@ -605,7 +605,7 @@
       const state = {
         query: "",
         category: "All",
-        quizMode: false,
+        quizMode: true,
         onlyUnmastered: false,
         sortOrder: "desc"
       };
