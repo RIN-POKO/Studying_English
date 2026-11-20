@@ -736,12 +736,15 @@
         );
       }
 
-      function pickEnglishVoice(localOnly = false) {
+      function pickEnglishVoice() {
         const allEn = getEnglishVoices();
-        const enVoices = localOnly ? allEn.filter((v) => v.localService) : allEn;
-        if (enVoices.length === 0) return null;
+        if (allEn.length === 0) return null;
 
-        // 1. Natural / Enhanced / Premium な高品質音声を最優先
+        // リモート音声(Online/Google等)は環境によって無音ハングするため、ローカル音声を最優先する
+        const localEn = allEn.filter((v) => v.localService);
+        const enVoices = localEn.length > 0 ? localEn : allEn;
+
+        // 1. ローカルの高品質音声（Enhanced / Premium / Natural）を優先
         const highQuality = enVoices.filter((v) => /Natural|Enhanced|Premium/i.test(v.name || ""));
         for (const name of NATURAL_VOICE_NAMES) {
           const matched = highQuality.find((v) => v.name && v.name.includes(name));
@@ -751,7 +754,7 @@
           return highQuality.find((v) => v.lang === "en-US") || highQuality[0];
         }
 
-        // 2. 各OS・ブラウザの標準的な明瞭音声を優先
+        // 2. 各OSの標準的な明瞭音声を優先
         for (const name of NATURAL_VOICE_NAMES) {
           const matched = enVoices.find((v) => v.name && v.name.includes(name));
           if (matched) return matched;
@@ -803,33 +806,27 @@
         stopSpeaking();
         if (wasSameActive) return;
 
-        const startSpeak = (mode = "preferred") => {
+        const startSpeak = (useVoice = true) => {
           const utterance = new SpeechSynthesisUtterance(text);
           utterance.lang = "en-US";
           utterance.rate = 0.95;
 
-          if (mode === "preferred") {
+          if (useVoice) {
             if (!preferredVoice) {
-              preferredVoice = pickEnglishVoice(false);
+              preferredVoice = pickEnglishVoice();
             }
             if (preferredVoice) {
               utterance.voice = preferredVoice;
-            }
-          } else if (mode === "local") {
-            const localVoice = pickEnglishVoice(true);
-            if (localVoice) {
-              utterance.voice = localVoice;
+              if (preferredVoice.lang) {
+                utterance.lang = preferredVoice.lang;
+              }
             }
           }
 
           utterance.onend = resetSpeakState;
           utterance.onerror = () => {
-            if (mode === "preferred" && utterance.voice && !utterance.voice.localService) {
-              startSpeak("local");
-              return;
-            }
-            if (mode !== "default" && utterance.voice) {
-              startSpeak("default");
+            if (useVoice && utterance.voice) {
+              startSpeak(false);
               return;
             }
             resetSpeakState();
@@ -849,10 +846,10 @@
         if (needsCancel) {
           speakTimer = setTimeout(() => {
             speakTimer = null;
-            startSpeak("preferred");
+            startSpeak(true);
           }, 60);
         } else {
-          startSpeak("preferred");
+          startSpeak(true);
         }
       }
 
