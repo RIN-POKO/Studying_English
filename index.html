@@ -685,13 +685,40 @@
       const canSpeak = "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
       let activeSpeakBtn = null;
       let preferredVoice = null;
+      let currentUtterance = null;
+      let speakTimer = null;
+
+      const PREFERRED_VOICE_NAMES = [
+        "Google US English",
+        "Samantha",
+        "Ava",
+        "Allison",
+        "Alex",
+        "Aaron",
+        "Nicky",
+        "Daniel",
+        "Karen",
+        "Moira",
+        "Tessa"
+      ];
+
+      const EXCLUDED_VOICE_PATTERN =
+        /Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Eddy|Flo|Fred|Good News|Grandma|Grandpa|Jester|Junior|Kathy|Organ|Ralph|Reed|Rocko|Sandy|Shelley|Superstar|Trinoids|Whisper|Wobble|Zarvox/i;
 
       function pickEnglishVoice() {
         if (!canSpeak) return null;
         const voices = window.speechSynthesis.getVoices() || [];
+        const enVoices = voices.filter(
+          (v) => v.lang && v.lang.toLowerCase().startsWith("en") && !EXCLUDED_VOICE_PATTERN.test(v.name || "")
+        );
+        for (const name of PREFERRED_VOICE_NAMES) {
+          const matched = enVoices.find((v) => v.name && v.name.includes(name));
+          if (matched) return matched;
+        }
         return (
-          voices.find((v) => v.lang === "en-US") ||
-          voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("en-")) ||
+          enVoices.find((v) => v.lang === "en-US" && v.default) ||
+          enVoices.find((v) => v.lang === "en-US") ||
+          enVoices[0] ||
           null
         );
       }
@@ -706,6 +733,7 @@
       }
 
       function resetSpeakState() {
+        currentUtterance = null;
         if (activeSpeakBtn) {
           activeSpeakBtn.classList.remove("is-speaking");
           activeSpeakBtn.textContent = "🔊 再生";
@@ -715,7 +743,11 @@
       }
 
       function stopSpeaking() {
-        if (canSpeak) {
+        if (speakTimer) {
+          clearTimeout(speakTimer);
+          speakTimer = null;
+        }
+        if (canSpeak && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
           window.speechSynthesis.cancel();
         }
         resetSpeakState();
@@ -723,27 +755,43 @@
 
       function speakText(text, btn) {
         if (!canSpeak || !text) return;
-        const isSameActive = activeSpeakBtn === btn && window.speechSynthesis.speaking;
+        const wasSameActive = activeSpeakBtn === btn && (window.speechSynthesis.speaking || window.speechSynthesis.pending);
+        const needsCancel = window.speechSynthesis.speaking || window.speechSynthesis.pending;
         stopSpeaking();
-        if (isSameActive) return;
+        if (wasSameActive) return;
 
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = "en-US";
-        utterance.rate = 0.95;
-        if (!preferredVoice) {
-          preferredVoice = pickEnglishVoice();
-        }
-        if (preferredVoice) {
-          utterance.voice = preferredVoice;
-        }
-        utterance.onend = resetSpeakState;
-        utterance.onerror = resetSpeakState;
+        const startSpeak = () => {
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = "en-US";
+          utterance.rate = 0.95;
+          if (!preferredVoice) {
+            preferredVoice = pickEnglishVoice();
+          }
+          if (preferredVoice) {
+            utterance.voice = preferredVoice;
+          }
+          utterance.onend = resetSpeakState;
+          utterance.onerror = resetSpeakState;
+          currentUtterance = utterance;
 
-        activeSpeakBtn = btn;
-        btn.classList.add("is-speaking");
-        btn.textContent = "■ 停止";
-        btn.setAttribute("aria-pressed", "true");
-        window.speechSynthesis.speak(utterance);
+          activeSpeakBtn = btn;
+          btn.classList.add("is-speaking");
+          btn.textContent = "■ 停止";
+          btn.setAttribute("aria-pressed", "true");
+          if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+          }
+          window.speechSynthesis.speak(utterance);
+        };
+
+        if (needsCancel) {
+          speakTimer = setTimeout(() => {
+            speakTimer = null;
+            startSpeak();
+          }, 60);
+        } else {
+          startSpeak();
+        }
       }
 
       function speakBtnHtml(text, label) {
