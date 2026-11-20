@@ -457,8 +457,60 @@
       color: var(--text);
     }
 
+    .expr-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-block-end: 4px;
+    }
+
+    .expr-header .expr-label {
+      margin-block-end: 0;
+    }
+
+    .speak-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      padding-block: 2px;
+      padding-inline: 8px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      line-height: 1.4;
+      flex-shrink: 0;
+      transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+    }
+
+    .speak-btn:hover:not(:disabled) {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .speak-btn.is-speaking {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .example-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .example-text {
+      flex: 1;
+      min-width: 0;
+    }
+
     .examples li + li {
-      margin-block-start: 4px;
+      margin-block-start: 6px;
     }
 
     .empty-state {
@@ -630,7 +682,77 @@
         return true;
       }
 
+      const canSpeak = "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
+      let activeSpeakBtn = null;
+      let preferredVoice = null;
+
+      function pickEnglishVoice() {
+        if (!canSpeak) return null;
+        const voices = window.speechSynthesis.getVoices() || [];
+        return (
+          voices.find((v) => v.lang === "en-US") ||
+          voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("en-")) ||
+          null
+        );
+      }
+
+      if (canSpeak) {
+        preferredVoice = pickEnglishVoice();
+        if (typeof window.speechSynthesis.addEventListener === "function") {
+          window.speechSynthesis.addEventListener("voiceschanged", () => {
+            preferredVoice = pickEnglishVoice();
+          });
+        }
+      }
+
+      function resetSpeakState() {
+        if (activeSpeakBtn) {
+          activeSpeakBtn.classList.remove("is-speaking");
+          activeSpeakBtn.textContent = "🔊 再生";
+          activeSpeakBtn.setAttribute("aria-pressed", "false");
+          activeSpeakBtn = null;
+        }
+      }
+
+      function stopSpeaking() {
+        if (canSpeak) {
+          window.speechSynthesis.cancel();
+        }
+        resetSpeakState();
+      }
+
+      function speakText(text, btn) {
+        if (!canSpeak || !text) return;
+        const isSameActive = activeSpeakBtn === btn && window.speechSynthesis.speaking;
+        stopSpeaking();
+        if (isSameActive) return;
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "en-US";
+        utterance.rate = 0.95;
+        if (!preferredVoice) {
+          preferredVoice = pickEnglishVoice();
+        }
+        if (preferredVoice) {
+          utterance.voice = preferredVoice;
+        }
+        utterance.onend = resetSpeakState;
+        utterance.onerror = resetSpeakState;
+
+        activeSpeakBtn = btn;
+        btn.classList.add("is-speaking");
+        btn.textContent = "■ 停止";
+        btn.setAttribute("aria-pressed", "true");
+        window.speechSynthesis.speak(utterance);
+      }
+
+      function speakBtnHtml(text, label) {
+        if (!canSpeak || !text) return "";
+        return `<button type="button" class="speak-btn" aria-label="${escapeHtml(label)}" aria-pressed="false" data-speak-text="${escapeHtml(text)}">🔊 再生</button>`;
+      }
+
       function renderCards() {
+        stopSpeaking();
         const dir = state.sortOrder === "asc" ? 1 : -1;
         const filtered = entries.filter(matchesFilter).sort((a, b) => {
           const dateA = String(a.date || "");
@@ -657,7 +779,12 @@
               ? `<div>
                   <h2 class="examples-title">例文</h2>
                   <ul class="examples" lang="en">
-                    ${entry.examples.map((ex) => `<li>${escapeHtml(ex)}</li>`).join("")}
+                    ${entry.examples
+                      .map(
+                        (ex) =>
+                          `<li><div class="example-item"><span class="example-text">${escapeHtml(ex)}</span>${speakBtnHtml(ex, "例文を再生")}</div></li>`
+                      )
+                      .join("")}
                   </ul>
                 </div>`
               : "";
@@ -681,7 +808,10 @@
                     <p class="expr-text" lang="en">${escapeHtml(entry.whatISaid || "")}</p>
                   </div>
                   <div class="expr-box expr-correct${state.quizMode ? " hidden-answer" : ""}" data-answer-box>
-                    <span class="expr-label">自然な表現 (Better / Correct)</span>
+                    <div class="expr-header">
+                      <span class="expr-label">自然な表現 (Better / Correct)</span>
+                      ${speakBtnHtml(entry.correction || "", "自然な表現を再生")}
+                    </div>
                     <p class="expr-text" lang="en">${escapeHtml(entry.correction || "")}</p>
                     <button type="button" class="reveal-btn" data-reveal-btn>答えを表示</button>
                   </div>
@@ -738,6 +868,11 @@
       });
 
       els.cardsContainer.addEventListener("click", (e) => {
+        const speakBtn = e.target.closest("[data-speak-text]");
+        if (speakBtn) {
+          speakText(speakBtn.getAttribute("data-speak-text"), speakBtn);
+          return;
+        }
         const masteredBtn = e.target.closest("[data-mastered-id]");
         if (masteredBtn) {
           toggleMastered(masteredBtn.getAttribute("data-mastered-id"));
