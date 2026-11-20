@@ -703,46 +703,65 @@
       let currentUtterance = null;
       let speakTimer = null;
 
-      const PREFERRED_VOICE_NAMES = [
+      const NATURAL_VOICE_NAMES = [
+        "Microsoft Aria",
+        "Microsoft Jenny",
+        "Microsoft Guy",
         "Samantha",
         "Ava",
         "Allison",
         "Alex",
         "Aaron",
         "Nicky",
-        "Microsoft Aria",
-        "Microsoft Jenny",
-        "Microsoft Guy",
-        "Microsoft Zira",
-        "Microsoft David",
-        "Microsoft Mark",
         "Daniel",
         "Karen",
         "Moira",
         "Tessa",
-        "Google US English"
+        "Google US English",
+        "Google UK English Female",
+        "Google UK English Male",
+        "Microsoft Zira",
+        "Microsoft David",
+        "Microsoft Mark"
       ];
 
       const EXCLUDED_VOICE_PATTERN =
         /Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Eddy|Flo|Fred|Good News|Grandma|Grandpa|Jester|Junior|Kathy|Organ|Ralph|Reed|Rocko|Sandy|Shelley|Superstar|Trinoids|Whisper|Wobble|Zarvox/i;
 
-      function pickEnglishVoice() {
-        if (!canSpeak) return null;
+      function getEnglishVoices() {
+        if (!canSpeak) return [];
         const voices = window.speechSynthesis.getVoices() || [];
-        const enVoices = voices.filter(
+        return voices.filter(
           (v) => v.lang && v.lang.toLowerCase().startsWith("en") && !EXCLUDED_VOICE_PATTERN.test(v.name || "")
         );
-        const localEnVoices = enVoices.filter((v) => v.localService);
-        const candidates = localEnVoices.length > 0 ? localEnVoices : enVoices;
+      }
 
-        for (const name of PREFERRED_VOICE_NAMES) {
-          const matched = candidates.find((v) => v.name && v.name.includes(name));
+      function pickEnglishVoice(localOnly = false) {
+        const allEn = getEnglishVoices();
+        const enVoices = localOnly ? allEn.filter((v) => v.localService) : allEn;
+        if (enVoices.length === 0) return null;
+
+        // 1. Natural / Enhanced / Premium な高品質音声を最優先
+        const highQuality = enVoices.filter((v) => /Natural|Enhanced|Premium/i.test(v.name || ""));
+        for (const name of NATURAL_VOICE_NAMES) {
+          const matched = highQuality.find((v) => v.name && v.name.includes(name));
           if (matched) return matched;
         }
+        if (highQuality.length > 0) {
+          return highQuality.find((v) => v.lang === "en-US") || highQuality[0];
+        }
+
+        // 2. 各OS・ブラウザの標準的な明瞭音声を優先
+        for (const name of NATURAL_VOICE_NAMES) {
+          const matched = enVoices.find((v) => v.name && v.name.includes(name));
+          if (matched) return matched;
+        }
+
+        // 3. en-US デフォルト → その他の英語音声
         return (
-          candidates.find((v) => v.lang === "en-US" && v.default) ||
-          candidates.find((v) => v.lang === "en-US") ||
-          candidates[0] ||
+          enVoices.find((v) => v.lang === "en-US" && v.default) ||
+          enVoices.find((v) => v.lang === "en-US") ||
+          enVoices[0] ||
           null
         );
       }
@@ -784,22 +803,33 @@
         stopSpeaking();
         if (wasSameActive) return;
 
-        const startSpeak = (useVoice = true) => {
+        const startSpeak = (mode = "preferred") => {
           const utterance = new SpeechSynthesisUtterance(text);
           utterance.lang = "en-US";
           utterance.rate = 0.95;
-          if (useVoice) {
+
+          if (mode === "preferred") {
             if (!preferredVoice) {
-              preferredVoice = pickEnglishVoice();
+              preferredVoice = pickEnglishVoice(false);
             }
             if (preferredVoice) {
               utterance.voice = preferredVoice;
             }
+          } else if (mode === "local") {
+            const localVoice = pickEnglishVoice(true);
+            if (localVoice) {
+              utterance.voice = localVoice;
+            }
           }
+
           utterance.onend = resetSpeakState;
           utterance.onerror = () => {
-            if (useVoice && utterance.voice) {
-              startSpeak(false);
+            if (mode === "preferred" && utterance.voice && !utterance.voice.localService) {
+              startSpeak("local");
+              return;
+            }
+            if (mode !== "default" && utterance.voice) {
+              startSpeak("default");
               return;
             }
             resetSpeakState();
@@ -819,10 +849,10 @@
         if (needsCancel) {
           speakTimer = setTimeout(() => {
             speakTimer = null;
-            startSpeak(true);
+            startSpeak("preferred");
           }, 60);
         } else {
-          startSpeak(true);
+          startSpeak("preferred");
         }
       }
 
