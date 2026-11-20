@@ -302,6 +302,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-10-26-10",
+    date: "2026-10-26",
+    category: "Naturalness",
+    whatISaid: "I make my rule long time I use SNS.",
+    correction: "I set a time limit for using social media.",
+    explanation:
+      "「使用時間のルールを作る（時間を制限する）」と言うときは「set a time limit for 〜」や「limit my screen time on 〜」と表現すると自然です。また、英語では和製英語の「SNS」よりも「social media」が一般的に使われます。",
+    examples: [
+      "I try to limit my screen time on social media before bed.",
+      "She set a strict time limit for playing video games."
+    ],
+    tags: ["naturalness", "vocabulary", "lifestyle"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-09",
+    date: "2026-10-26",
+    category: "Grammar",
+    whatISaid: "I do not distract when I'm in working room.",
+    correction: "I don't get distracted when I'm in my workspace.",
+    explanation:
+      "「distract」は「（人の）気を散らす」という他動詞なので、「気が散らない」と言うときは「I don't get distracted」のように受動態にします。また、仕事用の部屋は「working room」ではなく「workspace」や「home office」と言うのが自然です。",
+    examples: [
+      "I easily get distracted when there is noise around me.",
+      "Having a dedicated workspace helps me stay focused."
+    ],
+    tags: ["grammar", "work", "vocabulary"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-08",
+    date: "2026-10-26",
+    category: "Grammar",
+    whatISaid: "It is good effect for me.",
+    correction: "It has a good effect on me.",
+    explanation:
+      "「effect（効果）」は名詞なので、「It is good effect」ではなく「It has a good effect on me.」のように動詞「have」と前置詞「on」を組み合わせて使います。形容詞を使って「It is very effective for me.」と言うこともできます。",
+    examples: [
+      "Taking a short walk has a positive effect on my mood.",
+      "Separating work and living spaces is very effective for me."
+    ],
+    tags: ["grammar", "preposition", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-07",
+    date: "2026-10-26",
+    category: "Grammar",
+    whatISaid: "We are difficult to calm down alone now.",
+    correction: "It's difficult for us to unwind on our own now.",
+    explanation:
+      "「difficult」や「easy」などの形容詞は、人を主語にして「We are difficult to 〜」と言うと「私たちは扱いにくい人だ」という意味になります。「私たちが〜するのは難しい」と言うときは「It is difficult for us to 〜」の形を使います。また、仕事後にリラックスする意味では「unwind」も自然です。",
+    examples: [
+      "It is difficult for me to separate work from my private life.",
+      "It's hard to unwind when you keep checking work emails."
+    ],
+    tags: ["grammar", "lifestyle", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-06",
+    date: "2026-10-26",
+    category: "Grammar",
+    whatISaid: "I can communicate remote using smartphone and PC.",
+    correction: "I can communicate remotely using a smartphone and a PC.",
+    explanation:
+      "動詞の「communicate」を修飾するときは形容詞の「remote」ではなく副詞の「remotely」を使います。また、「smartphone」「PC」などの可算名詞を単数で使うときは冠詞「a」を付けます。",
+    examples: [
+      "Our team collaborates remotely from different cities.",
+      "You can join the meeting using a smartphone or a laptop."
+    ],
+    tags: ["grammar", "adverb", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-05",
+    date: "2026-10-26",
+    category: "Preposition",
+    whatISaid: "Sometimes I go back my parents' house and I work from there.",
+    correction: "Sometimes I go back to my parents' house and work from there.",
+    explanation:
+      "「go back」は自動詞なので、後ろに場所の名詞を置くときは前置詞「to」が必要です（「go back to + 場所」）。なお、「home」は副詞として使うため「go back home」のように「to」は不要になります。",
+    examples: [
+      "I'm planning to go back to my hometown next month.",
+      "After finishing my errands, I went back to the office."
+    ],
+    tags: ["preposition", "daily", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-04",
+    date: "2026-10-26",
+    category: "Vocabulary",
+    whatISaid: "I like working from home because I can work from everywhere.",
+    correction: "I like working from home because I can work from anywhere.",
+    explanation:
+      "「（場所に縛られず）どこからでも働ける」と言うときは、「everywhere（文字通りすべての場所）」ではなく「anywhere（どこでも好きな場所）」を使うのが自然です。",
+    examples: [
+      "With a laptop and Wi-Fi, you can work from anywhere.",
+      "I tried to find my keys, and I looked everywhere."
+    ],
+    tags: ["vocabulary", "work", "remote"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-03",
+    date: "2026-10-26",
+    category: "Grammar",
+    whatISaid: "My co-worker work from home too.",
+    correction: "My coworkers work from home too.",
+    explanation:
+      "同僚たち全般を指すときは複数形の「coworkers」にします。特定の1人の同僚を指す場合は「My coworker works from home」のように動詞に三単現の「-s」が必要です。",
+    examples: [
+      "Most of my coworkers work from home.",
+      "My coworker lives near the office."
+    ],
+    tags: ["grammar", "plural", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-02",
+    date: "2026-10-26",
+    category: "Grammar",
+    whatISaid: "I want to work at office, not in my house.",
+    correction: "I want to work at the office rather than from home.",
+    explanation:
+      "「オフィスで働く」と言うときは冠詞「the」を付けて「at the office」または「in the office」とします。また、「自宅で働く」は「in my house」より「from home」と言うのが一般的です。",
+    examples: [
+      "I prefer working at the office rather than working from home.",
+      "Is anyone at the office today?"
+    ],
+    tags: ["article", "work", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-26-01",
+    date: "2026-10-26",
+    category: "Vocabulary",
+    whatISaid: "I think it is not healthy style because I have no to do exercise.",
+    correction: "I don't think it's a healthy lifestyle because I don't exercise.",
+    explanation:
+      "「生活スタイル」は「style」だけでなく「lifestyle（可算名詞）」を使います。また、「運動をする時間や習慣がない」と言うときは「have no to do exercise」ではなく、「I don't exercise」や「I don't have time to exercise」のように表現します。",
+    examples: [
+      "I want to adopt a healthier lifestyle by exercising regularly.",
+      "I don't have enough time to exercise on weekdays."
+    ],
+    tags: ["vocabulary", "lifestyle", "health"],
+    mastered: false
+  },
+  {
     id: "2026-10-23-10",
     date: "2026-10-23",
     category: "Grammar",
