@@ -152,6 +152,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-11-11-10",
+    date: "2026-11-11",
+    category: "Grammar",
+    whatISaid: "Frozen food are so delicious, so I don't cook recently.",
+    correction: "Frozen food is so delicious, so I haven't cooked much recently.",
+    explanation:
+      "「frozen food（冷凍食品）」は総称として不可算名詞で扱うため、be動詞は「is」を使います。また、「最近ずっと自炊していない」という過去から現在までの継続を表すときは、現在完了形（haven't cooked much recently）にします。",
+    examples: [
+      "Japanese frozen food is really high quality these days.",
+      "I've been so busy that I haven't cooked at home recently."
+    ],
+    tags: ["grammar", "tense", "food"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-09",
+    date: "2026-11-11",
+    category: "Naturalness",
+    whatISaid: "Using computers too much makes our health bad.",
+    correction: "Using computers too much is bad for our health.",
+    explanation:
+      "「健康に悪い」と言うときは「make our health bad」よりも「be bad for our health」や「harm our health」を使う方が英語として自然です。",
+    examples: [
+      "Sitting at a desk all day is bad for your health.",
+      "Lack of sleep can seriously harm your health."
+    ],
+    tags: ["naturalness", "health", "technology"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-08",
+    date: "2026-11-11",
+    category: "Preposition",
+    whatISaid: "Some people are absorbed with computers.",
+    correction: "Some people get too absorbed in computers.",
+    explanation:
+      "「〜に夢中になる・没頭する」と言うときは、「be absorbed with」ではなく「be absorbed in」または「get absorbed in」のように前置詞「in」を使います。",
+    examples: [
+      "He was so absorbed in his video game that he didn't hear me.",
+      "It's easy to get absorbed in social media for hours."
+    ],
+    tags: ["preposition", "collocation", "technology"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-07",
+    date: "2026-11-11",
+    category: "Grammar",
+    whatISaid: "It is easy to take care of pet robot than real pet like dogs and cats.",
+    correction: "It is easier to take care of pet robots than real pets like dogs and cats.",
+    explanation:
+      "「than（〜より）」を使って比較するときは、形容詞を比較級「easier」にする必要があります。また、一般的なペットやロボット全般を指すときは可算名詞を複数形（pet robots / real pets）にします。",
+    examples: [
+      "It is easier to study online than to commute to a school.",
+      "Living with pet robots is becoming more common in Japan."
+    ],
+    tags: ["grammar", "comparison", "technology"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-06",
+    date: "2026-11-11",
+    category: "Grammar",
+    whatISaid: "We have to call other people without, unless I remember the cell phone number.",
+    correction: "We can call people even if we don't remember their phone numbers.",
+    explanation:
+      "「電話番号を覚えていなくても電話できる」と言うときは、「have to（〜しなければならない）」ではなく「can（〜できる）」を使い、「even if we don't remember 〜（たとえ覚えていなくても）」とつなげると意味が明確になります。",
+    examples: [
+      "Thanks to smartphones, we can call anyone even if we don't memorize their number.",
+      "You can use this app even if you don't have an account."
+    ],
+    tags: ["grammar", "conjunction", "technology"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-05",
+    date: "2026-11-11",
+    category: "Grammar",
+    whatISaid: "I remember my cell phone number when I was a child.",
+    correction: "I used to remember my phone number when I was a child.",
+    explanation:
+      "「子どもの頃は覚えていた（今は覚えていない）」という過去の状態や習慣を表すときは、現在形（remember）ではなく「used to remember」または過去形「remembered」を使います。",
+    examples: [
+      "I used to remember all my friends' phone numbers.",
+      "When I was young, I remembered every line of my favorite anime."
+    ],
+    tags: ["grammar", "tense", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-04",
+    date: "2026-11-11",
+    category: "Vocabulary",
+    whatISaid: "In Japan, most Japanese cannot write a difficult language.",
+    correction: "In Japan, many people can no longer write complex kanji by hand.",
+    explanation:
+      "「難しい漢字（文字）」を指すときは、「a difficult language（難しい言語）」ではなく「complex kanji」や「difficult characters」と言います。また、「手書きで」は「by hand」を添えると明確です。",
+    examples: [
+      "Since I type everything on a PC, I forget how to write complex kanji by hand.",
+      "Chinese and Japanese share many similar characters."
+    ],
+    tags: ["vocabulary", "culture", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-03",
+    date: "2026-11-11",
+    category: "Preposition",
+    whatISaid: "We can connect other people every time.",
+    correction: "We can connect with other people anytime.",
+    explanation:
+      "「人とつながる・連絡を取り合う」という意味で「connect」を使うときは、自動詞として前置詞「with」を付け「connect with other people」とします（「connect A」はケーブルや機器をつなぐときに使います）。",
+    examples: [
+      "Social media allows us to connect with people around the world.",
+      "I use LinkedIn to connect with other engineers."
+    ],
+    tags: ["preposition", "technology", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-02",
+    date: "2026-11-11",
+    category: "Grammar",
+    whatISaid: "AI makes our working efficiency.",
+    correction: "AI makes our work more efficient.",
+    explanation:
+      "「make + 目的語 + 形容詞」で「〜を…の状態にする」を表すときは、名詞の「efficiency」ではなく形容詞の「efficient」を使い「makes our work more efficient」とします。名詞「efficiency」を使う場合は「AI improves our work efficiency.」と表現します。",
+    examples: [
+      "New tools have made our development process much more efficient.",
+      "Automation can significantly improve work efficiency."
+    ],
+    tags: ["grammar", "ai", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-11-11-01",
+    date: "2026-11-11",
+    category: "Grammar",
+    whatISaid: "Today I'm working day.",
+    correction: "Today is a workday.",
+    explanation:
+      "「今日は仕事の日（出勤日）です」と言うとき、「I（私）」を主語にして「I'm working day」とは言えません。「Today is a workday.」または「I'm working today.」「I have work today.」と表現します。",
+    examples: [
+      "Today is a workday, so I don't have any plans after work.",
+      "Are you working today, or is it your day off?"
+    ],
+    tags: ["grammar", "work", "daily"],
+    mastered: false
+  },
+  {
     id: "2026-11-03-10",
     date: "2026-11-03",
     category: "Vocabulary",
