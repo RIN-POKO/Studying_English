@@ -537,6 +537,91 @@
       color: var(--text-muted);
     }
 
+    .flashcard-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-block-end: 12px;
+    }
+
+    .flashcard-progress {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .flashcard-prompt {
+      background: var(--surface-muted);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding-block: 22px;
+      padding-inline: 20px;
+      margin-block-end: 16px;
+    }
+
+    .flashcard-prompt-label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-block-end: 8px;
+    }
+
+    .flashcard-prompt-text {
+      margin: 0;
+      font-size: 1.22rem;
+      font-weight: 700;
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .flashcard-answer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-block-end: 16px;
+    }
+
+    .flashcard-answer[hidden] {
+      display: none;
+    }
+
+    .flashcard-answer .explanation {
+      margin-block-end: 0;
+    }
+
+    .flashcard-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-block-start: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--primary-text);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      color: var(--primary-text);
+    }
+
+    .flashcard-hint {
+      margin-block-start: 10px;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
     @media (min-width: 720px) {
       .expr-grid {
         grid-template-columns: 1fr 1fr;
@@ -579,6 +664,7 @@
           <button type="button" id="toggle-quiz" class="btn" aria-pressed="true">答えを隠す (テスト)</button>
           <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">未習得のみ</button>
           <button type="button" id="toggle-sort" class="btn" aria-label="並び順: 新しい順">新しい順 ↓</button>
+          <button type="button" id="toggle-flashcard" class="btn" aria-pressed="false">瞬間英作文モード</button>
         </div>
         <div class="category-pills" id="category-pills" role="group" aria-label="カテゴリ絞り込み"></div>
       </search>
@@ -607,7 +693,11 @@
         category: "All",
         quizMode: true,
         onlyUnmastered: false,
-        sortOrder: "desc"
+        sortOrder: "desc",
+        flashcardMode: false,
+        flashcardIndex: 0,
+        flashcardRevealed: false,
+        flashcardOrder: null
       };
 
       const els = {
@@ -618,6 +708,7 @@
         toggleQuiz: document.getElementById("toggle-quiz"),
         toggleUnmastered: document.getElementById("toggle-unmastered"),
         toggleSort: document.getElementById("toggle-sort"),
+        toggleFlashcard: document.getElementById("toggle-flashcard"),
         categoryPills: document.getElementById("category-pills"),
         resultsStatus: document.getElementById("results-status"),
         cardsContainer: document.getElementById("cards-container")
@@ -858,8 +949,7 @@
         return `<button type="button" class="speak-btn" aria-label="${escapeHtml(label)}" aria-pressed="false" data-speak-text="${escapeHtml(text)}">🔊 再生</button>`;
       }
 
-      function renderCards() {
-        stopSpeaking();
+      function getFilteredEntries() {
         const dir = state.sortOrder === "asc" ? 1 : -1;
         const filtered = entries.filter(matchesFilter).sort((a, b) => {
           const dateA = String(a.date || "");
@@ -869,10 +959,112 @@
           }
           return String(a.id || "").localeCompare(String(b.id || "")) * dir;
         });
-        els.resultsStatus.textContent = `${filtered.length}件の表現を表示中`;
+
+        if (state.flashcardMode && Array.isArray(state.flashcardOrder)) {
+          const orderMap = new Map(state.flashcardOrder.map((id, idx) => [id, idx]));
+          filtered.sort((a, b) => {
+            const idxA = orderMap.has(a.id) ? orderMap.get(a.id) : Number.MAX_SAFE_INTEGER;
+            const idxB = orderMap.has(b.id) ? orderMap.get(b.id) : Number.MAX_SAFE_INTEGER;
+            return idxA - idxB;
+          });
+        }
+        return filtered;
+      }
+
+      function renderFlashcard(filtered) {
+        if (state.flashcardIndex >= filtered.length) {
+          state.flashcardIndex = Math.max(0, filtered.length - 1);
+        }
+        if (state.flashcardIndex < 0) {
+          state.flashcardIndex = 0;
+        }
+        const entry = filtered[state.flashcardIndex];
+        const mastered = isMastered(entry);
+        const tagsHtml = (entry.tags || [])
+          .map((t) => `<span class="tag">#${escapeHtml(t)}</span>`)
+          .join("");
+        const examplesHtml = (entry.examples && entry.examples.length)
+          ? `<div>
+              <h2 class="examples-title">例文 (Example)</h2>
+              <ul class="examples" lang="en">
+                ${entry.examples
+                  .map(
+                    (ex) =>
+                      `<li><div class="example-item"><span class="example-text">${escapeHtml(ex)}</span>${speakBtnHtml(ex, "例文を再生")}</div></li>`
+                  )
+                  .join("")}
+              </ul>
+            </div>`
+          : "";
+        const promptText = entry.japanese || entry.explanation || entry.whatISaid || "";
+
+        els.cardsContainer.innerHTML = `
+          <div class="flashcard-wrap">
+            <div class="flashcard-toolbar">
+              <span class="flashcard-progress">${state.flashcardIndex + 1} / ${filtered.length}</span>
+              <button type="button" class="btn" data-flashcard-shuffle>🔀 シャッフル</button>
+            </div>
+            <article class="card${mastered ? " is-mastered" : ""}">
+              <div class="card-header">
+                <div class="meta">
+                  <time class="date" datetime="${escapeHtml(entry.date || "")}">${escapeHtml(entry.date || "")}</time>
+                  <span class="badge">${escapeHtml(entry.category || "General")}</span>
+                  ${tagsHtml}
+                </div>
+                <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
+                  ${mastered ? "✓ 習得済み" : "未習得"}
+                </button>
+              </div>
+
+              <div class="flashcard-prompt">
+                <span class="flashcard-prompt-label">日本語訳（英語で言ってみよう）</span>
+                <p class="flashcard-prompt-text">${escapeHtml(promptText)}</p>
+              </div>
+
+              <div class="flashcard-answer" ${state.flashcardRevealed ? "" : "hidden"}>
+                <div class="expr-box expr-correct">
+                  <div class="expr-header">
+                    <span class="expr-label">自然な英語表現</span>
+                    ${speakBtnHtml(entry.correction || "", "自然な表現を再生")}
+                  </div>
+                  <p class="expr-text" lang="en">${escapeHtml(entry.correction || "")}</p>
+                </div>
+
+                <div class="explanation">
+                  <h2 class="explanation-title">解説</h2>
+                  <div>${escapeHtml(entry.explanation || "")}</div>
+                </div>
+
+                ${examplesHtml}
+              </div>
+
+              <div class="flashcard-nav">
+                <button type="button" class="btn" data-flashcard-prev ${state.flashcardIndex === 0 ? "disabled" : ""}>← 前へ</button>
+                <button type="button" class="btn btn-primary" data-flashcard-toggle aria-expanded="${String(state.flashcardRevealed)}">
+                  ${state.flashcardRevealed ? "答えを隠す" : "答えを見る"}
+                </button>
+                <button type="button" class="btn" data-flashcard-next ${state.flashcardIndex >= filtered.length - 1 ? "disabled" : ""}>次へ →</button>
+              </div>
+              <p class="flashcard-hint">ショートカット: Space で答えを表示/非表示 · ← / → で前後のカードへ</p>
+            </article>
+          </div>
+        `;
+      }
+
+      function renderCards() {
+        stopSpeaking();
+        const filtered = getFilteredEntries();
+        els.resultsStatus.textContent = state.flashcardMode
+          ? `瞬間英作文モード: ${filtered.length}件中 ${filtered.length ? state.flashcardIndex + 1 : 0}件目`
+          : `${filtered.length}件の表現を表示中`;
 
         if (filtered.length === 0) {
           els.cardsContainer.innerHTML = `<div class="empty-state">条件に一致する表現がありません。</div>`;
+          return;
+        }
+
+        if (state.flashcardMode) {
+          renderFlashcard(filtered);
           return;
         }
 
@@ -952,6 +1144,8 @@
 
       els.searchInput.addEventListener("input", (e) => {
         state.query = e.target.value;
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
         renderCards();
       });
 
@@ -963,15 +1157,30 @@
 
       els.toggleUnmastered.addEventListener("click", () => {
         state.onlyUnmastered = !state.onlyUnmastered;
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
         els.toggleUnmastered.setAttribute("aria-pressed", String(state.onlyUnmastered));
         renderCards();
       });
 
       els.toggleSort.addEventListener("click", () => {
         state.sortOrder = state.sortOrder === "desc" ? "asc" : "desc";
+        state.flashcardOrder = null;
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
         const isAsc = state.sortOrder === "asc";
         els.toggleSort.textContent = isAsc ? "古い順 ↑" : "新しい順 ↓";
         els.toggleSort.setAttribute("aria-label", `並び順: ${isAsc ? "古い順" : "新しい順"}`);
+        renderCards();
+      });
+
+      els.toggleFlashcard.addEventListener("click", () => {
+        state.flashcardMode = !state.flashcardMode;
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
+        state.flashcardOrder = null;
+        els.toggleFlashcard.setAttribute("aria-pressed", String(state.flashcardMode));
+        els.toggleQuiz.disabled = state.flashcardMode;
         renderCards();
       });
 
@@ -979,6 +1188,8 @@
         const btn = e.target.closest("[data-category]");
         if (!btn) return;
         state.category = btn.getAttribute("data-category");
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
         render();
       });
 
@@ -993,6 +1204,44 @@
           toggleMastered(masteredBtn.getAttribute("data-mastered-id"));
           return;
         }
+        const fcToggle = e.target.closest("[data-flashcard-toggle]");
+        if (fcToggle) {
+          state.flashcardRevealed = !state.flashcardRevealed;
+          renderCards();
+          return;
+        }
+        const fcPrev = e.target.closest("[data-flashcard-prev]");
+        if (fcPrev) {
+          if (state.flashcardIndex > 0) {
+            state.flashcardIndex -= 1;
+            state.flashcardRevealed = false;
+            renderCards();
+          }
+          return;
+        }
+        const fcNext = e.target.closest("[data-flashcard-next]");
+        if (fcNext) {
+          const total = getFilteredEntries().length;
+          if (state.flashcardIndex < total - 1) {
+            state.flashcardIndex += 1;
+            state.flashcardRevealed = false;
+            renderCards();
+          }
+          return;
+        }
+        const fcShuffle = e.target.closest("[data-flashcard-shuffle]");
+        if (fcShuffle) {
+          const ids = getFilteredEntries().map((item) => item.id);
+          for (let i = ids.length - 1; i > 0; i -= 1) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [ids[i], ids[j]] = [ids[j], ids[i]];
+          }
+          state.flashcardOrder = ids;
+          state.flashcardIndex = 0;
+          state.flashcardRevealed = false;
+          renderCards();
+          return;
+        }
         const revealBtn = e.target.closest("[data-reveal-btn]");
         if (revealBtn) {
           const box = revealBtn.closest("[data-answer-box]");
@@ -1001,6 +1250,29 @@
             revealBtn.textContent = isNowHidden ? "答えを表示" : "答えを隠す";
             revealBtn.setAttribute("aria-expanded", String(!isNowHidden));
           }
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (!state.flashcardMode) return;
+        if (document.activeElement === els.searchInput) return;
+        if (e.key === "ArrowLeft") {
+          if (state.flashcardIndex > 0) {
+            state.flashcardIndex -= 1;
+            state.flashcardRevealed = false;
+            renderCards();
+          }
+        } else if (e.key === "ArrowRight") {
+          const total = getFilteredEntries().length;
+          if (state.flashcardIndex < total - 1) {
+            state.flashcardIndex += 1;
+            state.flashcardRevealed = false;
+            renderCards();
+          }
+        } else if (e.key === " " && e.target.tagName !== "BUTTON") {
+          e.preventDefault();
+          state.flashcardRevealed = !state.flashcardRevealed;
+          renderCards();
         }
       });
 
