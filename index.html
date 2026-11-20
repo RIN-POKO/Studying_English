@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>English Mistake Log | オンライン英会話 復習ノート</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+
+      --bg-light: #f8fafc;
+      --bg-dark: #0f172a;
+      --surface-light: #ffffff;
+      --surface-dark: #1e293b;
+      --surface-muted-light: #f1f5f9;
+      --surface-muted-dark: #334155;
+      --text-light: #0f172a;
+      --text-dark: #f1f5f9;
+      --text-muted-light: #475569;
+      --text-muted-dark: #cbd5e1;
+      --border-light: #e2e8f0;
+      --border-dark: #334155;
+
+      --primary-light: #2563eb;
+      --primary-dark: #60a5fa;
+      --primary-text-light: #ffffff;
+      --primary-text-dark: #0f172a;
+      --primary-soft-light: #eff6ff;
+      --primary-soft-dark: rgba(96, 165, 250, 0.16);
+
+      --danger-light: #dc2626;
+      --danger-dark: #fca5a5;
+      --danger-soft-light: #fef2f2;
+      --danger-soft-dark: rgba(248, 113, 113, 0.14);
+      --danger-border-light: #fecaca;
+      --danger-border-dark: rgba(248, 113, 113, 0.4);
+
+      --success-light: #059669;
+      --success-dark: #6ee7b7;
+      --success-soft-light: #ecfdf5;
+      --success-soft-dark: rgba(52, 211, 153, 0.14);
+      --success-border-light: #a7f3d0;
+      --success-border-dark: rgba(52, 211, 153, 0.4);
+
+      --bg: var(--bg-light);
+      --surface: var(--surface-light);
+      --surface-muted: var(--surface-muted-light);
+      --text: var(--text-light);
+      --text-muted: var(--text-muted-light);
+      --border: var(--border-light);
+      --primary: var(--primary-light);
+      --primary-text: var(--primary-text-light);
+      --primary-soft: var(--primary-soft-light);
+      --danger: var(--danger-light);
+      --danger-soft: var(--danger-soft-light);
+      --danger-border: var(--danger-border-light);
+      --success: var(--success-light);
+      --success-soft: var(--success-soft-light);
+      --success-border: var(--success-border-light);
+
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.05);
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--bg-dark);
+        --surface: var(--surface-dark);
+        --surface-muted: var(--surface-muted-dark);
+        --text: var(--text-dark);
+        --text-muted: var(--text-muted-dark);
+        --border: var(--border-dark);
+        --primary: var(--primary-dark);
+        --primary-text: var(--primary-text-dark);
+        --primary-soft: var(--primary-soft-dark);
+        --danger: var(--danger-dark);
+        --danger-soft: var(--danger-soft-dark);
+        --danger-border: var(--danger-border-dark);
+        --success: var(--success-dark);
+        --success-soft: var(--success-soft-dark);
+        --success-border: var(--success-border-dark);
+      }
+    }
+
+    @supports (color: light-dark(white, black)) {
+      :root {
+        --bg: light-dark(var(--bg-light), var(--bg-dark));
+        --surface: light-dark(var(--surface-light), var(--surface-dark));
+        --surface-muted: light-dark(var(--surface-muted-light), var(--surface-muted-dark));
+        --text: light-dark(var(--text-light), var(--text-dark));
+        --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+        --border: light-dark(var(--border-light), var(--border-dark));
+        --primary: light-dark(var(--primary-light), var(--primary-dark));
+        --primary-text: light-dark(var(--primary-text-light), var(--primary-text-dark));
+        --primary-soft: light-dark(var(--primary-soft-light), var(--primary-soft-dark));
+        --danger: light-dark(var(--danger-light), var(--danger-dark));
+        --danger-soft: light-dark(var(--danger-soft-light), var(--danger-soft-dark));
+        --danger-border: light-dark(var(--danger-border-light), var(--danger-border-dark));
+        --success: light-dark(var(--success-light), var(--success-dark));
+        --success-soft: light-dark(var(--success-soft-light), var(--success-soft-dark));
+        --success-border: light-dark(var(--success-border-light), var(--success-border-dark));
+      }
+    }
+
+    body, header, main, section, search, article, div, input, button, ul {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin-inline: auto;
+      padding-block: 28px 64px;
+      padding-inline: 18px;
+    }
+
+    header {
+      margin-block-end: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin-block: 6px 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-block-end: 20px;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding-block: 14px;
+      padding-inline: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-block-start: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      margin-block-end: 16px;
+    }
+
+    .controls-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1 1 240px;
+      padding-block: 10px;
+      padding-inline: 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .search-input:focus-visible,
+    .btn:focus-visible,
+    .pill:focus-visible,
+    .mastered-btn:focus-visible,
+    .reveal-btn:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    .btn,
+    .pill,
+    .mastered-btn,
+    .reveal-btn {
+      appearance: none;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding-block: 9px;
+      padding-inline: 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .btn:hover:not(:disabled) {
+      background: var(--surface-muted);
+    }
+
+    .btn[aria-pressed="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--primary-text);
+    }
+
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      border: 1px solid var(--border);
+      background: var(--surface-muted);
+      color: var(--text-muted);
+      padding-block: 5px;
+      padding-inline: 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+    }
+
+    .pill:hover:not(:disabled) {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .pill[aria-pressed="true"] {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .results-status {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-block-end: 12px;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding-block: 18px;
+      padding-inline: 20px;
+      box-shadow: var(--shadow);
+      transition: opacity 0.2s;
+    }
+
+    .card.is-mastered {
+      opacity: 0.76;
+    }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-block-end: 14px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .date {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .badge {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding-block: 3px;
+      padding-inline: 10px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: var(--surface-muted);
+      padding-block: 2px;
+      padding-inline: 8px;
+      border-radius: 6px;
+    }
+
+    .mastered-btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      padding-block: 5px;
+      padding-inline: 11px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .mastered-btn[aria-pressed="true"] {
+      background: var(--success-soft);
+      border-color: var(--success-border);
+      color: var(--success);
+    }
+
+    .expr-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-block-end: 14px;
+    }
+
+    .expr-box {
+      padding-block: 12px;
+      padding-inline: 14px;
+      border-radius: 8px;
+      border: 1px solid;
+    }
+
+    .expr-wrong {
+      background: var(--danger-soft);
+      border-color: var(--danger-border);
+    }
+
+    .expr-correct {
+      background: var(--success-soft);
+      border-color: var(--success-border);
+    }
+
+    .expr-label {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-block-end: 4px;
+      display: block;
+    }
+
+    .expr-wrong .expr-label {
+      color: var(--danger);
+    }
+
+    .expr-correct .expr-label {
+      color: var(--success);
+    }
+
+    .expr-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .expr-correct.hidden-answer .expr-text {
+      filter: blur(7px);
+      user-select: none;
+    }
+
+    .reveal-btn {
+      display: none;
+      margin-block-start: 8px;
+      padding-block: 4px;
+      padding-inline: 10px;
+      border-radius: 6px;
+      border: 1px solid var(--success-border);
+      background: var(--surface);
+      color: var(--success);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .expr-correct.hidden-answer .reveal-btn {
+      display: inline-block;
+    }
+
+    .explanation {
+      background: var(--surface-muted);
+      border-radius: 8px;
+      padding-block: 12px;
+      padding-inline: 14px;
+      font-size: 0.93rem;
+      margin-block-end: 12px;
+    }
+
+    .explanation-title,
+    .examples-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-block: 0 4px;
+    }
+
+    .examples {
+      margin: 0;
+      padding-inline-start: 18px;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .examples li + li {
+      margin-block-start: 4px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding-block: 48px;
+      padding-inline: 20px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 720px) {
+      .expr-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>English Mistake Log</h1>
+      <p class="subtitle">オンライン英会話で間違えた表現・より自然な言い回しの復習ノート</p>
+    </header>
+
+    <main>
+      <section class="stats" aria-label="学習統計">
+        <div class="stat-card">
+          <div class="stat-label">登録フレーズ数</div>
+          <div class="stat-value" id="stat-total">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">復習中</div>
+          <div class="stat-value" id="stat-review">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">習得済み</div>
+          <div class="stat-value" id="stat-mastered">0</div>
+        </div>
+      </section>
+
+      <search class="controls" aria-label="表現の検索と絞り込み">
+        <div class="controls-top">
+          <label for="search-input" class="visually-hidden">表現・解説・タグで検索</label>
+          <input
+            type="search"
+            id="search-input"
+            class="search-input"
+            placeholder="表現・解説・タグで検索..."
+          />
+          <button type="button" id="toggle-quiz" class="btn" aria-pressed="false">答えを隠す (テスト)</button>
+          <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">未習得のみ</button>
+        </div>
+        <div class="category-pills" id="category-pills" role="group" aria-label="カテゴリ絞り込み"></div>
+      </search>
+
+      <div id="results-status" class="results-status" aria-live="polite"></div>
+
+      <section class="cards" id="cards-container" aria-label="表現一覧"></section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    (function () {
+      const STORAGE_KEY = "english_mistake_log_mastered_v1";
+      const entries = Array.isArray(window.ENGLISH_ENTRIES) ? window.ENGLISH_ENTRIES : [];
+
+      let savedMastered = {};
+      try {
+        savedMastered = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch (_) {
+        savedMastered = {};
+      }
+
+      const state = {
+        query: "",
+        category: "All",
+        quizMode: false,
+        onlyUnmastered: false
+      };
+
+      const els = {
+        statTotal: document.getElementById("stat-total"),
+        statReview: document.getElementById("stat-review"),
+        statMastered: document.getElementById("stat-mastered"),
+        searchInput: document.getElementById("search-input"),
+        toggleQuiz: document.getElementById("toggle-quiz"),
+        toggleUnmastered: document.getElementById("toggle-unmastered"),
+        categoryPills: document.getElementById("category-pills"),
+        resultsStatus: document.getElementById("results-status"),
+        cardsContainer: document.getElementById("cards-container")
+      };
+
+      function isMastered(entry) {
+        if (Object.prototype.hasOwnProperty.call(savedMastered, entry.id)) {
+          return Boolean(savedMastered[entry.id]);
+        }
+        return Boolean(entry.mastered);
+      }
+
+      function toggleMastered(id) {
+        const target = entries.find((e) => e.id === id);
+        if (!target) return;
+        const next = !isMastered(target);
+        savedMastered[id] = next;
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(savedMastered));
+        } catch (_) {
+          // ignore storage errors
+        }
+        render();
+      }
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function renderCategories() {
+        const categories = ["All", ...new Set(entries.map((e) => e.category).filter(Boolean))];
+        els.categoryPills.innerHTML = categories
+          .map((cat) => {
+            const pressed = state.category === cat ? "true" : "false";
+            const label = cat === "All" ? "すべて" : escapeHtml(cat);
+            return `<button type="button" class="pill" aria-pressed="${pressed}" data-category="${escapeHtml(cat)}">${label}</button>`;
+          })
+          .join("");
+      }
+
+      function renderStats() {
+        const total = entries.length;
+        const mastered = entries.filter(isMastered).length;
+        els.statTotal.textContent = total;
+        els.statMastered.textContent = mastered;
+        els.statReview.textContent = total - mastered;
+      }
+
+      function matchesFilter(entry) {
+        if (state.category !== "All" && entry.category !== state.category) {
+          return false;
+        }
+        if (state.onlyUnmastered && isMastered(entry)) {
+          return false;
+        }
+        if (state.query.trim()) {
+          const q = state.query.trim().toLowerCase();
+          const haystack = [
+            entry.whatISaid,
+            entry.correction,
+            entry.explanation,
+            entry.category,
+            entry.date,
+            ...(entry.examples || []),
+            ...(entry.tags || [])
+          ]
+            .join(" ")
+            .toLowerCase();
+          if (!haystack.includes(q)) return false;
+        }
+        return true;
+      }
+
+      function renderCards() {
+        const filtered = entries.filter(matchesFilter);
+        els.resultsStatus.textContent = `${filtered.length}件の表現を表示中`;
+
+        if (filtered.length === 0) {
+          els.cardsContainer.innerHTML = `<div class="empty-state">条件に一致する表現がありません。</div>`;
+          return;
+        }
+
+        els.cardsContainer.innerHTML = filtered
+          .map((entry) => {
+            const mastered = isMastered(entry);
+            const tagsHtml = (entry.tags || [])
+              .map((t) => `<span class="tag">#${escapeHtml(t)}</span>`)
+              .join("");
+            const examplesHtml = (entry.examples && entry.examples.length)
+              ? `<div>
+                  <h2 class="examples-title">例文</h2>
+                  <ul class="examples" lang="en">
+                    ${entry.examples.map((ex) => `<li>${escapeHtml(ex)}</li>`).join("")}
+                  </ul>
+                </div>`
+              : "";
+
+            return `
+              <article class="card${mastered ? " is-mastered" : ""}">
+                <div class="card-header">
+                  <div class="meta">
+                    <time class="date" datetime="${escapeHtml(entry.date || "")}">${escapeHtml(entry.date || "")}</time>
+                    <span class="badge">${escapeHtml(entry.category || "General")}</span>
+                    ${tagsHtml}
+                  </div>
+                  <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
+                    ${mastered ? "✓ 習得済み" : "未習得"}
+                  </button>
+                </div>
+
+                <div class="expr-grid">
+                  <div class="expr-box expr-wrong">
+                    <span class="expr-label">自分の表現 (What I said)</span>
+                    <p class="expr-text" lang="en">${escapeHtml(entry.whatISaid || "")}</p>
+                  </div>
+                  <div class="expr-box expr-correct${state.quizMode ? " hidden-answer" : ""}" data-answer-box>
+                    <span class="expr-label">自然な表現 (Better / Correct)</span>
+                    <p class="expr-text" lang="en">${escapeHtml(entry.correction || "")}</p>
+                    <button type="button" class="reveal-btn" data-reveal-btn>答えを表示</button>
+                  </div>
+                </div>
+
+                <div class="explanation">
+                  <h2 class="explanation-title">解説</h2>
+                  <div>${escapeHtml(entry.explanation || "")}</div>
+                </div>
+
+                ${examplesHtml}
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      function render() {
+        renderStats();
+        renderCategories();
+        renderCards();
+      }
+
+      els.searchInput.addEventListener("input", (e) => {
+        state.query = e.target.value;
+        renderCards();
+      });
+
+      els.toggleQuiz.addEventListener("click", () => {
+        state.quizMode = !state.quizMode;
+        els.toggleQuiz.setAttribute("aria-pressed", String(state.quizMode));
+        renderCards();
+      });
+
+      els.toggleUnmastered.addEventListener("click", () => {
+        state.onlyUnmastered = !state.onlyUnmastered;
+        els.toggleUnmastered.setAttribute("aria-pressed", String(state.onlyUnmastered));
+        renderCards();
+      });
+
+      els.categoryPills.addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-category]");
+        if (!btn) return;
+        state.category = btn.getAttribute("data-category");
+        render();
+      });
+
+      els.cardsContainer.addEventListener("click", (e) => {
+        const masteredBtn = e.target.closest("[data-mastered-id]");
+        if (masteredBtn) {
+          toggleMastered(masteredBtn.getAttribute("data-mastered-id"));
+          return;
+        }
+        const revealBtn = e.target.closest("[data-reveal-btn]");
+        if (revealBtn) {
+          const box = revealBtn.closest("[data-answer-box]");
+          if (box) {
+            box.classList.remove("hidden-answer");
+          }
+        }
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
