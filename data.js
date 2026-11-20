@@ -302,6 +302,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-10-28-10",
+    date: "2026-10-28",
+    category: "Grammar",
+    whatISaid: "He taught how making things is fun.",
+    correction: "He taught me to enjoy making things.",
+    explanation:
+      "「（人）に〜することを教える」と言うときは、「teach + 人 + to + 動詞の原形」の形をとります。「teach」の後ろに「me（誰に）」を補い、「to enjoy」のように不定詞を続けると自然です。",
+    examples: [
+      "My father taught me to appreciate the process of creating something.",
+      "She taught her students to think critically."
+    ],
+    tags: ["grammar", "verb", "education"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-09",
+    date: "2026-10-28",
+    category: "Vocabulary",
+    whatISaid: "I chose a software engineer as a job.",
+    correction: "I chose software engineering as my career.",
+    explanation:
+      "職種や分野そのものを「キャリアとして選んだ」と言うときは、人を表す「a software engineer」ではなく分野を表す「software engineering」を使います。また、「as a job」より「as my career」と言うと将来の道を選んだニュアンスが自然に伝わります。",
+    examples: [
+      "She chose graphic design as her career.",
+      "I decided to pursue software engineering after university."
+    ],
+    tags: ["vocabulary", "career", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-08",
+    date: "2026-10-28",
+    category: "Grammar",
+    whatISaid: "Maybe I'm not. I'm inspired by my parents.",
+    correction: "Maybe not, but I was inspired by my parents.",
+    explanation:
+      "相手の質問に対して「たぶんそうではない」と短く返すときは「Maybe I'm not.」ではなく「Maybe not.」と言います。また、子どもの頃に受けた影響の話なので、現在形（I'm inspired）ではなく過去形（I was inspired）にします。",
+    examples: [
+      "Did you have a favorite teacher? — Maybe not, but my parents inspired me.",
+      "I was deeply inspired by his dedication."
+    ],
+    tags: ["grammar", "tense", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-07",
+    date: "2026-10-28",
+    category: "Preposition",
+    whatISaid: "Yes, I went kindergarten.",
+    correction: "Yes, I went to kindergarten.",
+    explanation:
+      "「go」は自動詞なので、行き先や通った学校を後ろに置くときは前置詞「to」が必要です（「go to kindergarten」）。前置詞なしで言う場合は他動詞の「attend」を使い、「I attended kindergarten.」とします。",
+    examples: [
+      "Did you go to kindergarten in your hometown?",
+      "Both of my siblings attended the same elementary school."
+    ],
+    tags: ["preposition", "education", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-06",
+    date: "2026-10-28",
+    category: "Vocabulary",
+    whatISaid: "Some children cannot go kindergarten, even if their family can pay money.",
+    correction: "Some children cannot attend kindergarten, even if their family can afford it.",
+    explanation:
+      "「（経済的に）費用を払う余裕がある」と言うときは、「can pay money」より「can afford it」または「can afford to pay for kindergarten」が自然です。また、「幼稚園に通う」は「go to kindergarten」または「attend kindergarten」とします。",
+    examples: [
+      "Even if families can afford private school, there may not be enough spots.",
+      "I couldn't afford to buy a car when I was a student."
+    ],
+    tags: ["vocabulary", "education", "social"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-05",
+    date: "2026-10-28",
+    category: "Grammar",
+    whatISaid: "In Philippines, do you have to pay money to go to school?",
+    correction: "In the Philippines, do you have to pay to go to school?",
+    explanation:
+      "「Philippines（フィリピン）」のように複数形の国名には定冠詞「the」を付けて「the Philippines」とします（「the United States」などと同様です）。また、「お金を払う」は文脈から明らかなので「pay」だけで十分伝わります。",
+    examples: [
+      "Public schools in the Philippines are free through high school.",
+      "Have you ever traveled to the Philippines or the United States?"
+    ],
+    tags: ["grammar", "article", "geography"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-04",
+    date: "2026-10-28",
+    category: "Vocabulary",
+    whatISaid: "We can study language, scientific things, and societies.",
+    correction: "We can study languages, science, and social studies.",
+    explanation:
+      "学校の教科名として言うときは、「scientific things」ではなく「science（理科・科学）」、「societies」ではなく「social studies（社会科）」を使います。",
+    examples: [
+      "My favorite subjects in high school were science and social studies.",
+      "Students learn foreign languages as well as practical life skills."
+    ],
+    tags: ["vocabulary", "education", "school"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-03",
+    date: "2026-10-28",
+    category: "Grammar",
+    whatISaid: "Regardless of where you live and how much your family have money.",
+    correction: "Regardless of where they live or how much their family earns.",
+    explanation:
+      "「どれくらいのお金」と言うときは「how much money your family has」のように「how much + 名詞」の語順にします。また、家庭の収入について述べるときは「have money」より「how much their family earns（どれくらい稼いでいるか）」と表現すると自然です。",
+    examples: [
+      "Everyone deserves a good education regardless of how much their family earns.",
+      "I don't know how much money we need for the trip."
+    ],
+    tags: ["grammar", "word-order", "vocabulary"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-02",
+    date: "2026-10-28",
+    category: "Preposition",
+    whatISaid: "Can be educated until high school for free.",
+    correction: "Students can receive a free education through high school.",
+    explanation:
+      "「高校まで（高校卒業まで含めて）」と言うときは、「until high school（高校に入るまで、と解釈されやすい）」ではなく「through high school」を使います。また、「教育を受ける」は受動態「be educated」より「receive an education」が自然で、主語（Students）も忘れずに補います。",
+    examples: [
+      "In Japan, students can receive a free education through high school.",
+      "The library is open Monday through Friday."
+    ],
+    tags: ["preposition", "education", "naturalness"],
+    mastered: false
+  },
+  {
+    id: "2026-10-28-01",
+    date: "2026-10-28",
+    category: "Naturalness",
+    whatISaid: "Today is not off.",
+    correction: "Today is not my day off.",
+    explanation:
+      "「今日は休みではない」と言うとき、「today」を主語にして「today is not off」とは言いません。「Today is not my day off.」または「I'm working today.」「I have work today.」と表現します。",
+    examples: [
+      "Tomorrow is my day off, so I'm going to a museum.",
+      "Is today your day off, or are you working?"
+    ],
+    tags: ["naturalness", "work", "daily"],
+    mastered: false
+  },
+  {
     id: "2026-10-27-10",
     date: "2026-10-27",
     category: "Naturalness",
