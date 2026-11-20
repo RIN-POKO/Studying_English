@@ -704,17 +704,23 @@
       let speakTimer = null;
 
       const PREFERRED_VOICE_NAMES = [
-        "Google US English",
         "Samantha",
         "Ava",
         "Allison",
         "Alex",
         "Aaron",
         "Nicky",
+        "Microsoft Aria",
+        "Microsoft Jenny",
+        "Microsoft Guy",
+        "Microsoft Zira",
+        "Microsoft David",
+        "Microsoft Mark",
         "Daniel",
         "Karen",
         "Moira",
-        "Tessa"
+        "Tessa",
+        "Google US English"
       ];
 
       const EXCLUDED_VOICE_PATTERN =
@@ -726,14 +732,17 @@
         const enVoices = voices.filter(
           (v) => v.lang && v.lang.toLowerCase().startsWith("en") && !EXCLUDED_VOICE_PATTERN.test(v.name || "")
         );
+        const localEnVoices = enVoices.filter((v) => v.localService);
+        const candidates = localEnVoices.length > 0 ? localEnVoices : enVoices;
+
         for (const name of PREFERRED_VOICE_NAMES) {
-          const matched = enVoices.find((v) => v.name && v.name.includes(name));
+          const matched = candidates.find((v) => v.name && v.name.includes(name));
           if (matched) return matched;
         }
         return (
-          enVoices.find((v) => v.lang === "en-US" && v.default) ||
-          enVoices.find((v) => v.lang === "en-US") ||
-          enVoices[0] ||
+          candidates.find((v) => v.lang === "en-US" && v.default) ||
+          candidates.find((v) => v.lang === "en-US") ||
+          candidates[0] ||
           null
         );
       }
@@ -775,18 +784,26 @@
         stopSpeaking();
         if (wasSameActive) return;
 
-        const startSpeak = () => {
+        const startSpeak = (useVoice = true) => {
           const utterance = new SpeechSynthesisUtterance(text);
           utterance.lang = "en-US";
           utterance.rate = 0.95;
-          if (!preferredVoice) {
-            preferredVoice = pickEnglishVoice();
-          }
-          if (preferredVoice) {
-            utterance.voice = preferredVoice;
+          if (useVoice) {
+            if (!preferredVoice) {
+              preferredVoice = pickEnglishVoice();
+            }
+            if (preferredVoice) {
+              utterance.voice = preferredVoice;
+            }
           }
           utterance.onend = resetSpeakState;
-          utterance.onerror = resetSpeakState;
+          utterance.onerror = () => {
+            if (useVoice && utterance.voice) {
+              startSpeak(false);
+              return;
+            }
+            resetSpeakState();
+          };
           currentUtterance = utterance;
 
           activeSpeakBtn = btn;
@@ -802,10 +819,10 @@
         if (needsCancel) {
           speakTimer = setTimeout(() => {
             speakTimer = null;
-            startSpeak();
+            startSpeak(true);
           }, 60);
         } else {
-          startSpeak();
+          startSpeak(true);
         }
       }
 
