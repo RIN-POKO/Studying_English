@@ -152,6 +152,156 @@ window.ENGLISH_ENTRIES = [
     mastered: false
   },
   {
+    id: "2026-11-03-10",
+    date: "2026-11-03",
+    category: "Vocabulary",
+    whatISaid: "Everyone has smartphones, so we can communicate with every time, everywhere.",
+    correction: "Everyone has a smartphone, so we can communicate with each other anytime, anywhere.",
+    explanation:
+      "「いつでも、どこでも」と言うときは「every time, everywhere」ではなく「anytime, anywhere」を使います。また、「communicate with」の後ろには「each other（お互い）」のように連絡をとる相手が必要です。",
+    examples: [
+      "With messaging apps, we can stay in touch anytime, anywhere.",
+      "Team members can communicate with each other easily online."
+    ],
+    tags: ["vocabulary", "technology", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-09",
+    date: "2026-11-03",
+    category: "Vocabulary",
+    whatISaid: "Before smartphones, we had to make a point with my friends.",
+    correction: "Before smartphones, we had to make plans in advance with friends.",
+    explanation:
+      "「友達と会う約束をする・予定を立てる」と言うときは、「make a point（要点を述べる／わざわざ〜する）」ではなく「make plans」を使います。なお、「make an appointment」は主に病院やビジネスなどの予約に使います。",
+    examples: [
+      "Let's make plans to grab dinner next week.",
+      "I need to make a dental appointment for Friday."
+    ],
+    tags: ["vocabulary", "daily", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-08",
+    date: "2026-11-03",
+    category: "Preposition",
+    whatISaid: "There is no chance to communicate with English.",
+    correction: "There is no chance to communicate in English.",
+    explanation:
+      "「（言語）でコミュニケーションをとる・話す」と言うとき、言語の前置詞は「with」ではなく「in」を使います（「communicate in English」「speak in Japanese」）。「communicate with 〜」は後ろに「人」を置くときに使います。",
+    examples: [
+      "Online lessons give me a great opportunity to communicate in English.",
+      "I try to communicate with my coworkers clearly."
+    ],
+    tags: ["preposition", "english", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-07",
+    date: "2026-11-03",
+    category: "Grammar",
+    whatISaid: "Now we can easy to go where we want.",
+    correction: "Now we can easily go wherever we want.",
+    explanation:
+      "助動詞「can」の後ろに形容詞「easy」を直接置くことはできません。「簡単に〜できる」と言うときは、副詞の「easily」を使って「we can easily go」とするか、「it is easy for us to go」の形にします。",
+    examples: [
+      "Thanks to navigation apps, we can easily find our way anywhere.",
+      "With high-speed trains, it is easy to travel across Japan."
+    ],
+    tags: ["grammar", "adverb", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-06",
+    date: "2026-11-03",
+    category: "Vocabulary",
+    whatISaid: "I think an automobile car is one of the best technological advancements.",
+    correction: "I think the car is one of the best technological advancements.",
+    explanation:
+      "「automobile」と「car」はどちらも「自動車」を意味するため、並べて使うと意味が重複します。日常会話ではシンプルに「the car」または「cars」だけで十分です。",
+    examples: [
+      "The smartphone is one of the greatest inventions of the 21st century.",
+      "Modern cars are much safer and more fuel-efficient than older ones."
+    ],
+    tags: ["vocabulary", "technology", "naturalness"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-05",
+    date: "2026-11-03",
+    category: "Grammar",
+    whatISaid: "If the source which AI search incorrect, AI's information is wrong.",
+    correction: "If the source that AI uses is incorrect, the information will be wrong.",
+    explanation:
+      "形容詞「incorrect」を使うときは、if節の中にbe動詞（is）が必要です（「If the source ... is incorrect」）。主語と動詞の対応を忘れずに補いましょう。",
+    examples: [
+      "If the data is inaccurate, the final result will be wrong.",
+      "Always double-check whether the source is reliable."
+    ],
+    tags: ["grammar", "technology", "ai"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-04",
+    date: "2026-11-03",
+    category: "Preposition",
+    whatISaid: "AI also search for the internet or books.",
+    correction: "AI also searches the internet or books.",
+    explanation:
+      "「インターネットを検索する」と言うときは「search for the internet」ではなく「search the internet」と他動詞で使います。「search for 〜」は「（見つからないもの）を探し求める」という意味になるため、「search for information on the internet」のように使います。",
+    examples: [
+      "I searched the internet for a solution to the bug.",
+      "AI searches a huge amount of data to generate answers."
+    ],
+    tags: ["preposition", "technology", "ai"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-03",
+    date: "2026-11-03",
+    category: "Preposition",
+    whatISaid: "To technology, we can easily communicate with people who live far from us.",
+    correction: "Thanks to technology, we can easily communicate with people who live far from us.",
+    explanation:
+      "「〜のおかげで」という肯定的な理由・背景を表すときは、「To 〜」ではなく「Thanks to 〜」を使います。",
+    examples: [
+      "Thanks to video calls, I can talk with my sister in the US anytime.",
+      "Thanks to AI tools, I can write code much faster."
+    ],
+    tags: ["preposition", "technology", "conversation"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-02",
+    date: "2026-11-03",
+    category: "Grammar",
+    whatISaid: "I use smartphone for searching, listen to music, and watching videos.",
+    correction: "I use my smartphone for searching, listening to music, and watching videos.",
+    explanation:
+      "前置詞「for」の後ろに複数の動作を並べるときは、すべて動名詞（-ing）に形を揃えます（searching, listening, and watching）。また、「smartphone」は可算名詞なので「my smartphone」のように所有格や冠詞を付けます。",
+    examples: [
+      "I use my laptop for coding, writing emails, and attending meetings.",
+      "She uses the app for tracking her expenses and setting budgets."
+    ],
+    tags: ["grammar", "gerund", "parallelism"],
+    mastered: false
+  },
+  {
+    id: "2026-11-03-01",
+    date: "2026-11-03",
+    category: "Preposition",
+    whatISaid: "I have no plan without studying.",
+    correction: "I have no plans other than studying.",
+    explanation:
+      "「〜以外に（〜を除いて）予定がない」と言うときは、「without（〜なしで）」ではなく「other than 〜」や「aside from 〜」を使います。また、「予定」は複数形の「plans」を使うのが自然です。",
+    examples: [
+      "I have no plans this weekend other than studying for my exam.",
+      "Aside from work, I don't have much to do today."
+    ],
+    tags: ["preposition", "daily", "conversation"],
+    mastered: false
+  },
+  {
     id: "2026-11-02-10",
     date: "2026-11-02",
     category: "Vocabulary",
