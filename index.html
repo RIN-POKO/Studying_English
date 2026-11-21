@@ -736,7 +736,7 @@
             placeholder="表現・解説・タグで検索..."
           />
           <button type="button" id="toggle-quiz" class="btn" aria-pressed="true">答えを隠す (テスト)</button>
-          <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">未習得のみ</button>
+          <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">表示: すべて</button>
           <button type="button" id="toggle-sort" class="btn" aria-label="並び順: 新しい順">新しい順 ↓</button>
           <button type="button" id="toggle-flashcard" class="btn" aria-pressed="false">瞬間英作文モード</button>
           <button type="button" id="reload-latest" class="btn" title="最新のデータを再読み込み">🔄 最新に更新</button>
@@ -767,7 +767,7 @@
         query: "",
         category: "All",
         quizMode: true,
-        onlyUnmastered: false,
+        masteryFilter: "all",
         sortOrder: "desc",
         flashcardMode: false,
         flashcardIndex: 0,
@@ -809,7 +809,10 @@
         } catch (_) {
           // ignore storage errors
         }
-        if (state.flashcardMode && state.onlyUnmastered && next) {
+        if (
+          state.flashcardMode &&
+          ((state.masteryFilter === "unmastered" && next) || (state.masteryFilter === "mastered" && !next))
+        ) {
           state.flashcardRevealed = false;
         }
         render();
@@ -843,11 +846,35 @@
         els.statReview.textContent = total - mastered;
       }
 
+      function getMasteryLabel() {
+        if (state.masteryFilter === "unmastered") return "未習得のみ";
+        if (state.masteryFilter === "mastered") return "習得済みのみ";
+        return "表示: すべて";
+      }
+
+      function cycleMasteryFilter() {
+        if (state.masteryFilter === "all") {
+          state.masteryFilter = "unmastered";
+        } else if (state.masteryFilter === "unmastered") {
+          state.masteryFilter = "mastered";
+        } else {
+          state.masteryFilter = "all";
+        }
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
+        els.toggleUnmastered.textContent = getMasteryLabel();
+        els.toggleUnmastered.setAttribute("aria-pressed", String(state.masteryFilter !== "all"));
+        renderCards();
+      }
+
       function matchesFilter(entry) {
         if (state.category !== "All" && entry.category !== state.category) {
           return false;
         }
-        if (state.onlyUnmastered && isMastered(entry)) {
+        if (state.masteryFilter === "unmastered" && isMastered(entry)) {
+          return false;
+        }
+        if (state.masteryFilter === "mastered" && !isMastered(entry)) {
           return false;
         }
         if (state.query.trim()) {
@@ -1084,6 +1111,7 @@
             <div class="flashcard-toolbar">
               <span class="flashcard-progress">${state.flashcardIndex + 1} / ${filtered.length}</span>
               <div class="flashcard-toolbar-actions">
+                <button type="button" class="btn" data-flashcard-mastery aria-pressed="${state.masteryFilter !== "all" ? "true" : "false"}">${escapeHtml(getMasteryLabel())}</button>
                 <button type="button" class="btn" data-flashcard-filters aria-pressed="${String(state.flashcardFiltersOpen)}">絞り込み</button>
                 <button type="button" class="btn" data-flashcard-shuffle>🔀 シャッフル</button>
                 <button type="button" class="btn" data-flashcard-exit>一覧へ</button>
@@ -1150,7 +1178,16 @@
           : `${filtered.length}件の表現を表示中`;
 
         if (filtered.length === 0) {
-          els.cardsContainer.innerHTML = `<div class="empty-state">条件に一致する表現がありません。</div>`;
+          els.cardsContainer.innerHTML = state.flashcardMode
+            ? `<div class="empty-state">
+                <p style="margin:0 0 12px;">条件に一致する表現がありません（現在: ${escapeHtml(getMasteryLabel())}）。</p>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+                  <button type="button" class="btn" data-flashcard-mastery aria-pressed="${state.masteryFilter !== "all" ? "true" : "false"}">${escapeHtml(getMasteryLabel())} を切替</button>
+                  <button type="button" class="btn" data-flashcard-filters aria-pressed="${String(state.flashcardFiltersOpen)}">絞り込み</button>
+                  <button type="button" class="btn" data-flashcard-exit>一覧へ</button>
+                </div>
+              </div>`
+            : `<div class="empty-state">条件に一致する表現がありません。</div>`;
           return;
         }
 
@@ -1246,13 +1283,7 @@
         renderCards();
       });
 
-      els.toggleUnmastered.addEventListener("click", () => {
-        state.onlyUnmastered = !state.onlyUnmastered;
-        state.flashcardIndex = 0;
-        state.flashcardRevealed = false;
-        els.toggleUnmastered.setAttribute("aria-pressed", String(state.onlyUnmastered));
-        renderCards();
-      });
+      els.toggleUnmastered.addEventListener("click", cycleMasteryFilter);
 
       els.toggleSort.addEventListener("click", () => {
         state.sortOrder = state.sortOrder === "desc" ? "asc" : "desc";
@@ -1334,6 +1365,11 @@
           state.flashcardIndex = 0;
           state.flashcardRevealed = false;
           renderCards();
+          return;
+        }
+        const fcMastery = e.target.closest("[data-flashcard-mastery]");
+        if (fcMastery) {
+          cycleMasteryFilter();
           return;
         }
         const fcFilters = e.target.closest("[data-flashcard-filters]");
