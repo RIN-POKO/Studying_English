@@ -367,6 +367,36 @@
       color: var(--success);
     }
 
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .bookmark-btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      padding-block: 5px;
+      padding-inline: 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .bookmark-btn[aria-pressed="true"] {
+      background: rgba(245, 158, 11, 0.14);
+      border-color: rgba(245, 158, 11, 0.5);
+      color: #d97706;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .bookmark-btn[aria-pressed="true"] {
+        color: #fbbf24;
+      }
+    }
+
     .expr-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -724,6 +754,10 @@
           <div class="stat-label">習得済み</div>
           <div class="stat-value" id="stat-mastered">0</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-label">ブックマーク</div>
+          <div class="stat-value" id="stat-bookmarked">0</div>
+        </div>
       </section>
 
       <search class="controls" aria-label="表現の検索と絞り込み">
@@ -737,6 +771,7 @@
           />
           <button type="button" id="toggle-quiz" class="btn" aria-pressed="true">答えを隠す (テスト)</button>
           <button type="button" id="toggle-unmastered" class="btn" aria-pressed="false">表示: すべて</button>
+          <button type="button" id="toggle-bookmarked" class="btn" aria-pressed="false">★ ブックマークのみ</button>
           <button type="button" id="toggle-sort" class="btn" aria-label="並び順: 新しい順">新しい順 ↓</button>
           <button type="button" id="toggle-flashcard" class="btn" aria-pressed="false">瞬間英作文モード</button>
           <button type="button" id="reload-latest" class="btn" title="最新のデータを再読み込み">🔄 最新に更新</button>
@@ -754,6 +789,7 @@
   <script>
     (function () {
       const STORAGE_KEY = "english_mistake_log_mastered_v1";
+      const BOOKMARK_KEY = "english_mistake_log_bookmarked_v1";
       let entries = [];
 
       let savedMastered = {};
@@ -763,11 +799,19 @@
         savedMastered = {};
       }
 
+      let savedBookmarks = {};
+      try {
+        savedBookmarks = JSON.parse(localStorage.getItem(BOOKMARK_KEY) || "{}");
+      } catch (_) {
+        savedBookmarks = {};
+      }
+
       const state = {
         query: "",
         category: "All",
         quizMode: true,
         masteryFilter: "all",
+        onlyBookmarked: false,
         sortOrder: "desc",
         flashcardMode: false,
         flashcardIndex: 0,
@@ -780,9 +824,11 @@
         statTotal: document.getElementById("stat-total"),
         statReview: document.getElementById("stat-review"),
         statMastered: document.getElementById("stat-mastered"),
+        statBookmarked: document.getElementById("stat-bookmarked"),
         searchInput: document.getElementById("search-input"),
         toggleQuiz: document.getElementById("toggle-quiz"),
         toggleUnmastered: document.getElementById("toggle-unmastered"),
+        toggleBookmarked: document.getElementById("toggle-bookmarked"),
         toggleSort: document.getElementById("toggle-sort"),
         toggleFlashcard: document.getElementById("toggle-flashcard"),
         reloadLatest: document.getElementById("reload-latest"),
@@ -799,6 +845,10 @@
         return Boolean(entry.mastered);
       }
 
+      function isBookmarked(entry) {
+        return Boolean(savedBookmarks[entry.id]);
+      }
+
       function toggleMastered(id) {
         const target = entries.find((e) => e.id === id);
         if (!target) return;
@@ -813,6 +863,26 @@
           state.flashcardMode &&
           ((state.masteryFilter === "unmastered" && next) || (state.masteryFilter === "mastered" && !next))
         ) {
+          state.flashcardRevealed = false;
+        }
+        render();
+      }
+
+      function toggleBookmark(id) {
+        const target = entries.find((e) => e.id === id);
+        if (!target) return;
+        const next = !isBookmarked(target);
+        if (next) {
+          savedBookmarks[id] = true;
+        } else {
+          delete savedBookmarks[id];
+        }
+        try {
+          localStorage.setItem(BOOKMARK_KEY, JSON.stringify(savedBookmarks));
+        } catch (_) {
+          // ignore storage errors
+        }
+        if (state.flashcardMode && state.onlyBookmarked && !next) {
           state.flashcardRevealed = false;
         }
         render();
@@ -841,9 +911,11 @@
       function renderStats() {
         const total = entries.length;
         const mastered = entries.filter(isMastered).length;
+        const bookmarked = entries.filter(isBookmarked).length;
         els.statTotal.textContent = total;
         els.statMastered.textContent = mastered;
         els.statReview.textContent = total - mastered;
+        els.statBookmarked.textContent = bookmarked;
       }
 
       function getMasteryLabel() {
@@ -867,6 +939,14 @@
         renderCards();
       }
 
+      function toggleBookmarkFilter() {
+        state.onlyBookmarked = !state.onlyBookmarked;
+        state.flashcardIndex = 0;
+        state.flashcardRevealed = false;
+        els.toggleBookmarked.setAttribute("aria-pressed", String(state.onlyBookmarked));
+        renderCards();
+      }
+
       function matchesFilter(entry) {
         if (state.category !== "All" && entry.category !== state.category) {
           return false;
@@ -875,6 +955,9 @@
           return false;
         }
         if (state.masteryFilter === "mastered" && !isMastered(entry)) {
+          return false;
+        }
+        if (state.onlyBookmarked && !isBookmarked(entry)) {
           return false;
         }
         if (state.query.trim()) {
@@ -1088,6 +1171,7 @@
         }
         const entry = filtered[state.flashcardIndex];
         const mastered = isMastered(entry);
+        const bookmarked = isBookmarked(entry);
         const tagsHtml = (entry.tags || [])
           .map((t) => `<span class="tag">#${escapeHtml(t)}</span>`)
           .join("");
@@ -1112,6 +1196,7 @@
               <span class="flashcard-progress">${state.flashcardIndex + 1} / ${filtered.length}</span>
               <div class="flashcard-toolbar-actions">
                 <button type="button" class="btn" data-flashcard-mastery aria-pressed="${state.masteryFilter !== "all" ? "true" : "false"}">${escapeHtml(getMasteryLabel())}</button>
+                <button type="button" class="btn" data-flashcard-bookmarked aria-pressed="${String(state.onlyBookmarked)}">★ ブックマーク</button>
                 <button type="button" class="btn" data-flashcard-filters aria-pressed="${String(state.flashcardFiltersOpen)}">絞り込み</button>
                 <button type="button" class="btn" data-flashcard-shuffle>🔀 シャッフル</button>
                 <button type="button" class="btn" data-flashcard-exit>一覧へ</button>
@@ -1124,9 +1209,14 @@
                   <span class="badge">${escapeHtml(entry.category || "General")}</span>
                   ${tagsHtml}
                 </div>
-                <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
-                  ${mastered ? "✓ 習得済み" : "未習得"}
-                </button>
+                <div class="card-actions">
+                  <button type="button" class="bookmark-btn" aria-pressed="${bookmarked ? "true" : "false"}" data-bookmark-id="${escapeHtml(entry.id)}" aria-label="ブックマークを切り替え">
+                    ${bookmarked ? "★" : "☆"}
+                  </button>
+                  <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
+                    ${mastered ? "✓ 習得済み" : "未習得"}
+                  </button>
+                </div>
               </div>
 
               <div class="flashcard-prompt">
@@ -1180,9 +1270,10 @@
         if (filtered.length === 0) {
           els.cardsContainer.innerHTML = state.flashcardMode
             ? `<div class="empty-state">
-                <p style="margin:0 0 12px;">条件に一致する表現がありません（現在: ${escapeHtml(getMasteryLabel())}）。</p>
+                <p style="margin:0 0 12px;">条件に一致する表現がありません（現在: ${escapeHtml(getMasteryLabel())}${state.onlyBookmarked ? " / ★ ブックマークのみ" : ""}）。</p>
                 <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
                   <button type="button" class="btn" data-flashcard-mastery aria-pressed="${state.masteryFilter !== "all" ? "true" : "false"}">${escapeHtml(getMasteryLabel())} を切替</button>
+                  <button type="button" class="btn" data-flashcard-bookmarked aria-pressed="${String(state.onlyBookmarked)}">★ ブックマーク</button>
                   <button type="button" class="btn" data-flashcard-filters aria-pressed="${String(state.flashcardFiltersOpen)}">絞り込み</button>
                   <button type="button" class="btn" data-flashcard-exit>一覧へ</button>
                 </div>
@@ -1199,6 +1290,7 @@
         els.cardsContainer.innerHTML = filtered
           .map((entry) => {
             const mastered = isMastered(entry);
+            const bookmarked = isBookmarked(entry);
             const tagsHtml = (entry.tags || [])
               .map((t) => `<span class="tag">#${escapeHtml(t)}</span>`)
               .join("");
@@ -1230,9 +1322,14 @@
                     <span class="badge">${escapeHtml(entry.category || "General")}</span>
                     ${tagsHtml}
                   </div>
-                  <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
-                    ${mastered ? "✓ 習得済み" : "未習得"}
-                  </button>
+                  <div class="card-actions">
+                    <button type="button" class="bookmark-btn" aria-pressed="${bookmarked ? "true" : "false"}" data-bookmark-id="${escapeHtml(entry.id)}" aria-label="ブックマークを切り替え">
+                      ${bookmarked ? "★" : "☆"}
+                    </button>
+                    <button type="button" class="mastered-btn" aria-pressed="${mastered ? "true" : "false"}" data-mastered-id="${escapeHtml(entry.id)}">
+                      ${mastered ? "✓ 習得済み" : "未習得"}
+                    </button>
+                  </div>
                 </div>
 
                 ${japaneseHtml}
@@ -1285,6 +1382,8 @@
 
       els.toggleUnmastered.addEventListener("click", cycleMasteryFilter);
 
+      els.toggleBookmarked.addEventListener("click", toggleBookmarkFilter);
+
       els.toggleSort.addEventListener("click", () => {
         state.sortOrder = state.sortOrder === "desc" ? "asc" : "desc";
         state.flashcardOrder = null;
@@ -1324,9 +1423,19 @@
           speakText(speakBtn.getAttribute("data-speak-text"), speakBtn);
           return;
         }
+        const bookmarkBtn = e.target.closest("[data-bookmark-id]");
+        if (bookmarkBtn) {
+          toggleBookmark(bookmarkBtn.getAttribute("data-bookmark-id"));
+          return;
+        }
         const masteredBtn = e.target.closest("[data-mastered-id]");
         if (masteredBtn) {
           toggleMastered(masteredBtn.getAttribute("data-mastered-id"));
+          return;
+        }
+        const fcBookmarked = e.target.closest("[data-flashcard-bookmarked]");
+        if (fcBookmarked) {
+          toggleBookmarkFilter();
           return;
         }
         const fcToggle = e.target.closest("[data-flashcard-toggle]");
