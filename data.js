@@ -2,6 +2,166 @@
 // 新しい表現を追加する場合は、配列の先頭（最新順）にオブジェクトを追加してください。
 window.ENGLISH_ENTRIES = [
   {
+    id: "2026-11-24-10",
+    date: "2026-11-24",
+    category: "Grammar",
+    whatISaid: "I also like ocean too.",
+    correction: "I like the ocean, too.",
+    japanese: "海も好きです。",
+    explanation:
+      "「also」と「too」はどちらも「〜も」という意味なので、1つの文で同時に重ねて使いません。どちらか一方を使います。また、一般的な「海」を指すときは定冠詞「the」を付けて「the ocean」と言います。",
+    examples: [
+      "I like forests, and I like the ocean, too.",
+      "I also enjoy visiting museums when I travel."
+    ],
+    tags: ["grammar", "article", "nature"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-09",
+    date: "2026-11-24",
+    category: "Grammar",
+    whatISaid: "I will visit a famous places and hidden places.",
+    correction: "I visit both famous places and hidden gems.",
+    japanese: "有名な場所と穴場スポットの両方を訪れます。",
+    explanation:
+      "複数形の名詞（places）の前に単数の冠詞「a」は付けられません。また、観光客にあまり知られていない「穴場・隠れた名所」は「hidden gems」と言うととても自然です。",
+    examples: [
+      "Kyoto has many famous temples as well as hidden gems.",
+      "I love discovering hidden gems in local neighborhoods."
+    ],
+    tags: ["grammar", "vocabulary", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-08",
+    date: "2026-11-24",
+    category: "Preposition",
+    whatISaid: "Making a plan before going to trip is important.",
+    correction: "Making a plan before going on a trip is important.",
+    japanese: "旅行に出かける前に計画を立てることが大切です。",
+    explanation:
+      "「旅行に行く」と言うときは「go to trip」ではなく、前置詞「on」と冠詞「a」を使って「go on a trip」と表現します。",
+    examples: [
+      "We are planning to go on a trip to Hokkaido next winter.",
+      "I always check the weather forecast before going on a trip."
+    ],
+    tags: ["preposition", "collocation", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-07",
+    date: "2026-11-24",
+    category: "Grammar",
+    whatISaid: "I'm so enjoyed because the cuisine is so tasty.",
+    correction: "I really enjoyed it because the food was so tasty.",
+    japanese: "料理がとても美味しかったので、すごく楽しめました。",
+    explanation:
+      "「とても楽しんだ」と言うとき、be動詞（I'm）と「enjoy / enjoyed」は一緒に使えません（「I'm enjoyed」だと受動態になってしまいます）。シンプルに「I really enjoyed it」と表現します。",
+    examples: [
+      "I really enjoyed the poutine we had in Vancouver.",
+      "Did you enjoy your trip to Seattle?"
+    ],
+    tags: ["grammar", "verb", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-06",
+    date: "2026-11-24",
+    category: "Grammar",
+    whatISaid: "Vancouver city is more clean.",
+    correction: "Vancouver is cleaner.",
+    japanese: "バンクーバーの方がきれいです。",
+    explanation:
+      "「clean」は1音節の短い形容詞なので、比較級にするときは「more clean」ではなく語尾に「-er」を付けて「cleaner」とします。また、都市名には通常「city」を付けず「Vancouver」だけで表します。",
+    examples: [
+      "The streets in Vancouver are much cleaner than I expected.",
+      "This route is shorter and faster."
+    ],
+    tags: ["grammar", "comparison", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-05",
+    date: "2026-11-24",
+    category: "Vocabulary",
+    whatISaid: "Trip date is the most priority for me.",
+    correction: "The travel dates are my top priority.",
+    japanese: "旅行の日程が私にとって最優先事項です。",
+    explanation:
+      "「最優先事項・一番の優先」と言うときは「the most priority」ではなく「my top priority」または「the highest priority」と表現します。",
+    examples: [
+      "Safety is always our top priority.",
+      "When planning a trip, the budget is my top priority."
+    ],
+    tags: ["vocabulary", "collocation", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-04",
+    date: "2026-11-24",
+    category: "Grammar",
+    whatISaid: "I consider how much does it cost and how long do we need.",
+    correction: "I consider how much it costs and how many days we need.",
+    japanese: "どれくらい費用がかかるかと、何日必要かを考慮します。",
+    explanation:
+      "「consider」などの後ろに疑問詞節（間接疑問文）を置くときは、疑問文の語順（does it cost / do we need）ではなく平叙文の語順（it costs / we need）にします。",
+    examples: [
+      "I need to check how much the flight costs.",
+      "Do you know how long it takes to get to Vancouver?"
+    ],
+    tags: ["grammar", "word-order", "travel"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-03",
+    date: "2026-11-24",
+    category: "Vocabulary",
+    whatISaid: "I have no confidence to play this next role.",
+    correction: "I don't feel confident taking on this new role.",
+    japanese: "この新しい役割をこなす自信がありません。",
+    explanation:
+      "仕事上の「役割を引き受ける・担う」と言うときは、「play a role（演劇の役を演じる）」ではなく「take on a role」や「handle a role」を使います。また、「〜する自信がない」は「I don't feel confident 〜ing」や「I'm not confident that I can 〜」が自然です。",
+    examples: [
+      "I'm excited to take on a new role next month.",
+      "She feels confident leading the team."
+    ],
+    tags: ["vocabulary", "business", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-02",
+    date: "2026-11-24",
+    category: "Vocabulary",
+    whatISaid: "I will change my position and I promote it.",
+    correction: "I'm moving to a new position and getting promoted.",
+    japanese: "新しいポジションに移り、昇進します。",
+    explanation:
+      "「昇進する」と言うときは能動態「promote it」ではなく受動態の「get promoted」または「be promoted」を使います。また、社内異動でポジションが変わる場合は「move to a new position」と表現すると自然です。",
+    examples: [
+      "Congratulations on getting promoted!",
+      "He is moving to a new role in the engineering department next month."
+    ],
+    tags: ["vocabulary", "business", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-11-24-01",
+    date: "2026-11-24",
+    category: "Grammar",
+    whatISaid: "Yesterday it's holiday, so it was so relaxed at my home.",
+    correction: "Yesterday was a holiday, so I just relaxed at home.",
+    japanese: "昨日は祝日だったので、家でゆっくり過ごしました。",
+    explanation:
+      "「自分がリラックスした」と言うときは「it was so relaxed」ではなく、人（I）を主語にして「I just relaxed at home.」と表現します（「it was relaxing」なら「くつろげる時間だった」という意味になります）。昨日の話なので時制も過去形（was）にします。",
+    examples: [
+      "Yesterday was a national holiday, so I stayed home and relaxed.",
+      "I had a very relaxing weekend at home."
+    ],
+    tags: ["grammar", "tense", "daily"],
+    mastered: false
+  },
+  {
     id: "2026-11-20-10",
     date: "2026-11-20",
     category: "Preposition",
