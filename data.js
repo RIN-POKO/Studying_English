@@ -2,6 +2,166 @@
 // 新しい表現を追加する場合は、配列の先頭（最新順）にオブジェクトを追加してください。
 window.ENGLISH_ENTRIES = [
   {
+    id: "2026-11-27-10",
+    date: "2026-11-27",
+    category: "Vocabulary",
+    whatISaid: "Choosing the environment which affects positive effects is important.",
+    correction: "Choosing an environment that has a positive effect on us is important.",
+    japanese: "良い影響を与えてくれる環境を選ぶことが大切です。",
+    explanation:
+      "「affect（影響を与える：動詞）」と「effect（影響：名詞）」を「affects positive effects」のように重ねて使うのは誤りです。「良い影響を与える」と言いたいときは「have a positive effect on 〜」または「positively affect 〜」のどちらかを使います。",
+    examples: [
+      "Surrounding yourself with supportive people has a positive effect on your mindset.",
+      "A quiet workspace can positively affect your productivity."
+    ],
+    tags: ["vocabulary", "collocation", "mindset"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-09",
+    date: "2026-11-27",
+    category: "Vocabulary",
+    whatISaid: "If my coworkers work hard, he affects I have to work hard.",
+    correction: "If my coworkers work hard, it motivates me to work hard, too.",
+    japanese: "同僚が一生懸命働いていると、私も頑張ろうという気持ちになります。",
+    explanation:
+      "「affect」は後ろに名詞（目的語）を取る動詞なので、文（I have to work hard）を直接続けることはできません。周囲の姿勢に刺激されて前向きになるニュアンスには「motivate + 人 + to 動詞」や「encourage + 人 + to 動詞」を使います。前の状況全体を受ける主語も「he」ではなく「it」にします。",
+    examples: [
+      "Seeing my teammates work hard motivates me to do my best.",
+      "Her positive attitude encourages everyone around her to stay focused."
+    ],
+    tags: ["vocabulary", "verb", "mindset"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-08",
+    date: "2026-11-27",
+    category: "Grammar",
+    whatISaid: "Mindset doesn't need it, but it makes our lives easier to stay.",
+    correction: "A mindset isn't strictly necessary, but it makes our lives easier.",
+    japanese: "マインドセットは必須ではありませんが、人生をより生きやすくしてくれます。",
+    explanation:
+      "「必要ではない」と言うときに能動態の「doesn't need it」を使うと「それがそれを必要としない」という意味になってしまいます。「isn't necessary」や「You don't necessarily need it」と表します。また、「生きやすくする」は「easier to stay」ではなく「makes our lives easier」だけで十分に伝わります。",
+    examples: [
+      "A detailed plan isn't strictly necessary, but it makes the trip smoother.",
+      "Having a clear goal makes it easier to make daily decisions."
+    ],
+    tags: ["grammar", "naturalness", "mindset"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-07",
+    date: "2026-11-27",
+    category: "Naturalness",
+    whatISaid: "My work is remote working, so in weekdays, I don't have to go out.",
+    correction: "I work remotely, so on weekdays I don't have to go out.",
+    japanese: "リモートワークなので、平日は外出する必要がありません。",
+    explanation:
+      "「仕事がリモートワークです」と言いたいとき、「My work is remote working」は不自然です。動詞を使って「I work remotely.」とするか、「My job is remote.」と言うのが自然です。また、「平日に」は「in weekdays」ではなく前置詞「on」を使って「on weekdays」と表現します。",
+    examples: [
+      "I work remotely full-time, so I rarely commute to the office.",
+      "My job is mostly remote, except for one day a week."
+    ],
+    tags: ["naturalness", "preposition", "work"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-06",
+    date: "2026-11-27",
+    category: "Grammar",
+    whatISaid: "I choose go on foot instead of by bicycle or by train.",
+    correction: "I choose to go on foot instead of biking or taking the train.",
+    japanese: "自転車や電車ではなく、歩いて行くようにしています。",
+    explanation:
+      "「choose」の後ろに動詞を続けるときは「to」不定詞（choose to go）にします。また、「instead of」は前置詞なので後ろには名詞や動名詞（-ing）を置き、「by」は直接続けません（「instead of going by bike or train」なら自然です）。",
+    examples: [
+      "I chose to walk to the station instead of taking the bus.",
+      "She tries to take the stairs instead of using the elevator."
+    ],
+    tags: ["grammar", "infinitive", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-05",
+    date: "2026-11-27",
+    category: "Vocabulary",
+    whatISaid: "I don't do exercise every day, so I want to acquire an exercising habit.",
+    correction: "I don't exercise every day, so I want to build an exercise habit.",
+    japanese: "今は毎日運動していないので、運動習慣を身につけたいです。",
+    explanation:
+      "「習慣を身につける」と言うとき、「acquire a habit」は硬く不自然な表現です。英語では「build a habit」「develop a habit」「get into the habit of 〜ing」を使うのが定番です。また、「運動習慣」は「exercise habit」、動詞も「do exercise」より「exercise」の方が自然です。",
+    examples: [
+      "It takes time to build a daily exercise habit.",
+      "I want to get into the habit of reading before bed."
+    ],
+    tags: ["vocabulary", "collocation", "habits"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-04",
+    date: "2026-11-27",
+    category: "Grammar",
+    whatISaid: "I have meetings which communicate with Indian coworkers.",
+    correction: "I have meetings where I communicate with my Indian coworkers.",
+    japanese: "インド人の同僚とコミュニケーションを取る会議があります。",
+    explanation:
+      "「meetings which communicate...」とすると「会議そのものが会話する」という意味になってしまいます。「〜する会議」のように場所や場面を表すときは関係副詞「where」（または「in which」）を使います。シンプルに「I have meetings with my Indian coworkers.」と言っても自然です。",
+    examples: [
+      "We have weekly meetings where we share our project progress.",
+      "I have online meetings with my Indian coworkers every day."
+    ],
+    tags: ["grammar", "relative-clause", "business"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-03",
+    date: "2026-11-27",
+    category: "Grammar",
+    whatISaid: "Most of text communication are written in English.",
+    correction: "Most of our text communication is written in English.",
+    japanese: "テキストでのやり取りのほとんどは英語で書かれています。",
+    explanation:
+      "「most of」の後ろには「our」や「the」などの限定詞が付いた名詞を置きます（一般論なら「of」を省いて「Most text communication」とします）。また、「communication」は不可算名詞なので、動詞は「are」ではなく単数形の「is」を使います。",
+    examples: [
+      "Most of our communication with the team is done in English.",
+      "Most of our text messages are written in English."
+    ],
+    tags: ["grammar", "uncountable", "business"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-02",
+    date: "2026-11-27",
+    category: "Preposition",
+    whatISaid: "Usually, I take the lessons at lunch break.",
+    correction: "Usually, I take lessons during my lunch break.",
+    japanese: "普段は昼休みにレッスンを受けています。",
+    explanation:
+      "「昼休みの間に」と言うときは前置詞「at」ではなく「during」（または「on」）を使い、所有格「my」を付けて「during my lunch break」と表現します。また、特定のレッスンではなく一般的な習慣を指すため、「the lessons」の「the」は不要です。",
+    examples: [
+      "I usually study English during my lunch break.",
+      "She often goes for a quick walk on her lunch break."
+    ],
+    tags: ["preposition", "article", "daily"],
+    mastered: false
+  },
+  {
+    id: "2026-11-27-01",
+    date: "2026-11-27",
+    category: "Preposition",
+    whatISaid: "I'll go to coffee with my friends.",
+    correction: "I'll go for coffee with my friends.",
+    japanese: "友達とコーヒーを飲みに行きます。",
+    explanation:
+      "「コーヒーを飲みに行く」と言うとき、「coffee」は場所ではないため「go to coffee」とは言えません。前置詞「for」を使って「go for coffee」とするか、「grab coffee」「get coffee」「go to a cafe」と表現します。",
+    examples: [
+      "Let's go for coffee sometime this weekend.",
+      "I'm going to grab coffee with my friends on Sunday."
+    ],
+    tags: ["preposition", "daily", "casual"],
+    mastered: false
+  },
+  {
     id: "2026-11-24-10",
     date: "2026-11-24",
     category: "Grammar",
